@@ -1,0 +1,263 @@
+---
+layout: default
+title: "Master Data Science From Zero to Hero"
+description: "A comprehensive 12-week course that takes you from beginner to advanced data scientist. Learn Python, machine learning, and real-world projects."
+---
+
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">DataMaster.Course</div>
+            <nav class="nav">
+                <a href="#description" class="nav-link">Description</a>
+                <a href="#syllabus" class="nav-link">Syllabus</a>
+                <a href="#instructor" class="nav-link">Instructor</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="badge">New Course Available</div>
+            <h1 class="hero-title">
+                Master Data Science<br>
+                <span class="hero-subtitle">From Zero to Hero</span>
+            </h1>
+            <p class="hero-description">
+                A comprehensive 12-week course that takes you from beginner to advanced data scientist. 
+                Learn Python, machine learning, and real-world project implementation.
+            </p>
+            <div class="hero-buttons">
+                <a href="#pricing" class="btn btn-primary">Enroll Now - $299</a>
+                <a href="#description" class="btn btn-secondary">Learn More</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-icon">👥</span>
+                    <span>2,500+ students</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">⏰</span>
+                    <span>12 weeks</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">⭐</span>
+                    <span>4.9/5 rating</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Description Section -->
+<section id="description" class="section section-gray">
+    <div class="container">
+        <h2 class="section-title">What You'll Learn</h2>
+        <div class="two-column">
+            <div class="column">
+                <h3 class="column-title">Core Skills</h3>
+                <ul class="checklist">
+                    <li>Python programming fundamentals and advanced concepts</li>
+                    <li>Data manipulation with Pandas and NumPy</li>
+                    <li>Statistical analysis and hypothesis testing</li>
+                    <li>Data visualization with Matplotlib and Seaborn</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3 class="column-title">Advanced Topics</h3>
+                <ul class="checklist">
+                    <li>Machine learning algorithms and implementation</li>
+                    <li>Deep learning with TensorFlow and Keras</li>
+                    <li>Real-world project development</li>
+                    <li>Portfolio building and career guidance</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Syllabus Section -->
+<section id="syllabus" class="section">
+    <div class="container">
+        <h2 class="section-title">Course Syllabus</h2>
+        <div class="syllabus-grid">
+            {% assign modules = "Python Fundamentals,Data Structures & Libraries,Data Cleaning & Preprocessing,Exploratory Data Analysis,Statistical Analysis,Machine Learning Basics,Regression Analysis,Classification Algorithms,Clustering & Dimensionality,Deep Learning Introduction,Advanced Deep Learning,Capstone Project" | split: "," %}
+            {% assign topics = "Variables & Data Types|Control Structures|Functions,Lists Dictionaries Sets|NumPy Basics|Pandas Introduction,Handling Missing Data|Data Transformation|Feature Engineering,Statistical Summaries|Data Visualization|Pattern Recognition,Descriptive Statistics|Hypothesis Testing|Correlation Analysis,Supervised Learning|Unsupervised Learning|Model Evaluation,Linear Regression|Logistic Regression|Regularization,Decision Trees|Random Forest|SVM,K-Means|Hierarchical Clustering|PCA,Neural Networks|TensorFlow Basics|Keras Implementation,CNNs|RNNs|Transfer Learning,Project Planning|Implementation|Presentation" | split: "," %}
+            
+            {% for i in (1..12) %}
+            <div class="syllabus-card">
+                <div class="syllabus-header">
+                    <h3 class="syllabus-title">Week {{ i }}: {{ modules[forloop.index0] }}</h3>
+                    <div class="week-badge">Week {{ i }}</div>
+                </div>
+                <div class="syllabus-topics">
+                    {% assign week_topics = topics[forloop.index0] | split: "|" %}
+                    {% for topic in week_topics %}
+                    <span class="topic-badge">{{ topic }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Instructor Section -->
+<section id="instructor" class="section section-gray">
+    <div class="container">
+        <h2 class="section-title">Meet Your Instructor</h2>
+        <div class="instructor-card">
+            <div class="instructor-avatar">DS</div>
+            <div class="instructor-info">
+                <h3 class="instructor-name">Dr. Sarah Johnson</h3>
+                <p class="instructor-role">Senior Data Scientist at TechCorp</p>
+                <p class="instructor-bio">
+                    With over 8 years of experience in data science and machine learning, Dr. Johnson has worked with 
+                    Fortune 500 companies to implement AI solutions. She holds a PhD in Computer Science from MIT and 
+                    has published 25+ research papers in top-tier conferences.
+                </p>
+                <div class="instructor-badges">
+                    <span class="instructor-badge">PhD Computer Science</span>
+                    <span class="instructor-badge">8+ Years Experience</span>
+                    <span class="instructor-badge">25+ Publications</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="section">
+    <div class="container">
+        <h2 class="section-title">What Students Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"This course completely transformed my career. The hands-on projects and clear explanations made complex concepts easy to understand."</p>
+                <div class="testimonial-author">
+                    <strong>Alex Chen</strong><br>
+                    <span>Data Analyst at Google</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Dr. Johnson's teaching style is exceptional. I went from knowing nothing about ML to landing my dream job in just 6 months."</p>
+                <div class="testimonial-author">
+                    <strong>Maria Rodriguez</strong><br>
+                    <span>ML Engineer at Spotify</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"The capstone project was incredibly valuable. It gave me real portfolio pieces that impressed employers during interviews."</p>
+                <div class="testimonial-author">
+                    <strong>David Kim</strong><br>
+                    <span>Data Scientist at Uber</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="section section-gray">
+    <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h3 class="faq-question">Do I need prior programming experience?</h3>
+                <p class="faq-answer">No! This course is designed for complete beginners. We start with Python basics and gradually build up to advanced topics.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">How much time should I dedicate per week?</h3>
+                <p class="faq-answer">We recommend 8-10 hours per week, including video lectures, assignments, and project work. The course is flexible to accommodate different schedules.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">What software/tools do I need?</h3>
+                <p class="faq-answer">All you need is a computer with internet access. We'll guide you through installing Python, Jupyter notebooks, and all necessary libraries.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Is there a certificate upon completion?</h3>
+                <p class="faq-answer">Yes! You'll receive a verified certificate of completion that you can add to your LinkedIn profile and resume.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">What if I fall behind or need extra help?</h3>
+                <p class="faq-answer">We have a dedicated Slack community, weekly office hours, and 1-on-1 mentoring sessions available for students who need additional support.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Is there a money-back guarantee?</h3>
+                <p class="faq-answer">We offer a 30-day money-back guarantee. If you're not satisfied with the course, we'll refund your payment in full.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="section">
+    <div class="container">
+        <div class="pricing-content">
+            <h2 class="section-title">Ready to Start Your Journey?</h2>
+            <p class="pricing-subtitle">Join thousands of students who have transformed their careers with data science</p>
+            
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3 class="pricing-title">Complete Course</h3>
+                    <div class="pricing-price">$299</div>
+                    <p class="pricing-period">One-time payment</p>
+                </div>
+                
+                <ul class="pricing-features">
+                    <li>12 weeks of comprehensive content</li>
+                    <li>Hands-on projects and assignments</li>
+                    <li>Slack community access</li>
+                    <li>Certificate of completion</li>
+                    <li>Lifetime access to materials</li>
+                    <li>30-day money-back guarantee</li>
+                </ul>
+                
+                <a href="#" class="btn btn-primary btn-large">Enroll Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter">
+    <div class="container">
+        <div class="newsletter-content">
+            <h2 class="newsletter-title">Stay Updated</h2>
+            <p class="newsletter-description">
+                Subscribe to our newsletter for course updates, data science tips, and exclusive content.
+            </p>
+            
+            <form class="newsletter-form" id="newsletter-form">
+                <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                <button type="submit" class="btn btn-green">Subscribe</button>
+            </form>
+            
+            <p class="newsletter-note">You'll get updates within 24 hours</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">DataMaster.Course</div>
+            <p class="footer-tagline">Empowering the next generation of data scientists</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </div>
+</footer>

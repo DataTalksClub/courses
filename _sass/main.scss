@@ -1,0 +1,633 @@
+// Variables
+$primary-color: #2563eb;
+$primary-hover: #1d4ed8;
+$secondary-color: #6b7280;
+$success-color: #16a34a;
+$success-hover: #15803d;
+$text-dark: #1f2937;
+$text-light: #6b7280;
+$text-lighter: #9ca3af;
+$bg-gray: #f9fafb;
+$bg-purple: #faf5ff;
+$border-color: #e5e7eb;
+$white: #ffffff;
+
+// Base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: $text-dark;
+  background-color: $white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  
+  @media (min-width: 768px) {
+    padding: 0 2rem;
+  }
+}
+
+// Header
+.header {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid $border-color;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $text-dark;
+  }
+  
+  .nav {
+    display: none;
+    gap: 2rem;
+    
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+  
+  .nav-link {
+    color: $primary-color;
+    text-decoration: none;
+    transition: color 0.2s;
+    
+    &:hover {
+      color: $primary-hover;
+    }
+  }
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+  
+  &.btn-primary {
+    background-color: $primary-color;
+    color: $white;
+    
+    &:hover {
+      background-color: $primary-hover;
+    }
+  }
+  
+  &.btn-secondary {
+    background-color: $white;
+    color: $text-dark;
+    border: 1px solid $border-color;
+    
+    &:hover {
+      background-color: $bg-gray;
+    }
+  }
+  
+  &.btn-green {
+    background-color: $success-color;
+    color: $white;
+    
+    &:hover {
+      background-color: $success-hover;
+    }
+  }
+  
+  &.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    width: 100%;
+  }
+}
+
+// Hero Section
+.hero {
+  padding: 5rem 0;
+  text-align: center;
+  
+  .hero-content {
+    max-width: 4xl;
+    margin: 0 auto;
+  }
+  
+  .badge {
+    display: inline-block;
+    background-color: rgba($primary-color, 0.1);
+    color: $primary-color;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba($primary-color, 0.2);
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    
+    @media (min-width: 768px) {
+      font-size: 4rem;
+    }
+  }
+  
+  .hero-subtitle {
+    color: $secondary-color;
+  }
+  
+  .hero-description {
+    font-size: 1.25rem;
+    color: $secondary-color;
+    margin-bottom: 2rem;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 3rem;
+    
+    @media (min-width: 640px) {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+  
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    
+    .stat {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: $text-light;
+    }
+  }
+}
+
+// Sections
+.section {
+  padding: 5rem 0;
+  
+  &.section-gray {
+    background-color: $bg-gray;
+  }
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: $text-dark;
+}
+
+// Two Column Layout
+.two-column {
+  display: grid;
+  gap: 2rem;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.column-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: $text-dark;
+}
+
+.checklist {
+  list-style: none;
+  
+  li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.75rem;
+    color: $text-dark;
+    
+    &::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: $success-color;
+      font-weight: bold;
+    }
+  }
+}
+
+// Syllabus
+.syllabus-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.syllabus-card {
+  background: $white;
+  border: 1px solid $border-color;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  
+  .syllabus-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  .syllabus-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $text-dark;
+    flex: 1;
+  }
+  
+  .week-badge {
+    background-color: $bg-gray;
+    color: $text-dark;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+  }
+  
+  .syllabus-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .topic-badge {
+    background-color: rgba($primary-color, 0.1);
+    color: $primary-color;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+  }
+}
+
+// Instructor
+.instructor-card {
+  background: $white;
+  border: 1px solid $border-color;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+.instructor-avatar {
+  width: 8rem;
+  height: 8rem;
+  background: linear-gradient(135deg, #60a5fa, #a855f7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.instructor-info {
+  flex: 1;
+  text-align: center;
+  
+  @media (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+.instructor-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: $text-dark;
+}
+
+.instructor-role {
+  color: $primary-color;
+  margin-bottom: 1rem;
+}
+
+.instructor-bio {
+  color: $text-dark;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.instructor-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+  }
+}
+
+.instructor-badge {
+  background-color: rgba($primary-color, 0.1);
+  color: $primary-color;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+// Testimonials
+.testimonials-grid {
+  display: grid;
+  gap: 2rem;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.testimonial-card {
+  background: $white;
+  border: 1px solid $border-color;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  
+  .stars {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+  
+  .testimonial-text {
+    font-style: italic;
+    color: $text-dark;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    
+    &::before {
+      content: '"';
+    }
+    
+    &::after {
+      content: '"';
+    }
+  }
+  
+  .testimonial-author {
+    strong {
+      color: $text-dark;
+    }
+    
+    span {
+      color: $text-light;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+// FAQ
+.faq-list {
+  max-width: 4xl;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: $white;
+  border: 1px solid $border-color;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  
+  .faq-question {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: $text-dark;
+    margin-bottom: 0.75rem;
+  }
+  
+  .faq-answer {
+    color: $text-dark;
+    line-height: 1.6;
+  }
+}
+
+// Pricing
+.pricing-content {
+  text-align: center;
+  max-width: 4xl;
+  margin: 0 auto;
+}
+
+.pricing-subtitle {
+  font-size: 1.25rem;
+  color: $secondary-color;
+  margin-bottom: 3rem;
+}
+
+.pricing-card {
+  max-width: 28rem;
+  margin: 0 auto;
+  background: rgba($primary-color, 0.05);
+  border: 2px solid rgba($primary-color, 0.2);
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $text-dark;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: $primary-color;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-period {
+  color: $secondary-color;
+}
+
+.pricing-features {
+  list-style: none;
+  margin-bottom: 2rem;
+  text-align: left;
+  
+  li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.75rem;
+    color: $text-dark;
+    
+    &::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: $success-color;
+      font-weight: bold;
+    }
+  }
+}
+
+// Newsletter
+.newsletter {
+  background-color: $bg-purple;
+  padding: 5rem 0;
+}
+
+.newsletter-content {
+  max-width: 42rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.newsletter-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: $text-dark;
+  margin-bottom: 1rem;
+}
+
+.newsletter-description {
+  color: $secondary-color;
+  margin-bottom: 2rem;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 28rem;
+  margin: 0 auto 1rem;
+  
+  @media (min-width: 640px) {
+    flex-direction: row;
+  }
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid $border-color;
+  border-radius: 0.5rem;
+  background: $white;
+  font-size: 1rem;
+  
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+  }
+}
+
+.newsletter-note {
+  font-size: 0.875rem;
+  color: $text-light;
+}
+
+// Footer
+.footer {
+  background-color: #1f2937;
+  color: $white;
+  padding: 3rem 0;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footer-tagline {
+  color: #9ca3af;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+  
+  a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.2s;
+    
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 767px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .instructor-card {
+    text-align: center;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
