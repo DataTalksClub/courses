@@ -11,11 +11,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Data Science From Zero to Hero</title>
+    <meta name="description" content="A comprehensive 12-week course that takes you from beginner to advanced data scientist. Learn Python, machine learning, and real-world projects.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Header -->
 <header class="header">
     <div class="container">
         <div class="header-content">
-            <div class="logo">DataMaster.Course</div>
+            <div class="logo">Machine Learning Zoomcamp</div>
             <nav class="nav">
                 <a href="#description" class="nav-link">Description</a>
                 <a href="#syllabus" class="nav-link">Syllabus</a>
@@ -32,14 +43,14 @@
 <section class="hero">
     <div class="container">
         <div class="hero-content">
-            <div class="badge">New Course Available</div>
+            <div class="badge">Free Course</div>
             <h1 class="hero-title">
-                Master Data Science<br>
-                <span class="hero-subtitle">From Zero to Hero</span>
+                Master ML Engineering<br>
+                <span class="hero-subtitle">From Zero to Deployment</span>
             </h1>
             <p class="hero-description">
-                A comprehensive 12-week course that takes you from beginner to advanced data scientist. 
-                Learn Python, machine learning, and real-world project implementation.
+                A comprehensive 4-month course that takes you from beginner to advanced ML engineer. 
+                Learn the fundamentals of ML, from regression and classification to deployment and deep learning.
             </p>
             <div class="hero-buttons">
                 <a href="#pricing" class="btn btn-primary">Enroll Now</a>
@@ -90,219 +101,336 @@
     </div>
 </section>
 
+<!-- Course Features Section -->
+<section class="section section-features">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">How You'll Learn</h2>
+            <p class="section-subtitle">Our comprehensive approach combines theory, practice, and community support</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-box">
+                <span class="feature-number">01</span>
+                <h3 class="feature-title">Theory Meets Practice</h3>
+                <p class="feature-description">
+                    Each concept is followed by hands-on practice. You'll learn by doing, not just watching.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <span class="feature-number">02</span>
+                <h3 class="feature-title">Interactive Learning</h3>
+                <p class="feature-description">
+                    Video lectures are paired with code demos, bringing complex concepts to life through practical examples.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <span class="feature-number">03</span>
+                <h3 class="feature-title">Weekly Assignments</h3>
+                <p class="feature-description">
+                    Reinforce your learning with practical homework assignments that challenge and inspire.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <span class="feature-number">04</span>
+                <h3 class="feature-title">Portfolio Project</h3>
+                <p class="feature-description">
+                    Cap off your learning with an end-to-end project that showcases your new skills to potential employers.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <span class="feature-number">05</span>
+                <h3 class="feature-title">Vibrant Community</h3>
+                <p class="feature-description">
+                    Join DataTalks.Club on Slack to connect with peers, share insights, and get support when you need it.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technologies Section -->
+<section class="technologies">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Technologies You'll Master</h2>
+            <p class="section-subtitle">A comprehensive tech stack for end-to-end machine learning development and deployment</p>
+        </div>
+
+        <!-- Part 1: Machine Learning Algorithms -->
+        <div class="tech-part">
+            <div class="tech-part-header">
+                <div class="tech-part-number">01</div>
+                <div>
+                    <h3 class="tech-part-title">Machine Learning Algorithms</h3>
+                    <p class="tech-part-description">Master the fundamentals of ML algorithms and their implementation</p>
+                </div>
+            </div>
+            
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-icon">
+                    <h3 class="tech-name">Python</h3>
+                    <p class="tech-description">The foundation of data science and machine learning development</p>
+                    <span class="tech-category">Core Language</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter" class="tech-icon">
+                    <h3 class="tech-name">Jupyter</h3>
+                    <p class="tech-description">Interactive computing environment for development and experimentation</p>
+                    <span class="tech-category">Development</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" class="tech-icon">
+                    <h3 class="tech-name">NumPy</h3>
+                    <p class="tech-description">Linear algebra and numerical computing for ML algorithms</p>
+                    <span class="tech-category">Data Processing</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" class="tech-icon">
+                    <h3 class="tech-name">Pandas</h3>
+                    <p class="tech-description">Data manipulation, analysis, and feature engineering</p>
+                    <span class="tech-category">Data Processing</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://raw.githubusercontent.com/mwaskom/seaborn/master/doc/_static/logo-mark-lightbg.svg" alt="Seaborn" class="tech-icon">
+                    <h3 class="tech-name">Matplotlib & Seaborn</h3>
+                    <p class="tech-description">Data visualization and statistical graphics</p>
+                    <span class="tech-category">Visualization</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" alt="Scikit-learn" class="tech-icon">
+                    <h3 class="tech-name">Scikit-learn</h3>
+                    <p class="tech-description">Implementation of various ML algorithms and evaluation metrics</p>
+                    <span class="tech-category">Machine Learning</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" class="tech-icon">
+                    <h3 class="tech-name">TensorFlow</h3>
+                    <p class="tech-description">Open-source framework for deep learning and neural networks</p>
+                    <span class="tech-category">Deep Learning</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" alt="Keras" class="tech-icon">
+                    <h3 class="tech-name">Keras</h3>
+                    <p class="tech-description">High-level neural network API for rapid deep learning development</p>
+                    <span class="tech-category">Deep Learning</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://raw.githubusercontent.com/dmlc/dmlc.github.io/master/img/logo-m/xgboost.png" alt="XGBoost" class="tech-icon">
+                    <h3 class="tech-name">XGBoost</h3>
+                    <p class="tech-description">Gradient boosting framework for advanced ensemble learning</p>
+                    <span class="tech-category">Machine Learning</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Part 2: Deployment -->
+        <div class="tech-part">
+            <div class="tech-part-header">
+                <div class="tech-part-number">02</div>
+                <div>
+                    <h3 class="tech-part-title">Model Deployment</h3>
+                    <p class="tech-part-description">Learn to deploy ML models to production environments</p>
+                </div>
+            </div>
+            
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" class="tech-icon">
+                    <h3 class="tech-name">Flask</h3>
+                    <p class="tech-description">Web framework for creating ML model APIs</p>
+                    <span class="tech-category">Web Framework</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="tech-icon">
+                    <h3 class="tech-name">Docker</h3>
+                    <p class="tech-description">Containerization for ML model deployment</p>
+                    <span class="tech-category">DevOps</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" class="tech-icon">
+                    <h3 class="tech-name">Kubernetes</h3>
+                    <p class="tech-description">Container orchestration for scaling ML applications</p>
+                    <span class="tech-category">DevOps</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://cdn.worldvectorlogo.com/logos/aws-lambda-1.svg" alt="AWS Lambda" class="tech-icon">
+                    <h3 class="tech-name">AWS Lambda</h3>
+                    <p class="tech-description">Serverless computing for ML model serving</p>
+                    <span class="tech-category">Cloud</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow Lite" class="tech-icon">
+                    <h3 class="tech-name">TensorFlow Lite</h3>
+                    <p class="tech-description">Optimized framework for mobile and edge devices</p>
+                    <span class="tech-category">Mobile & Edge</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow Serving" class="tech-icon">
+                    <h3 class="tech-name">TensorFlow Serving</h3>
+                    <p class="tech-description">Production system for ML model deployment</p>
+                    <span class="tech-category">Deployment</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://pipenv.pypa.io/en/latest/_static/pipenv.png" alt="Pipenv" class="tech-icon">
+                    <h3 class="tech-name">Pipenv</h3>
+                    <p class="tech-description">Python dependency and environment management</p>
+                    <span class="tech-category">Development</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Syllabus Section -->
 <section id="syllabus" class="section">
     <div class="container">
         <h2 class="section-title">Course Syllabus</h2>
+        
+        <!-- Prerequisites -->
+        <div class="prerequisites mb-8">
+            <h3 class="section-subtitle">Prerequisites</h3>
+            <div class="syllabus-topics">
+                <span class="topic-badge">Prior programming experience (1+ year)</span>
+                <span class="topic-badge">Command line basics</span>
+                <span class="topic-badge">No prior ML knowledge required</span>
+            </div>
+        </div>
+
+        <!-- Course Modules -->
         <div class="syllabus-grid">
-            
-            
-            
-            
             <div class="syllabus-card">
                 <div class="syllabus-header">
-                    <h3 class="syllabus-title">Week 1: Python Fundamentals</h3>
-                    <div class="week-badge">Week 1</div>
+                    <h3 class="syllabus-title">Module 1: Introduction to Machine Learning</h3>
+                    <div class="week-badge">Module 1</div>
                 </div>
                 <div class="syllabus-topics">
-                    
-                    
-                    <span class="topic-badge">Variables & Data Types</span>
-                    
-                    <span class="topic-badge">Control Structures</span>
-                    
-                    <span class="topic-badge">Functions</span>
-                    
-                </div>
-            </div>
-            
-            <div class="syllabus-card">
-                <div class="syllabus-header">
-                    <h3 class="syllabus-title">Week 2: Data Structures & Libraries</h3>
-                    <div class="week-badge">Week 2</div>
-                </div>
-                <div class="syllabus-topics">
-                    
-                    
-                    <span class="topic-badge">Lists Dictionaries Sets</span>
-                    
-                    <span class="topic-badge">NumPy Basics</span>
-                    
-                    <span class="topic-badge">Pandas Introduction</span>
-                    
-                </div>
-            </div>
-            
-            <div class="syllabus-card">
-                <div class="syllabus-header">
-                    <h3 class="syllabus-title">Week 3: Data Cleaning & Preprocessing</h3>
-                    <div class="week-badge">Week 3</div>
-                </div>
-                <div class="syllabus-topics">
-                    
-                    
-                    <span class="topic-badge">Handling Missing Data</span>
-                    
-                    <span class="topic-badge">Data Transformation</span>
-                    
-                    <span class="topic-badge">Feature Engineering</span>
-                    
-                </div>
-            </div>
-            
-            <div class="syllabus-card">
-                <div class="syllabus-header">
-                    <h3 class="syllabus-title">Week 4: Exploratory Data Analysis</h3>
-                    <div class="week-badge">Week 4</div>
-                </div>
-                <div class="syllabus-topics">
-                    
-                    
-                    <span class="topic-badge">Statistical Summaries</span>
-                    
-                    <span class="topic-badge">Data Visualization</span>
-                    
-                    <span class="topic-badge">Pattern Recognition</span>
-                    
-                </div>
-            </div>
-            
-            <div class="syllabus-card">
-                <div class="syllabus-header">
-                    <h3 class="syllabus-title">Week 5: Statistical Analysis</h3>
-                    <div class="week-badge">Week 5</div>
-                </div>
-                <div class="syllabus-topics">
-                    
-                    
-                    <span class="topic-badge">Descriptive Statistics</span>
-                    
-                    <span class="topic-badge">Hypothesis Testing</span>
-                    
-                    <span class="topic-badge">Correlation Analysis</span>
-                    
-                </div>
-            </div>
-            
-            <div class="syllabus-card">
-                <div class="syllabus-header">
-                    <h3 class="syllabus-title">Week 6: Machine Learning Basics</h3>
-                    <div class="week-badge">Week 6</div>
-                </div>
-                <div class="syllabus-topics">
-                    
-                    
+                    <span class="topic-badge">ML vs Rule-Based Systems</span>
                     <span class="topic-badge">Supervised Learning</span>
-                    
-                    <span class="topic-badge">Unsupervised Learning</span>
-                    
-                    <span class="topic-badge">Model Evaluation</span>
-                    
+                    <span class="topic-badge">CRISP-DM Framework</span>
+                    <span class="topic-badge">Model Selection Process</span>
+                    <span class="topic-badge">Environment Setup</span>
                 </div>
             </div>
-            
+
             <div class="syllabus-card">
                 <div class="syllabus-header">
-                    <h3 class="syllabus-title">Week 7: Regression Analysis</h3>
-                    <div class="week-badge">Week 7</div>
+                    <h3 class="syllabus-title">Module 2: Machine Learning for Regression</h3>
+                    <div class="week-badge">Module 2</div>
                 </div>
                 <div class="syllabus-topics">
-                    
-                    
-                    <span class="topic-badge">Linear Regression</span>
-                    
+                    <span class="topic-badge">Car Price Prediction Project</span>
+                    <span class="topic-badge">Exploratory Data Analysis</span>
+                    <span class="topic-badge">Linear Regression Basics</span>
+                    <span class="topic-badge">Feature Engineering & Regularization</span>
+                </div>
+            </div>
+
+            <div class="syllabus-card">
+                <div class="syllabus-header">
+                    <h3 class="syllabus-title">Module 3: Machine Learning for Classification</h3>
+                    <div class="week-badge">Module 3</div>
+                </div>
+                <div class="syllabus-topics">
+                    <span class="topic-badge">Churn Prediction Project</span>
+                    <span class="topic-badge">Feature Selection & Encoding</span>
                     <span class="topic-badge">Logistic Regression</span>
-                    
-                    <span class="topic-badge">Regularization</span>
-                    
+                    <span class="topic-badge">Model Interpretation</span>
                 </div>
             </div>
-            
+
             <div class="syllabus-card">
                 <div class="syllabus-header">
-                    <h3 class="syllabus-title">Week 8: Classification Algorithms</h3>
-                    <div class="week-badge">Week 8</div>
+                    <h3 class="syllabus-title">Module 4: Evaluation Metrics</h3>
+                    <div class="week-badge">Module 4</div>
                 </div>
                 <div class="syllabus-topics">
-                    
-                    
+                    <span class="topic-badge">Accuracy, Precision, Recall</span>
+                    <span class="topic-badge">ROC Curves & AUC</span>
+                    <span class="topic-badge">Cross-Validation</span>
+                </div>
+            </div>
+
+            <div class="syllabus-card">
+                <div class="syllabus-header">
+                    <h3 class="syllabus-title">Module 5: Deploying ML Models</h3>
+                    <div class="week-badge">Module 5</div>
+                </div>
+                <div class="syllabus-topics">
+                    <span class="topic-badge">Saving & Loading Models</span>
+                    <span class="topic-badge">Flask API Deployment</span>
+                    <span class="topic-badge">Docker & Virtual Environments</span>
+                    <span class="topic-badge">Cloud Deployment (AWS)</span>
+                </div>
+            </div>
+
+            <div class="syllabus-card">
+                <div class="syllabus-header">
+                    <h3 class="syllabus-title">Module 6: Decision Trees & Ensemble Learning</h3>
+                    <div class="week-badge">Module 6</div>
+                </div>
+                <div class="syllabus-topics">
                     <span class="topic-badge">Decision Trees</span>
-                    
-                    <span class="topic-badge">Random Forest</span>
-                    
-                    <span class="topic-badge">SVM</span>
-                    
+                    <span class="topic-badge">Random Forest & Gradient Boosting</span>
+                    <span class="topic-badge">Model Selection & Hyperparameter Tuning</span>
                 </div>
             </div>
-            
+
             <div class="syllabus-card">
                 <div class="syllabus-header">
-                    <h3 class="syllabus-title">Week 9: Clustering & Dimensionality</h3>
-                    <div class="week-badge">Week 9</div>
+                    <h3 class="syllabus-title">Module 7: Neural Networks & Deep Learning</h3>
+                    <div class="week-badge">Module 7</div>
                 </div>
                 <div class="syllabus-topics">
-                    
-                    
-                    <span class="topic-badge">K-Means</span>
-                    
-                    <span class="topic-badge">Hierarchical Clustering</span>
-                    
-                    <span class="topic-badge">PCA</span>
-                    
-                </div>
-            </div>
-            
-            <div class="syllabus-card">
-                <div class="syllabus-header">
-                    <h3 class="syllabus-title">Week 10: Deep Learning Introduction</h3>
-                    <div class="week-badge">Week 10</div>
-                </div>
-                <div class="syllabus-topics">
-                    
-                    
-                    <span class="topic-badge">Neural Networks</span>
-                    
-                    <span class="topic-badge">TensorFlow Basics</span>
-                    
-                    <span class="topic-badge">Keras Implementation</span>
-                    
-                </div>
-            </div>
-            
-            <div class="syllabus-card">
-                <div class="syllabus-header">
-                    <h3 class="syllabus-title">Week 11: Advanced Deep Learning</h3>
-                    <div class="week-badge">Week 11</div>
-                </div>
-                <div class="syllabus-topics">
-                    
-                    
-                    <span class="topic-badge">CNNs</span>
-                    
-                    <span class="topic-badge">RNNs</span>
-                    
+                    <span class="topic-badge">TensorFlow & Keras</span>
+                    <span class="topic-badge">Convolutional Neural Networks</span>
                     <span class="topic-badge">Transfer Learning</span>
-                    
+                    <span class="topic-badge">Model Optimization & Regularization</span>
                 </div>
             </div>
-            
+
             <div class="syllabus-card">
                 <div class="syllabus-header">
-                    <h3 class="syllabus-title">Week 12: Capstone Project</h3>
-                    <div class="week-badge">Week 12</div>
+                    <h3 class="syllabus-title">Module 8: Serverless Deep Learning</h3>
+                    <div class="week-badge">Module 8</div>
                 </div>
                 <div class="syllabus-topics">
-                    
-                    
-                    <span class="topic-badge">Project Planning</span>
-                    
-                    <span class="topic-badge">Implementation</span>
-                    
-                    <span class="topic-badge">Presentation</span>
-                    
+                    <span class="topic-badge">Introduction to Serverless</span>
+                    <span class="topic-badge">AWS Lambda & TensorFlow Lite</span>
+                    <span class="topic-badge">API Gateway</span>
                 </div>
             </div>
-            
+
+            <div class="syllabus-card">
+                <div class="syllabus-header">
+                    <h3 class="syllabus-title">Module 9: Kubernetes & TensorFlow Serving</h3>
+                    <div class="week-badge">Module 9</div>
+                </div>
+                <div class="syllabus-topics">
+                    <span class="topic-badge">TensorFlow Model Serving</span>
+                    <span class="topic-badge">Kubernetes Basics</span>
+                    <span class="topic-badge">Deploying ML Models to Kubernetes</span>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -457,6 +585,9 @@
         </div>
     </div>
 </footer>
+
+</body>
+</html>
 
     <script src="/assets/js/main.js"></script>
 </body>

@@ -177,73 +177,157 @@ export default function CourseLanding() {
       <section id="syllabus" className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-gray-800 mb-12 text-center">Course Syllabus</h2>
-          <div className="space-y-6">
+          
+          {/* Prerequisites */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Prerequisites</h3>
+            <ul className="space-y-2">
+              <li className="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-700">Prior programming experience (at least 1+ year)</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-700">Comfort with command line basics</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-700">No prior ML knowledge required</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Course Modules */}
+          <div className="space-y-8">
             {[
               {
-                week: 1,
-                title: "Python Fundamentals",
-                topics: ["Variables & Data Types", "Control Structures", "Functions"],
+                module: 1,
+                title: "Introduction to Machine Learning",
+                topics: [
+                  "ML vs Rule-Based Systems",
+                  "Supervised Learning",
+                  "CRISP-DM Framework",
+                  "Model Selection Process",
+                  "Environment Setup",
+                  "Homework"
+                ],
               },
               {
-                week: 2,
-                title: "Data Structures & Libraries",
-                topics: ["Lists, Dictionaries, Sets", "NumPy Basics", "Pandas Introduction"],
+                module: 2,
+                title: "Machine Learning for Regression",
+                topics: [
+                  "Car Price Prediction Project",
+                  "Exploratory Data Analysis",
+                  "Linear Regression Basics",
+                  "Feature Engineering & Regularization",
+                  "Homework"
+                ],
               },
               {
-                week: 3,
-                title: "Data Cleaning & Preprocessing",
-                topics: ["Handling Missing Data", "Data Transformation", "Feature Engineering"],
+                module: 3,
+                title: "Machine Learning for Classification",
+                topics: [
+                  "Churn Prediction Project",
+                  "Feature Selection & Encoding",
+                  "Logistic Regression",
+                  "Model Interpretation",
+                  "Homework"
+                ],
               },
               {
-                week: 4,
-                title: "Exploratory Data Analysis",
-                topics: ["Statistical Summaries", "Data Visualization", "Pattern Recognition"],
+                module: 4,
+                title: "Evaluation Metrics",
+                topics: [
+                  "Accuracy, Precision, Recall",
+                  "ROC Curves & AUC",
+                  "Cross-Validation",
+                  "Homework"
+                ],
               },
               {
-                week: 5,
-                title: "Statistical Analysis",
-                topics: ["Descriptive Statistics", "Hypothesis Testing", "Correlation Analysis"],
+                module: 5,
+                title: "Deploying ML Models",
+                topics: [
+                  "Saving & Loading Models",
+                  "Flask API Deployment",
+                  "Docker & Virtual Environments",
+                  "Cloud Deployment (AWS)",
+                  "Homework"
+                ],
               },
               {
-                week: 6,
-                title: "Machine Learning Basics",
-                topics: ["Supervised Learning", "Unsupervised Learning", "Model Evaluation"],
+                module: 6,
+                title: "Decision Trees & Ensemble Learning",
+                topics: [
+                  "Decision Trees",
+                  "Random Forest & Gradient Boosting",
+                  "Model Selection & Hyperparameter Tuning",
+                  "Homework"
+                ],
               },
               {
-                week: 7,
-                title: "Regression Analysis",
-                topics: ["Linear Regression", "Logistic Regression", "Regularization"],
+                module: 7,
+                title: "Neural Networks & Deep Learning",
+                topics: [
+                  "TensorFlow & Keras",
+                  "Convolutional Neural Networks",
+                  "Transfer Learning",
+                  "Model Optimization & Regularization",
+                  "Homework"
+                ],
               },
-              { week: 8, title: "Classification Algorithms", topics: ["Decision Trees", "Random Forest", "SVM"] },
-              { week: 9, title: "Clustering & Dimensionality", topics: ["K-Means", "Hierarchical Clustering", "PCA"] },
               {
-                week: 10,
-                title: "Deep Learning Introduction",
-                topics: ["Neural Networks", "TensorFlow Basics", "Keras Implementation"],
+                module: 8,
+                title: "Serverless Deep Learning",
+                topics: [
+                  "Introduction to Serverless",
+                  "AWS Lambda & TensorFlow Lite",
+                  "API Gateway",
+                  "Homework"
+                ],
               },
-              { week: 11, title: "Advanced Deep Learning", topics: ["CNNs", "RNNs", "Transfer Learning"] },
-              { week: 12, title: "Capstone Project", topics: ["Project Planning", "Implementation", "Presentation"] },
+              {
+                module: 9,
+                title: "Kubernetes & TensorFlow Serving",
+                topics: [
+                  "TensorFlow Model Serving",
+                  "Kubernetes Basics",
+                  "Deploying ML Models to Kubernetes",
+                  "Homework"
+                ],
+              }
             ].map((module) => (
-              <Card key={module.week} className="border border-gray-200">
+              <Card key={module.module} className="border border-gray-200">
                 <CardContent className="p-6">
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                        Week {module.week}: {module.title}
-                      </h3>
-                      <div className="flex flex-wrap gap-2">
-                        {module.topics.map((topic, index) => (
-                          <Badge key={index} variant="secondary" className="bg-blue-50 text-blue-700">
-                            {topic}
+                  <div className="flex items-center gap-4 mb-4">
+                    <Badge variant="secondary" className="text-blue-700 bg-blue-50">
+                      Module {module.module}
                           </Badge>
-                        ))}
-                      </div>
-                    </div>
-                    <Badge className="bg-gray-100 text-gray-700">Week {module.week}</Badge>
+                    <h3 className="text-xl font-semibold text-gray-800">{module.title}</h3>
                   </div>
+                  <ul className="space-y-2">
+                    {module.topics.map((topic, index) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">{topic}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          {/* Capstone Projects */}
+          <div className="mt-12">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Capstone Projects</h3>
+            <Card className="border border-gray-200">
+              <CardContent className="p-6">
+                <p className="text-gray-700">
+                  Midterm & Final Projects integrating all learned concepts
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
