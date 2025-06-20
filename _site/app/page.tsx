@@ -94,7 +94,7 @@ export default function CourseLanding() {
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
               onClick={() => scrollToSection("pricing")}
             >
-              Enroll Now - $299
+              Enroll Now
             </Button>
             <Button
               variant="outline"
@@ -385,8 +385,6 @@ export default function CourseLanding() {
             <CardContent className="p-8">
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">Complete Course</h3>
-                <div className="text-4xl font-bold text-blue-600 mb-2">$299</div>
-                <p className="text-gray-600">One-time payment</p>
               </div>
 
               <ul className="space-y-3 mb-8 text-left">
