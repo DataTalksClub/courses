@@ -1,6 +1,6 @@
 # DataMaster Course Landing Page
 
-A Jekyll-based landing page for selling data science courses with an indie aesthetic.
+A Jekyll-based landing page for courses.
 
 ## Features
 
