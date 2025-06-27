@@ -6,9 +6,12 @@ url: "https://yourusername.github.io"
 # Build settings
 markdown: kramdown
 highlighter: rouge
+
+# Sass/SCSS
 sass:
   sass_dir: _sass
   style: compressed
+  sourcemap: :always
 
 plugins:
   - jekyll-feed
@@ -23,3 +26,6 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - .sass-cache/
+  - .jekyll-cache/
+  - .jekyll-metadata
