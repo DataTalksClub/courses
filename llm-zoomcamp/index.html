@@ -1,0 +1,1232 @@
+---
+layout: default
+title: "LLM Zoomcamp: A Free Course on Real-Life Applications of LLMs"
+description: "A comprehensive 10-week course that teaches you how to build AI systems that answer questions about your knowledge base. Learn LLMs, RAG, vector search, evaluation, monitoring, and more."
+---
+
+{% include ml-zoomcamp-styles.html %}
+
+    <div class="top-banner">
+        <div class="container">
+            <div class="register-cta-container">
+                <p>🎓 Current cohort is live! <a href="https://airtable.com/appPPxkgYLH06Mvbw/shr7WtxHEPXxaui0Q" class="register-cta">Join Now</a></p> 
+            </div>
+        </div>
+    </div>
+
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="logo">LLM Zoomcamp</a>
+            <nav class="nav">
+                <a href="/" class="nav-link">All Courses</a>
+                <a href="#description" class="nav-link">Topics</a>
+                <a href="#technologies" class="nav-link">Technologies</a>
+                <a href="#syllabus" class="nav-link">Syllabus</a>
+                <a href="#portfolio" class="nav-link">Projects</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="https://airtable.com/appPPxkgYLH06Mvbw/shr7WtxHEPXxaui0Q" class="nav-link nav-link-highlight" target="_blank">Register</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<script>
+    // Add shadow to header on scroll
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 0) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+</script>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="badge">Free Course</div>
+            <h1 class="hero-title">
+                LLM Zoomcamp<br>
+                <span class="hero-subtitle">Master Real-Life Applications of LLMs</span>
+            </h1>
+            <p class="hero-description">
+                A comprehensive 10-week course that teaches you how to build AI systems that answer questions about your knowledge base. 
+                Learn LLMs, RAG, vector search, evaluation, monitoring, and more.
+            </p>
+            <div class="hero-buttons">
+                <a href="#pricing" class="btn btn-primary">Join Now</a>
+                <a href="#description" class="btn btn-secondary">Learn More</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-icon">👥</span>
+                    <span>73,000+ community</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">⏰</span>
+                    <span>10 weeks of content</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">⭐</span>
+                    <span>Hands-on projects</span>
+                </div>
+            </div>
+            <div class="tech-badges">
+                <a href="https://openai.com" target="_blank" class="tech-badge">
+                    <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI">
+                </a>
+                <a href="https://qdrant.tech" target="_blank" class="tech-badge">
+                    <img src="https://img.shields.io/badge/Qdrant-FF4B4B?style=for-the-badge&logo=qdrant&logoColor=white" alt="Qdrant">
+                </a>
+                <a href="https://www.elastic.co" target="_blank" class="tech-badge">
+                    <img src="https://img.shields.io/badge/Elasticsearch-005571?style=for-the-badge&logo=elasticsearch&logoColor=white" alt="Elasticsearch">
+                </a>
+                <a href="https://www.arize.com" target="_blank" class="tech-badge">
+                    <img src="https://img.shields.io/badge/Arize-00C7B7?style=for-the-badge&logo=arize&logoColor=white" alt="Arize">
+                </a>
+                <a href="https://jupyter.org/" target="_blank" class="tech-badge">
+                    <img src="https://img.shields.io/badge/Notebook-7.1.2-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter Notebook">
+                </a>
+                <a href="https://pandas.pydata.org/" target="_blank" class="tech-badge">
+                    <img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="pandas">
+                </a>
+                <a href="https://scikit-learn.org/" target="_blank" class="tech-badge">
+                    <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn">
+                </a>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- What You'll Learn Section -->
+<section id="description" class="section section-gray">
+    <div class="container">
+        <h2 class="section-title">What You'll Learn</h2>
+        <p class="section-subtitle">A comprehensive curriculum covering modern LLM applications</p>
+        
+        <div class="learning-grid">
+            <div class="learning-card">
+                <div class="learning-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <h3>LLM Foundations</h3>
+                <ul class="learning-list">
+                    <li>Introduction to LLMs</li>
+                    <li>OpenAI API integration</li>
+                    <li>Prompt engineering</li>
+                    <li>Text generation</li>
+                    <li>Question answering</li>
+                </ul>
+            </div>
+
+            <div class="learning-card">
+                <div class="learning-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                    </svg>
+                </div>
+                <h3>Vector Search</h3>
+                <ul class="learning-list">
+                    <li>Vector embeddings</li>
+                    <li>Semantic search</li>
+                    <li>Qdrant integration</li>
+                    <li>Indexing strategies</li>
+                    <li>Efficient retrieval</li>
+                </ul>
+            </div>
+
+            <div class="learning-card">
+                <div class="learning-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.871 4A17.926 17.926 0 003 12c0 2.874.673 5.59 1.871 8m14.13 0a17.926 17.926 0 001.87-8c0-2.874-.673-5.59-1.87-8M9 9h1.246a1 1 0 01.961.725l1.586 5.55a1 1 0 00.961.725H15m1-7h-.08a2 2 0 00-1.519.698L9.6 15.302A2 2 0 018.08 16H8" />
+                    </svg>
+                </div>
+                <h3>RAG & Agents</h3>
+                <ul class="learning-list">
+                    <li>Retrieval-Augmented Generation</li>
+                    <li>Knowledge base integration</li>
+                    <li>Agentic functionality</li>
+                    <li>Function calling</li>
+                    <li>Advanced RAG patterns</li>
+                </ul>
+            </div>
+
+            <div class="learning-card">
+                <div class="learning-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                </div>
+                <h3>Evaluation & Monitoring</h3>
+                <ul class="learning-list">
+                    <li>Search evaluation</li>
+                    <li>Online vs offline testing</li>
+                    <li>LLM as a Judge</li>
+                    <li>User feedback tracking</li>
+                    <li>Performance monitoring</li>
+                </ul>
+            </div>
+
+            <div class="learning-card">
+                <div class="learning-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                </div>
+                <h3>Best Practices</h3>
+                <ul class="learning-list">
+                    <li>Hybrid search techniques</li>
+                    <li>Document reranking</li>
+                    <li>System optimization</li>
+                    <li>Error handling</li>
+                    <li>Production deployment</li>
+                </ul>
+            </div>
+
+            <div class="learning-card">
+                <div class="learning-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <h3>Project Development</h3>
+                <ul class="learning-list">
+                    <li>End-to-end projects</li>
+                    <li>Fitness assistant example</li>
+                    <li>System architecture</li>
+                    <li>Integration patterns</li>
+                    <li>Deployment strategies</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Prerequisites Section -->
+<section class="section section-gray">
+    <div class="container">
+        <h2 class="section-title">Prerequisites</h2>
+        <div class="prerequisites-grid">
+            <div class="prerequisite-card">
+                <div class="prerequisite-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                </div>
+                <h3>Python Experience</h3>
+                <p>Basic Python programming knowledge</p>
+                <ul class="prerequisite-details">
+                    <li>Understanding of functions and classes</li>
+                    <li>Working with APIs and HTTP requests</li>
+                    <li>Basic data structures and JSON</li>
+                </ul>
+            </div>
+
+            <div class="prerequisite-card">
+                <div class="prerequisite-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
+                    </svg>
+                </div>
+                <h3>Development Tools</h3>
+                <p>Familiarity with basic development tools</p>
+                <ul class="prerequisite-details">
+                    <li>Git version control</li>
+                    <li>Command line operations</li>
+                    <li>Virtual environments</li>
+                </ul>
+            </div>
+
+            <div class="prerequisite-card highlight">
+                <div class="prerequisite-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <h3>LLM Knowledge</h3>
+                <p>No prior LLM or ML experience required!</p>
+                <ul class="prerequisite-details">
+                    <li>We'll teach LLMs from scratch</li>
+                    <li>Step-by-step approach</li>
+                    <li>Focus on practical applications</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section-cta">
+            <div class="register-cta-container">
+                <p>Meet the requirements? Start your journey into LLM engineering!</p>
+                <a href="https://airtable.com/appPPxkgYLH06Mvbw/shr7WtxHEPXxaui0Q" class="register-cta">Join the Course</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Syllabus Section -->
+<section id="syllabus" class="section">
+    <div class="container">
+        <h2 class="section-title">Course Syllabus</h2>
+        <p class="section-subtitle">A comprehensive curriculum covering modern LLM applications</p>
+
+        <div class="syllabus-grid">
+            <!-- Module 1 -->
+            <div class="module">
+                <span class="module-tag">Module 1</span>
+                <h3>Introduction to LLMs and RAG</h3>
+                <ul>
+                    <li>Basics of LLMs</li>
+                    <li>OpenAI API Integration</li>
+                    <li>Text Search with Elasticsearch</li>
+                    <li>RAG Fundamentals</li>
+                    <li>Homework</li>
+                </ul>
+            </div>
+
+            <!-- Module 2 -->
+            <div class="module">
+                <span class="module-tag">Module 2</span>
+                <h3>Vector Search</h3>
+                <ul>
+                    <li>Vector Search & Embeddings</li>
+                    <li>Indexing & Retrieval</li>
+                    <li>Qdrant Integration</li>
+                    <li>Efficient Data Storage</li>
+                    <li>Homework</li>
+                </ul>
+            </div>
+
+            <!-- Bonus Module -->
+            <div class="module">
+                <span class="module-tag">Bonus Module</span>
+                <h3>Agents (Bonus)</h3>
+                <ul>
+                    <li>Agentic Functionality</li>
+                    <li>Function Calling</li>
+                    <li>Advanced RAG Patterns</li>
+                    <li>Homework</li>
+                </ul>
+            </div>
+
+            <!-- Module 3 -->
+            <div class="module">
+                <span class="module-tag">Module 3</span>
+                <h3>Evaluation</h3>
+                <ul>
+                    <li>Search Evaluation</li>
+                    <li>Online vs Offline Testing</li>
+                    <li>LLM as a Judge</li>
+                    <li>Evaluation Metrics</li>
+                    <li>Homework</li>
+                </ul>
+            </div>
+
+            <!-- Module 4 -->
+            <div class="module">
+                <span class="module-tag">Module 4</span>
+                <h3>Monitoring</h3>
+                <ul>
+                    <li>Online Evaluation</li>
+                    <li>User Feedback Tracking</li>
+                    <li>Monitoring Dashboards</li>
+                    <li>Performance Analysis</li>
+                    <li>Homework</li>
+                </ul>
+            </div>
+
+            <!-- Module 5 -->
+            <div class="module">
+                <span class="module-tag">Module 5</span>
+                <h3>Best Practices</h3>
+                <ul>
+                    <li>Hybrid Search</li>
+                    <li>Document Reranking</li>
+                    <li>System Optimization</li>
+                    <li>Error Handling</li>
+                    <li>Homework</li>
+                </ul>
+            </div>
+
+            <!-- Module 6 -->
+            <div class="module">
+                <span class="module-tag">Module 6</span>
+                <h3>End-to-End Project</h3>
+                <ul>
+                    <li>Fitness Assistant Project</li>
+                    <li>System Architecture</li>
+                    <li>Integration Patterns</li>
+                    <li>Deployment Strategies</li>
+                    <li>Project Review</li>
+                </ul>
+            </div>
+
+            <!-- Capstone Project -->
+            <div class="module project">
+                <span class="module-tag">Capstone Project</span>
+                <h3>Build Your Own LLM Application</h3>
+                <p>Apply everything you've learned to create a complete LLM-powered application.</p>
+                <ul>
+                    <li>End-to-end implementation</li>
+                    <li>RAG system development</li>
+                    <li>Evaluation and monitoring</li>
+                    <li>Production deployment</li>
+                    <li>Documentation and presentation</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section-cta">
+            <div class="register-cta-container">
+                <p>Ready to dive into LLM engineering?</p>
+                <a href="https://airtable.com/appPPxkgYLH06Mvbw/shr7WtxHEPXxaui0Q" class="register-cta">Start Learning Today</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Course Features Section -->
+<section class="section section-features">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">How You'll Learn</h2>
+            <p class="section-subtitle">Our comprehensive approach combines theory, practice, and community support</p>
+        </div>
+        
+        <div class="features-grid">
+
+            <div class="feature-box">
+                    <span class="feature-number">01</span>
+                <h3 class="feature-title">Weekly Assignments</h3>
+                <p class="feature-description">
+                    Reinforce your learning with practical homework assignments that challenge and inspire.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <span class="feature-number">02</span>
+                <h3 class="feature-title">Portfolio Project</h3>
+                <p class="feature-description">
+                    Cap off your learning with an end-to-end project that showcases your new skills to potential employers.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <span class="feature-number">03</span>
+                <h3 class="feature-title">Vibrant Community</h3>
+                <p class="feature-description">
+                    Join DataTalks.Club on Slack to connect with peers, share insights, and get support when you need it.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Projects Section -->
+<section id = "portfolio" class="section section-gray">
+    <div class="container">
+        <h2 class="section-title">Build Your ML Portfolio</h2>
+        <p class="section-subtitle">Create a real-world project that showcases your skills to potential employers</p>
+
+        <div class="projects-grid">
+            <div class="project-card main">
+                <div class="project-content">
+                    <h3>Course Project</h3>
+                    <p class="project-description">
+                        As an LLM engineer, personal projects are crucial for job interviews and demonstrating practical experience. 
+                        You'll complete one comprehensive end-to-end RAG project with two submission attempts:
+                    </p>
+                    <ul class="project-list">
+                        <li>
+                            <strong>Project Requirements:</strong>
+                            <ul>
+                                <li>Select and prepare an interesting dataset</li>
+                                <li>Build a knowledge base and ingestion pipeline</li>
+                                <li>Implement retrieval and LLM integration</li>
+                                <li>Evaluate RAG performance</li>
+                                <li>Create a user interface</li>
+                                <li>Implement monitoring and feedback collection</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Technology Flexibility:</strong>
+                            <ul>
+                                <li>Choice of LLM (OpenAI, Ollama, Groq, etc.)</li>
+                                <li>Various database options for knowledge base</li>
+                                <li>Multiple interface frameworks (Streamlit, FastAPI, etc.)</li>
+                                <li>Different monitoring solutions</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Instructor Section -->
+<section id="instructor" class="section section-gray">
+    <div class="container">
+        <h2 class="section-title">Meet Your Instructors</h2>
+        <div class="instructor-card">
+            <div class="instructor-image">
+                <img src="https://avatars.githubusercontent.com/u/875246" alt="Alexey Grigorev" class="instructor-avatar">
+            </div>
+            <div class="instructor-info">
+                <div class="instructor-header">
+                    <h3 class="instructor-name">Alexey Grigorev</h3>
+                    <p class="instructor-role">Lead Instructor & Founder of DataTalks.Club</p>
+                </div>
+                <p class="instructor-bio">
+                    A seasoned software engineer and data scientist with over 10 years of engineering and 6 years of ML experience, 
+                    Alexey specializes in bringing data science projects from early prototypes to production. His expertise spans 
+                    problem identification, data collection, model creation, deployment, and maintenance.
+                </p>
+                <div class="instructor-experience">
+                    <h4>Professional Background</h4>
+                    <ul class="experience-list">
+                        <li>Lead Data Scientist at OLX Group (Berlin) - Built large-scale ML systems processing 250+ images/second</li>
+                        <li>Data Scientist at Simplaex - Developed ML infrastructure processing 3+ billion events daily</li>
+                        <li>Data Scientist at Searchmetrics (Berlin)</li>
+                        <li>Research positions at TU Berlin, Boston University Cognitive Neuroscience Lab</li>
+                    </ul>
+                </div>
+                <div class="instructor-achievements">
+                    <h4>Publications & Achievements</h4>
+                    <ul class="experience-list">
+                        <li>Author of "Mastering Java for Data Science" (2017) and "TensorFlow Deep Learning Projects" (2018)</li>
+                        <li>Kaggle Competition Master with multiple top-10 finishes, including 1st place in NIPS'17 Criteo Challenge</li>
+                        <li>Published researcher with papers in SIGIR and WSDM</li>
+                        <li>IT4BI Master's graduate (ULB, UFRT, TU Berlin)</li>
+                    </ul>
+                </div>
+                <div class="instructor-badges">
+                    <span class="instructor-badge">Python & Java Expert</span>
+                    <span class="instructor-badge">ML Systems Design</span>
+                    <span class="instructor-badge">Kaggle Master</span>
+                    <span class="instructor-badge">Published Author</span>
+                    <span class="instructor-badge">Community Builder</span>
+                </div>
+                <div class="instructor-links">
+                    <a href="https://datatalks.club" target="_blank" rel="noopener noreferrer" class="instructor-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="link-icon">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                        </svg>
+                        DataTalks.Club
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="instructor-card">
+            <div class="instructor-image">
+                <img src="https://avatars.githubusercontent.com/u/55026550?v=4" alt="Timur Kamaliev" class="instructor-avatar">
+            </div>
+            <div class="instructor-info">
+                <div class="instructor-header">
+                    <h3 class="instructor-name">Timur Kamaliev</h3>
+                    <p class="instructor-role">Senior Data Scientist at 1221 Systems</p>
+                </div>
+                <p class="instructor-bio">
+                    A seasoned data scientist with over 8 years of experience in industrial automation and AI systems. Currently working as a Senior Data Scientist at 1221 Systems, Timur brings practical expertise in implementing machine learning solutions and optimization systems at scale.
+                </p>
+                <div class="instructor-experience">
+                    <h4>Professional Background</h4>
+                    <ul class="experience-list">
+                        <li>Senior Data Scientist at 1221 Systems</li>
+                        <li>Data Scientist at Innostage</li>
+                        <li>APC and Process Optimization Consultant at Emerson Automation Solutions</li>
+                    </ul>
+                </div>
+                <div class="instructor-links">
+                    <a href="https://www.linkedin.com/in/timurkamaliev/" target="_blank" rel="noopener noreferrer" class="instructor-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="link-icon">
+                            <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/SVizor42" target="_blank" rel="noopener noreferrer" class="instructor-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="link-icon">
+                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Video Section -->
+<section class="section section-gray">
+    <div class="container">
+        <h2 class="section-title">Watch & Learn</h2>
+        <p class="section-subtitle">Get to know our course better through these videos</p>
+
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8lgiOLMMKcY?si=bnR5Z_xR0MgpSok8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Live Q&A</h3>
+                    <p>Get answers to the most common questions about the ML Zoomcamp</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FgnelhEJFj0?si=7JeF4PWzXpz8jhEx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Launch Stream</h3>
+                    <p>Watch our course introduction and learn what to expect</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Practical Workshops Section -->
+<section class="section section-gray">
+    <div class="container">
+        <h2 class="section-title">Practical Workshops</h2>
+        <p class="section-subtitle">Watch our recorded workshop sessions to get hands-on experience</p>
+
+        <div class="workshops-grid">
+            <div class="workshop-video">
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nMrGK5QgPVE?si=rPZiSvctQfZ9fRwP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Implement a Search Engine</h3>
+                    <p>Join Alexey Grigorev in this hands-on tutorial about building a search engine from scratch, focusing on text and vector search methods.</p>
+                </div>
+            </div>
+
+            <div class="workshop-video">
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/GH3lrOsU3AU?si=R_w3y_XxZc2JREwj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>From RAG to Agents: Making Smart AI Assistants</h3>
+                    <p>Join Alexey Grigorev in this bonus module to learn how to build intelligent AI assistants using RAG and agent architectures.</p>
+                </div>
+            </div>
+
+            <div class="workshop-video">
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/MNt_KK32gys?si=YcT_xBvliJJo2Tcs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>From REST to Reasoning: Building Knowledge Graphs</h3>
+                    <p>Join Hiba Jamal to learn how to build knowledge graphs from REST API documentation using dlt and Cognee, modeling APIs as structured graphs of interconnected concepts.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="workshops-features">
+            <div class="feature">
+                <span class="feature-number">3+</span>
+                <p>Hours of content</p>
+            </div>
+            <div class="feature">
+                <span class="feature-number">Free</span>
+                <p>Workshop recordings</p>
+            </div>
+            <div class="feature">
+                <span class="feature-number">24/7</span>
+                <p>Available on-demand</p>
+            </div>
+        </div>
+
+        <div class="section-cta">
+            <div class="register-cta-container">
+                <p>Want to participate in future live workshops?</p>
+                <a href="https://airtable.com/appPPxkgYLH06Mvbw/shr7WtxHEPXxaui0Q" class="register-cta">Register for the Course</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .workshops-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+    }
+
+    .workshop-video {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        height: 0;
+        overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+    .video-info {
+        padding: 1.5rem;
+    }
+
+    .video-info h3 {
+        color: #1f2937;
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .video-info p {
+        color: #6b7280;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .workshops-features {
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        margin: 3rem 0;
+        text-align: center;
+    }
+
+    .workshops-features .feature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-number {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #4f46e5;
+        margin-bottom: 0.5rem;
+    }
+
+    .workshops-features p {
+        color: #6b7280;
+        font-size: 1.1rem;
+        margin: 0;
+    }
+
+    @media (max-width: 768px) {
+        .workshops-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .workshops-features {
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+</style>
+
+<!-- Learning in Public Section -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Learn in Public</h2>
+        <p class="section-subtitle">Share your journey, build your presence, earn recognition</p>
+
+        <div class="learning-public-grid">
+            <div class="learning-public-content">
+
+                <div class="learning-benefits">
+                    <h3>Why Learn in Public?</h3>
+                    <ul class="benefits-list">
+                        <li>
+                            <strong>Earn Extra Points</strong>
+                            <p>Get bonus points for sharing your progress, insights, and projects online</p>
+                        </li>
+                        <li>
+                            <strong>Build Your Portfolio</strong>
+                            <p>Create valuable content that showcases your skills and knowledge</p>
+                        </li>
+                        <li>
+                            <strong>Increase Visibility</strong>
+                            <p>Get noticed by social media algorithms and reach a broader audience</p>
+                        </li>
+                        <li>
+                            <strong>Network Growth</strong>
+                            <p>Connect with individuals and organizations in the data science community</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="leaderboard-showcase">
+                <div class="quote-card">
+                    <img src="https://raw.githubusercontent.com/DataTalksClub/datatalksclub.github.io/master/images/posts/2023-08-17-machine-learning-zoomcamp/image8.png" 
+                         alt="Extract from Shawn Wang's article about learning in public"
+                         class="quote-image">
+                    <div class="quote-attribution">
+                        <p>Inspired by <a href="https://www.youtube.com/watch?v=tkBCPqWKCL8&list=PL7NIGf5_PlM-Dk3lgPsZFT94Ng7PpRQEh&index=5&t=195s" 
+                                        target="_blank">Shawn @swyx Wang</a>'s approach to 
+                           <a href="https://www.swyx.io/learn-in-public" target="_blank">learning in public</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="learning-cta">
+                    <p class="cta-text">Everyone has something valuable to contribute, regardless of their expertise level</p>
+                    <a href="#" class="btn btn-primary">Start Your Learning Journey</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<!-- Community Section -->
+<section class="section section-gray">
+    <div class="container">
+        <div class="community-wrapper">
+            <div class="community-content">
+                <h2 class="section-title">Learn with Our Community</h2>
+                <p class="section-subtitle">Join 73,000+ data practitioners in our thriving Slack community</p>
+                
+                <div class="community-features">
+                    <div class="feature-item">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 9h.01M15 9h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Enhance your skills through peer learning</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 7a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Connect with peers who share your passion</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Get help and support when you need it</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 11a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Build lasting friendships and connections</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="community-image">
+                <img src="https://raw.githubusercontent.com/DataTalksClub/datatalksclub.github.io/master/images/posts/2023-08-17-machine-learning-zoomcamp/image5.png" 
+                     alt="Course channel in our Slack community"
+                     class="slack-screenshot">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .community-wrapper {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+        margin: 2rem 0;
+    }
+
+    .community-content {
+        flex: 1;
+    }
+
+    .community-features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        transition: all 0.2s ease;
+    }
+
+    .feature-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-icon {
+        width: 20px;
+        height: 20px;
+        color: #4f46e5;
+        flex-shrink: 0;
+    }
+
+    .feature-item span {
+        font-size: 0.9rem;
+        color: #1f2937;
+        line-height: 1.3;
+    }
+
+    .community-image {
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .slack-screenshot {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .slack-screenshot:hover {
+        transform: translateY(-4px);
+    }
+
+    @media (max-width: 1024px) {
+        .community-wrapper {
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .community-image {
+            max-width: 100%;
+        }
+
+        .community-features {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<!-- Pricing Section -->
+<section id="pricing" class="section section-highlight">
+    <div class="container">
+        <div class="pricing-content">
+            <div class="free-banner">
+                <span class="free-badge">100% FREE</span>
+                <h2 class="section-title">Start Learning Today!</h2>
+                <p class="pricing-subtitle">Choose your learning path: self-paced or join our current live cohort</p>
+            </div>
+            
+            <div class="pricing-options">
+                <div class="pricing-card free">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Self-Paced Learning</h3>
+                        <div class="price">
+                            <span class="original-price">$0</span>
+                            <span class="free-text">Start Immediately</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li>Instant access to all course materials</li>
+                        <li>Complete curriculum on GitHub</li>
+                        <li>Access to all recorded sessions</li>
+                        <li>Learn at your own pace</li>
+                    </ul>
+                    
+                    <div class="pricing-cta">
+                        <a href="https://github.com/DataTalksClub/llm-zoomcamp" class="btn btn-primary btn-large">Access materials now</a>
+                        <p class="cta-subtitle">Join 10,000+ students learning LLMs!</p>
+                    </div>
+                </div>
+
+                <div class="pricing-card free highlight">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Live Cohort (Current)</h3>
+                        <div class="price">
+                            <span class="original-price">$0</span>
+                            <span class="free-text">Everything + Certificate</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li>All self-paced features</li>
+                        <li>Regular live office hours</li>
+                        <li>Structured timeline with deadlines</li>
+                        <li>Certificate upon completion</li>
+                        <li>Peer learning & project reviews</li>
+                    </ul>
+                    
+                    <div class="pricing-cta">
+                        <a href="https://airtable.com/appPPxkgYLH06Mvbw/shr7WtxHEPXxaui0Q" class="btn btn-primary btn-large">Join current cohort</a>
+                        <p class="cta-subtitle">Join now - current cohort is live!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="why-free">
+                <h3>When is the next cohort?</h3>
+                <p>If you miss the current cohort, the next one will start in May-June 2026. You can either join now or wait for the next cohort.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="section section-gray">
+    <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+            <!-- Registration & Timing -->
+            <div class="faq-item">
+                <h3 class="faq-question">Can I still join the course?</h3>
+                <div class="faq-answer">
+                    <p>Yes! You can join the current cohort which is live now. To receive a certificate, you need to submit your project while we're still accepting submissions. If you miss the current cohort, the next one will start in May-June 2026.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Do I need a confirmation email after registering?</h3>
+                <div class="faq-answer">
+                    <p>No, you don't need it. You're accepted automatically. You can start learning and submit your project (while submissions are open) without registering. Registration is mainly to gauge interest before the start date.</p>
+                </div>
+            </div>
+
+            <!-- Course Structure -->
+            <div class="faq-item">
+                <h3 class="faq-question">How do I access the course materials and live sessions?</h3>
+                <div class="faq-answer">
+                    <ul>
+                        <li>Course materials are available on GitHub</li>
+                        <li>Live sessions are streamed on YouTube</li>
+                        <li>Questions during live sessions are submitted via Slido</li>
+                        <li>Session links are posted in Slack & Telegram announcements</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Certificate Requirements -->
+            <div class="faq-item">
+                <h3 class="faq-question">Can I get a certificate in self-paced mode?</h3>
+                <div class="faq-answer">
+                    <p>No, certificates are only available when completing the course with a live cohort. This is because:</p>
+                    <ul>
+                        <li>You need to peer-review 3 projects after submitting your own</li>
+                        <li>Peer reviews can only be done during the active course period</li>
+                        <li>Project submissions must be made while the submission form is open</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Project Requirements -->
+            <div class="faq-item">
+                <h3 class="faq-question">What do I need to do to get certified?</h3>
+                <div class="faq-answer">
+                    <p>To earn your certificate, you need to:</p>
+                    <ul>
+                        <li>Submit your project (you have two attempts)</li>
+                        <li>Complete peer reviews of 3 other projects</li>
+                        <li>Submit while the course is active</li>
+                    </ul>
+                    <p>Note: Weekly homework is recommended but not mandatory for certification.</p>
+                </div>
+            </div>
+
+            <!-- Future Cohorts -->
+            <div class="faq-item">
+                <h3 class="faq-question">When will the course be offered next?</h3>
+                <div class="faq-answer">
+                    <p>The current cohort is live now. The next cohort will start in May-June 2026. You can either join the current cohort or wait for the next one.</p>
+                </div>
+            </div>
+
+            <!-- Course Content -->
+            <div class="faq-item">
+                <h3 class="faq-question">Where can I find the lectures and videos?</h3>
+                <div class="faq-answer">
+                    <p>All course content is available through:</p>
+                    <ul>
+                        <li>DataTalks.Club's YouTube channel</li>
+                        <li>Course GitHub repository</li>
+                        <li>Bookmarked and pinned links in Slack</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sponsors Section -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Sponsors & Supporters</h2>
+        <p class="section-subtitle">A special thanks to our course sponsors for making this initiative possible!</p>
+
+        <div class="sponsors-grid">
+            <div class="sponsor-card">
+                <a href="https://arize.com/" target="_blank" rel="noopener noreferrer" class="sponsor-link">
+                    <img src="https://datatalks.club/images/partners/arize.png" 
+                         alt="Arize" 
+                         class="sponsor-logo">
+                </a>
+            </div>
+
+            <div class="sponsor-card">
+                <a href="https://qdrant.tech/" target="_blank" rel="noopener noreferrer" class="sponsor-link">
+                    <img src="https://github.com/DataTalksClub/llm-zoomcamp/raw/main/images/qdrant.png" 
+                         alt="Qdrant" 
+                         class="sponsor-logo">
+                </a>
+            </div>
+
+            <div class="sponsor-card">
+                <a href="https://dlthub.com/" target="_blank" rel="noopener noreferrer" class="sponsor-link">
+                    <img src="https://github.com/DataTalksClub/data-engineering-zoomcamp/raw/main/images/dlthub.png" 
+                         alt="DLT" 
+                         class="sponsor-logo">
+                </a>
+            </div>
+        </div>
+
+        <div class="sponsor-cta">
+            <p>Interested in supporting our community?</p>
+            <a href="mailto:alexey@datatalks.club" class="cta-link">Reach out to alexey@datatalks.club</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Sponsors section styles */
+    .sponsors-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin: 3rem auto;
+        max-width: 1200px;
+    }
+
+    .sponsor-card {
+        background: white;
+        border-radius: 12px;
+        padding: 2rem;
+        text-align: center;
+        transition: transform 0.2s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sponsor-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .sponsor-logo {
+        max-width: 100%;
+        height: auto;
+        max-height: 120px;
+        object-fit: contain;
+    }
+
+    .sponsor-cta {
+        text-align: center;
+        margin: 4rem auto 2rem;
+        max-width: 600px;
+        padding: 2rem;
+        background: #f8fafc;
+        border-radius: 12px;
+    }
+
+    .sponsor-cta p {
+        color: #1f2937;
+        font-size: 1.125rem;
+        margin: 0 0 1rem 0;
+    }
+
+    .cta-link {
+        color: #4338ca;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s ease;
+    }
+
+    .cta-link:hover {
+        color: #3730a3;
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        .sponsors-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin: 2rem 1rem;
+        }
+
+        .sponsor-card {
+            max-width: 100%;
+        }
+    }
+</style>
+
+<!-- DataTalks.Club Section -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">About DataTalks.Club</h2>
+
+        <div class="dtc-highlights">
+            <div class="highlight-card">
+                <div class="highlight-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                </div>
+                <h4>Free Education</h4>
+                <p>Courses and online events at no cost</p>
+            </div>
+
+            <div class="highlight-card">
+                <div class="highlight-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                </div>
+                <h4>Global Community</h4>
+                <p>Connect with 73,000+ data professionals worldwide</p>
+            </div>
+
+            <div class="highlight-card">
+                <div class="highlight-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <h4>Career Growth</h4>
+                <p>Practical skills and networking opportunities</p>
+            </div>
+        </div>
+    </div>
+</section>
+

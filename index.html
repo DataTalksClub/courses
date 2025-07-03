@@ -6,33 +6,382 @@ description: "Free, comprehensive courses for data professionals - from Data Eng
 
 {% include main-page-styles.html %}
 
+<style>
+    /* ... existing styles ... */
+    
+    .courses-grid, .ai-courses-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        padding: 1rem 0;
+        margin: 2rem 0;
+    }
+    
+    .course-card {
+        position: relative;
+        width: 100%;
+        background: #FFFFFF;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid transparent;
+    }
+
+    .course-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.12);
+        border-color: #4338CA;
+    }
+
+    .course-card:hover .course-title {
+        color: #4338CA;
+    }
+
+    .course-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, #4338CA, #6366F1);
+        transform: scaleX(0);
+        transition: transform 0.3s;
+        transform-origin: left;
+    }
+
+    .course-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .course-content {
+        padding: 2rem;
+    }
+
+    .course-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        background: #EEF2FF;
+        color: #3730A3;
+        border-radius: 9999px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin-bottom: 1.25rem;
+    }
+
+    .live-indicator {
+        color: #DC2626;
+        margin-right: 0.5rem;
+    }
+
+    .course-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+
+    .course-description {
+        color: #374151;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .course-features {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .course-features li {
+        display: flex;
+        align-items: center;
+        color: #4B5563;
+        margin-bottom: 0.75rem;
+        line-height: 1.5;
+    }
+
+    .course-features li::before {
+        content: "✓";
+        color: #4338CA;
+        margin-right: 0.75rem;
+        font-weight: bold;
+    }
+
+    .enroll-button {
+        display: inline-block;
+        width: 100%;
+        padding: 0.75rem 1.5rem;
+        background: #4338CA;
+        color: white;
+        text-align: center;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        transition: all 0.2s;
+        text-decoration: none;
+    }
+
+    .enroll-button:hover {
+        background: #3730A3;
+        transform: translateY(-2px);
+    }
+
+    .course-card-wrapper {
+        position: relative;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .course-actions {
+        margin-top: auto;
+        padding-top: 1rem;
+    }
+
+    .tech-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .tech-badge {
+        padding: 0.25rem 0.75rem;
+        background: #F3F4F6;
+        color: #1F2937;
+        border-radius: 9999px;
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
+
+    .section {
+        padding: 5rem 0;
+    }
+
+    .section-gray {
+        background: #F8FAFC;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #111827;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.25rem;
+        color: #374151;
+        text-align: center;
+        margin-bottom: 3rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.6;
+    }
+
+    .learning-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .learning-card {
+        background: #FFFFFF;
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .learning-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 1.5rem;
+        color: #4338CA;
+    }
+
+    .learning-icon svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .learning-card h3 {
+        color: #111827;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+
+    .learning-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .learning-list li {
+        color: #4B5563;
+        margin-bottom: 0.75rem;
+        padding-left: 1.5rem;
+        position: relative;
+        line-height: 1.5;
+    }
+
+    .learning-list li::before {
+        content: "✓";
+        color: #4338CA;
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+    }
+
+    @media (max-width: 1200px) {
+        .learning-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .learning-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+        }
+    }
+
+    .ai-courses-group {
+        background: #FFFFFF;
+        padding: 3rem;
+        border-radius: 24px;
+        margin: 3rem 0;
+        border: 1px solid #E2E8F0;
+    }
+
+    .group-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 1rem;
+    }
+
+    .group-description {
+        color: #4B5563;
+        margin-bottom: 2.5rem;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        max-width: 800px;
+    }
+    
+    .course-card-link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .header {
+        background: #FFFFFF;
+        border-bottom: 1px solid #E2E8F0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    .nav-link {
+        position: relative;
+        transition: color 0.2s;
+    }
+
+    .nav-link:hover {
+        color: #4338CA;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #4338CA;
+        transform: scaleX(0);
+        transition: transform 0.2s;
+    }
+
+    .nav-link:hover::after {
+        transform: scaleX(1);
+    }
+
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    /* Focus styles for better keyboard navigation */
+    a:focus-visible,
+    button:focus-visible {
+        outline: 2px solid #4338CA;
+        outline-offset: 2px;
+    }
+
+    /* Skip to main content link for keyboard users */
+    .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: #4338CA;
+        color: white;
+        padding: 8px;
+        z-index: 100;
+        transition: top 0.2s;
+    }
+
+    .skip-link:focus {
+        top: 0;
+    }
+</style>
+
 <div class="top-banner">
-        <div class="container">
-            <div class="register-cta-container">
-                <p>🎓 Join our thriving community of 73,000+ data practitioners!</p>
-                <a href="https://datatalks.club/slack.html" class="register-cta">Join DataTalks.Club Slack</a>
-            </div>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="container">
+        <div class="register-cta-container">
+            <p>🎓 Join our thriving community of 73,000+ data practitioners!</p>
+            <a href="https://datatalks.club/slack.html" class="register-cta">Join DataTalks.Club Slack</a>
         </div>
     </div>
+</div>
 
-    <header class="header">
+    <header class="header" role="banner">
         <div class="container">
             <div class="header-content">
-                <div class="logo">DataTalks.Club Courses</div>
-                <nav class="nav">
-                    <a href="#courses" class="nav-link">Courses</a>
-                    <a href="#community" class="nav-link">Community</a>
-                    <a href="https://datatalks.club/slack.html" class="nav-link" target="_blank">Join Slack</a>
+                <div class="logo" role="heading" aria-level="1">DataTalks.Club Courses</div>
+                <nav class="nav" role="navigation" aria-label="Main navigation">
+                    <a href="#courses" class="nav-link" aria-label="View courses">Courses</a>
+                    <a href="#community" class="nav-link" aria-label="View community">Community</a>
+                    <a href="https://datatalks.club/slack.html" class="nav-link" target="_blank" rel="noopener" aria-label="Join Slack community">Join Slack</a>
                 </nav>
             </div>
         </div>
     </header>
 
-    <section class="hero">
+    <section class="hero" role="region" aria-labelledby="hero-title">
         <div class="container">
             <div class="hero-content">
-                <div class="badge">Free Education</div>
-                <h1 class="hero-title">
+                <div class="badge" role="text">Free Education</div>
+                <h1 class="hero-title" id="hero-title">
                     Master Data & AI<br>
                     <span class="hero-subtitle">From Theory to Production</span>
                 </h1>
@@ -69,189 +418,226 @@ description: "Free, comprehensive courses for data professionals - from Data Eng
             
             <div class="courses-grid">
                 <!-- ML Zoomcamp -->
-                <a href="/ml-zoomcamp/" class="course-card-link">
-                    <div class="course-card">
-                        <div class="course-content">
-                            <div class="course-badge">16 Weeks • September 2025</div>
-                            <h3 class="course-title">Machine Learning Zoomcamp</h3>
-                            <p class="course-description">
-                                ML engineering with deployment focus covering regression, classification, deep learning, and practical projects.
-                            </p>
-                            <ul class="course-features">
-                                <li>ML Fundamentals</li>
-                                <li>Model Deployment</li>
-                                <li>Deep Learning</li>
-                            </ul>
+                <div class="course-card-wrapper">
+                    <a href="/ml-zoomcamp/" class="course-card-link">
+                        <div class="course-card">
+                            <div class="course-content">
+                                <div class="course-badge">16 Weeks • September 2025</div>
+                                <h3 class="course-title">Machine Learning Zoomcamp</h3>
+                                <p class="course-description">
+                                    ML engineering with deployment focus covering regression, classification, deep learning, and practical projects.
+                                </p>
+                                <ul class="course-features">
+                                    <li>ML Fundamentals</li>
+                                    <li>Model Deployment</li>
+                                    <li>Deep Learning</li>
+                                </ul>
+                            </div>
                         </div>
+                    </a>
+                    <div class="course-actions">
+                        <a href="https://airtable.com/appflP5cuR8bD5MIm/shryxwLd0COOEaqXo" class="enroll-button">Register Now</a>
                     </div>
-                </a>
+                </div>
                 
                 <!-- Data Engineering Zoomcamp -->
-                <a href="https://github.com/DataTalksClub/data-engineering-zoomcamp" class="course-card-link">
-                    <div class="course-card">
-                        <div class="course-content">
-                            <div class="course-badge">9 Weeks • January 2026</div>
-                            <h3 class="course-title">Data Engineering Zoomcamp</h3>
-                            <p class="course-description">
-                                Complete data engineering bootcamp covering Docker, SQL, Terraform, GCP, Kafka, and Spark.
-                            </p>
-                            <ul class="course-features">
-                                <li>Data Warehousing</li>
-                                <li>Batch & Stream Processing</li>
-                                <li>Cloud Infrastructure</li>
-                            </ul>
+                <div class="course-card-wrapper">
+                    <a href="https://github.com/DataTalksClub/data-engineering-zoomcamp" class="course-card-link">
+                        <div class="course-card">
+                            <div class="course-content">
+                                <div class="course-badge">9 Weeks • January 2026</div>
+                                <h3 class="course-title">Data Engineering Zoomcamp</h3>
+                                <p class="course-description">
+                                    Complete data engineering bootcamp covering Docker, SQL, Terraform, GCP, Kafka, and Spark.
+                                </p>
+                                <ul class="course-features">
+                                    <li>Data Warehousing</li>
+                                    <li>Batch & Stream Processing</li>
+                                    <li>Cloud Infrastructure</li>
+                                </ul>
+                            </div>
                         </div>
+                    </a>
+                    <div class="course-actions">
+                        <a href="https://airtable.com/appzbS8Pkg9PL254a/shr6oVXeQvSI5HuWD" class="enroll-button">Register Now</a>
                     </div>
-                </a>
+                </div>
 
                 <!-- MLOps Zoomcamp -->
-                <a href="https://github.com/DataTalksClub/mlops-zoomcamp" class="course-card-link">
-                    <div class="course-card">
-                        <div class="course-content">
-                            <div class="course-badge">
-                                <span class="live-indicator">🔴 LIVE</span>
-                                <span class="duration">9 Weeks</span>
+                <div class="course-card-wrapper">
+                    <a href="https://github.com/DataTalksClub/mlops-zoomcamp" class="course-card-link">
+                        <div class="course-card">
+                            <div class="course-content">
+                                <div class="course-badge">
+                                    <span class="live-indicator">🔴 LIVE</span>
+                                    <span class="duration">9 Weeks</span>
+                                </div>
+                                <h3 class="course-title">MLOps Zoomcamp</h3>
+                                <p class="course-description">
+                                    Production ML systems & best practices including experiment tracking, model deployment, and monitoring.
+                                </p>
+                                <ul class="course-features">
+                                    <li>Model Monitoring</li>
+                                    <li>ML Pipelines</li>
+                                    <li>Model Registry</li>
+                                </ul>
                             </div>
-                            <h3 class="course-title">MLOps Zoomcamp</h3>
-                            <p class="course-description">
-                                Production ML systems & best practices including experiment tracking, model deployment, and monitoring.
-                            </p>
-                            <ul class="course-features">
-                                <li>Model Monitoring</li>
-                                <li>ML Pipelines</li>
-                                <li>Model Registry</li>
-                            </ul>
                         </div>
+                    </a>
+                    <div class="course-actions">
+                        <a href="https://airtable.com/appYdhA23GVZd1iN2/shrCb8y6eTbPKwSTL" class="enroll-button">Register Now</a>
                     </div>
-                </a>
+                </div>
+            </div>
 
-                <!-- AI Courses Section -->
-                <div class="ai-courses-group">
-                    <h3 class="group-title">AI Development Courses</h3>
-                    <p class="group-description">Master modern AI development with our comprehensive courses covering LLMs, AI tools, and open-source solutions.</p>
-                    <div class="ai-courses-grid">
-                        <!-- LLM Zoomcamp -->
+            <!-- AI Courses Section -->
+            <div class="ai-courses-group">
+                <h2 class="group-title">
+                    <a href="/ai-courses/index.html" style="color: inherit; text-decoration: none;">AI Development Courses</a>
+                </h2>
+                <p class="group-description">Master the latest AI technologies and frameworks with our specialized courses</p>
+                
+                <div class="ai-courses-grid">
+                    <!-- LLM Zoomcamp -->
+                    <div class="course-card-wrapper">
                         <a href="https://github.com/DataTalksClub/llm-zoomcamp" class="course-card-link">
                             <div class="course-card">
                                 <div class="course-content">
                                     <div class="course-badge">
                                         <span class="live-indicator">🔴 LIVE</span>
-                                        <span class="duration">10 Weeks</span>
+                                        <span class="duration">8 Weeks</span>
                                     </div>
                                     <h3 class="course-title">LLM Zoomcamp</h3>
                                     <p class="course-description">
-                                        Comprehensive course on building production-ready LLM applications with modern tools and best practices.
+                                        Large Language Models course covering fine-tuning, RAG systems, and LLM application development
                                     </p>
-                                    <div class="tech-badges">
-                                        <span class="tech-badge">LangChain</span>
-                                        <span class="tech-badge">OpenAI</span>
-                                        <span class="tech-badge">Hugging Face</span>
-                                    </div>
                                     <ul class="course-features">
-                                        <li>LLM Application Architecture</li>
-                                        <li>RAG & Vector Databases</li>
-                                        <li>Fine-tuning & Deployment</li>
-                                        <li>Production Best Practices</li>
+                                        <li>LLM Fine-tuning</li>
+                                        <li>Prompt Engineering</li>
+                                        <li>RAG Applications</li>
                                     </ul>
                                 </div>
                             </div>
                         </a>
+                        <div class="course-actions">
+                            <a href="https://airtable.com/appPPxkgYLH06Mvbw/shr7WtxHEPXxaui0Q" class="enroll-button">Register Now</a>
+                        </div>
+                    </div>
 
-                        <!-- Open Source LLM Zoomcamp -->
+                    <!-- Open-Source LLM Zoomcamp -->
+                    <div class="course-card-wrapper">
                         <a href="https://github.com/DataTalksClub/open-source-llm-zoomcamp" class="course-card-link">
                             <div class="course-card">
                                 <div class="course-content">
-                                    <div class="course-badge">Coming Soon • 8 Weeks</div>
-                                    <h3 class="course-title">Open Source LLM Zoomcamp</h3>
+                                    <div class="course-badge">Coming Soon</div>
+                                    <h3 class="course-title">Open-Source LLM Zoomcamp</h3>
                                     <p class="course-description">
-                                        Deep dive into open-source LLMs, from local deployment to cost-effective production solutions.
+                                        Hands-on course focused on open-source LLM tools, local deployment, and cost-effective AI solutions
                                     </p>
-                                    <div class="tech-badges">
-                                        <span class="tech-badge">Llama 2</span>
-                                        <span class="tech-badge">Mistral</span>
-                                        <span class="tech-badge">vLLM</span>
-                                    </div>
                                     <ul class="course-features">
-                                        <li>Local LLM Deployment</li>
-                                        <li>Model Quantization</li>
-                                        <li>Performance Optimization</li>
-                                        <li>Cost-effective Scaling</li>
+                                        <li>Open-Source Models</li>
+                                        <li>Model Optimization</li>
+                                        <li>Efficient Deployment</li>
                                     </ul>
                                 </div>
                             </div>
                         </a>
+                        <div class="course-actions">
+                            <a href="https://airtable.com/apprlTIMJPOWhp2Kr/shrYO3Dcm6RN9f4Ko" class="enroll-button">Join Waitlist</a>
+                        </div>
+                    </div>
 
-                        <!-- AI Dev Tools Zoomcamp -->
+                    <!-- AI Dev Tools Zoomcamp -->
+                    <div class="course-card-wrapper">
                         <a href="https://github.com/DataTalksClub/ai-dev-tools-zoomcamp" class="course-card-link">
                             <div class="course-card">
                                 <div class="course-content">
-                                    <div class="course-badge">Coming Soon • 6 Weeks</div>
+                                    <div class="course-badge">Coming Soon</div>
                                     <h3 class="course-title">AI Dev Tools Zoomcamp</h3>
                                     <p class="course-description">
-                                        Master modern AI development tools and workflows to supercharge your productivity.
+                                        A course that teaches you how to leverage AI tools to accelerate and improve your coding workflow.
                                     </p>
-                                    <div class="tech-badges">
-                                        <span class="tech-badge">GitHub Copilot</span>
-                                        <span class="tech-badge">Cursor</span>
-                                        <span class="tech-badge">Claude</span>
-                                    </div>
                                     <ul class="course-features">
-                                        <li>AI-assisted Development</li>
-                                        <li>Code Generation & Review</li>
-                                        <li>Testing & Documentation</li>
-                                        <li>Workflow Optimization</li>
+                                        <li>AI System Design</li>
+                                        <li>Development Workflows</li>
+                                        <li>Tool Integration</li>
                                     </ul>
                                 </div>
                             </div>
                         </a>
+                        <div class="course-actions">
+                            <a href="https://airtable.com/appJRFiWKHBgmEt70/shrpw7rk55Ewr1jCG" class="enroll-button">Join Waitlist</a>
+                        </div>
                     </div>
                 </div>
+            </div>
+
             <!-- Stock Markets Analytics Zoomcamp -->
-            <a href="https://github.com/DataTalksClub/stock-markets-analytics-zoomcamp" class="course-card-link">
-                <div class="course-card">
-                    <div class="course-content">
-                        <div class="course-badge">8 Weeks • April 2025</div>
-                        <h3 class="course-title">Stock Markets Analytics Zoomcamp</h3>
-                        <p class="course-description">
-                            Financial data analysis and algorithmic trading strategies using Python and modern analytics tools.
-                        </p>
-                        <ul class="course-features">
-                            <li>Market Analysis</li>
-                            <li>Trading Strategies</li>
-                            <li>Risk Management</li>
-                        </ul>
+            <div class="finance-course" style="margin-top: 3rem;">
+                <div class="course-card-wrapper" style="max-width: 400px;">
+                    <a href="https://github.com/DataTalksClub/stock-markets-analytics-zoomcamp" class="course-card-link">
+                        <div class="course-card">
+                            <div class="course-content">
+                                <div class="course-badge">8 Weeks • April 2025</div>
+                                <h3 class="course-title">Stock Markets Analytics Zoomcamp</h3>
+                                <p class="course-description">
+                                    Financial data analysis and algorithmic trading strategies using Python and modern analytics tools.
+                                </p>
+                                <ul class="course-features">
+                                    <li>Market Analysis</li>
+                                    <li>Trading Strategies</li>
+                                    <li>Risk Management</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="course-actions">
+                        <a href="https://pythoninvest.com/course" class="enroll-button">Register Now</a>
                     </div>
                 </div>
-            </a>
             </div>
         </div>
     </section>
 
-    <section id="community" class="community-section">
+    <section id="community" class="section section-gray">
         <div class="container">
-            <h2 class="section-title">Join Our Community</h2>
-            <p class="section-subtitle">Learn, share, and grow with fellow data practitioners</p>
+            <h2 class="section-title" style="font-size: 2.5rem; font-weight: 700; color: #111827; text-align: center; margin-bottom: 1rem;">Join Our Community</h2>
+            <p class="section-subtitle" style="font-size: 1.125rem; color: #4B5563; text-align: center; margin-bottom: 3rem; max-width: 640px; margin-left: auto; margin-right: auto;">Learn, share, and grow with fellow data practitioners</p>
             
-            <div class="community-benefits">
-                <div class="benefit-card">
-                    <div class="benefit-icon">🎓</div>
-                    <h3>Free Education</h3>
-                    <p>All courses are completely free and open to everyone</p>
+            <div class="community-benefits" style="max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
+                <div class="benefit-item" style="display: flex; align-items: flex-start; gap: 1rem;">
+                    <div class="benefit-icon" style="background: #EEF2FF; border-radius: 12px; padding: 12px; color: #4338CA;">
+                        🎓
+                    </div>
+                    <div>
+                        <h3 style="font-size: 1.25rem; font-weight: 600; color: #111827; margin: 0 0 0.5rem 0;">Free Education</h3>
+                        <p style="color: #4B5563; margin: 0; line-height: 1.5;">All courses are completely free and open to everyone</p>
+                    </div>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">👥</div>
-                    <h3>Active Community</h3>
-                    <p>Learn with peers and get support when you need it</p>
+
+                <div class="benefit-item" style="display: flex; align-items: flex-start; gap: 1rem;">
+                    <div class="benefit-icon" style="background: #EEF2FF; border-radius: 12px; padding: 12px; color: #4338CA;">
+                        👥
+                    </div>
+                    <div>
+                        <h3 style="font-size: 1.25rem; font-weight: 600; color: #111827; margin: 0 0 0.5rem 0;">Active Community</h3>
+                        <p style="color: #4B5563; margin: 0; line-height: 1.5;">Learn with peers and get support when you need it</p>
+                    </div>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">📚</div>
-                    <h3>Practical Learning</h3>
-                    <p>Hands-on projects and real-world applications</p>
+
+                <div class="benefit-item" style="display: flex; align-items: flex-start; gap: 1rem;">
+                    <div class="benefit-icon" style="background: #EEF2FF; border-radius: 12px; padding: 12px; color: #4338CA;">
+                        📚
+                    </div>
+                    <div>
+                        <h3 style="font-size: 1.25rem; font-weight: 600; color: #111827; margin: 0 0 0.5rem 0;">Practical Learning</h3>
+                        <p style="color: #4B5563; margin: 0; line-height: 1.5;">Hands-on projects and real-world applications</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="cta-container">
-                <a href="https://datatalks.club/slack.html" class="btn btn-primary">Join Our Slack Community</a>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://datatalks.club/slack.html" class="join-button" style="display: inline-block; background: #4338CA; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: all 0.2s;">Join Our Slack Community</a>
             </div>
         </div>
     </section>
