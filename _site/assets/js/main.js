@@ -9,6 +9,18 @@ if ('performance' in window) {
   });
 }
 
+// Header scroll shadow effect (for ML Zoomcamp and other pages)
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.header');
+  if (header) {
+    if (window.scrollY > 0) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }
+}, { passive: true });
+
 // Smooth scrolling for navigation links
 document.addEventListener("DOMContentLoaded", () => {
   // Handle navigation clicks with performance optimization
