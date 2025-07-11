@@ -12,6 +12,11 @@ $bg-purple: #faf5ff;
 $border-color: #e5e7eb;
 $white: #ffffff;
 
+// Import component styles
+@import "layout";
+@import "courses";
+@import "performance";
+
 // Base styles
 * {
   margin: 0;
@@ -33,6 +38,10 @@ body {
   
   @media (min-width: 768px) {
     padding: 0 2rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 0.75rem;
   }
 }
 

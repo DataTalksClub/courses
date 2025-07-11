@@ -1,6 +1,17 @@
+// Performance monitoring
+if ('performance' in window) {
+  window.addEventListener('load', () => {
+    // Log performance metrics (remove in production)
+    const perfData = performance.getEntriesByType('navigation')[0];
+    if (perfData) {
+      console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+    }
+  });
+}
+
 // Smooth scrolling for navigation links
 document.addEventListener("DOMContentLoaded", () => {
-  // Handle navigation clicks
+  // Handle navigation clicks with performance optimization
   const navLinks = document.querySelectorAll('a[href^="#"]')
 
   navLinks.forEach((link) => {
@@ -11,9 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const targetElement = document.getElementById(targetId)
 
       if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
+        // Use requestAnimationFrame for smoother scrolling
+        requestAnimationFrame(() => {
+          targetElement.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          })
         })
       }
     })
@@ -39,9 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
-  // Add active state to navigation based on scroll position
+  // Add active state to navigation based on scroll position with throttling
   const sections = document.querySelectorAll("section[id]")
   const navItems = document.querySelectorAll(".nav-link")
+  let ticking = false
 
   function updateActiveNav() {
     let current = ""
@@ -61,7 +76,16 @@ document.addEventListener("DOMContentLoaded", () => {
         item.classList.add("active")
       }
     })
+    
+    ticking = false
   }
 
-  window.addEventListener("scroll", updateActiveNav)
+  function requestTick() {
+    if (!ticking) {
+      requestAnimationFrame(updateActiveNav)
+      ticking = true
+    }
+  }
+
+  window.addEventListener("scroll", requestTick, { passive: true })
 })
