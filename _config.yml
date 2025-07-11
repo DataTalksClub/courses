@@ -1,7 +1,7 @@
-title: "DataMaster Course"
-description: "Master Data Science From Zero to Hero"
-baseurl: ""
-url: "https://yourusername.github.io"
+title: "DataTalks.Club Free Courses"
+description: "Master machine learning engineering, data engineering, MLOps, LLMs, and more with DataTalks.Club free courses (Zoomcamps)."
+baseurl: "https://datatalks.club/courses/"
+url: "https://datatalks.club/courses/"
 
 # Build settings
 markdown: kramdown
