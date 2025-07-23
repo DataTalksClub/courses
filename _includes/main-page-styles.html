@@ -21,18 +21,96 @@
             --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        /* Top Banner */
+        /* Accessibility - Visually hidden class for screen readers */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        .visually-hidden:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            margin: 0;
+            overflow: visible;
+            clip: auto;
+            background: #fff;
+            padding: 0.5rem 1rem;
+            z-index: 101;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 0.25rem;
+        }
+
+        /* Top banner improvements */
         .top-banner {
-            background: linear-gradient(90deg, var(--primary-light), var(--primary-color));
+            background: linear-gradient(90deg, rgba(37, 99, 235, 0.1), #2563eb);
             padding: 1rem 0;
             position: relative;
             z-index: 100;
+            text-align: center;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 1rem;
+        }
+
+        .top-banner .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .top-banner .register-cta-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+
+        @media (min-width: 768px) {
+            .top-banner .register-cta-container {
+                flex-direction: row;
+                gap: 1.5rem;
+                justify-content: center;
+            }
+
+            .top-banner p {
+                margin: 0;
+            }
+        }
+
+        .top-banner p {
+            color: #1d4ed8;
+            font-weight: 500;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .top-banner .register-cta {
+            background: #ffffff;
+            color: #2563eb;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border-radius: 0.25rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .top-banner .register-cta:hover {
+            background: #1d4ed8;
+            color: #ffffff;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         /* Header */
