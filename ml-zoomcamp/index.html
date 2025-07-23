@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Machine Learning Zoomcamp"
-description: "A comprehensive 12-week course that takes you from beginner to advanced data scientist. Learn Python, machine learning, and real-world projects."
+description: "A free 4-month course on ML engineering. Learn machine learning from regression and classification to deployment and deep learning."
 ---
 
 {% include ml-zoomcamp-styles.html %}
@@ -18,7 +18,7 @@ description: "A comprehensive 12-week course that takes you from beginner to adv
 <header class="header">
     <div class="container">
         <div class="header-content">
-            <a href="https://datatalks.club/courses/ml-zoomcamp/" class="logo">Machine Learning Zoomcamp</a>
+            <a href="/courses/ml-zoomcamp/" class="logo">Machine Learning Zoomcamp</a>
             <nav class="nav">
                 <a href="https://datatalks.club/courses/" class="nav-link">All Courses</a>
                 <a href="#description" class="nav-link">Topics</a>
@@ -32,18 +32,6 @@ description: "A comprehensive 12-week course that takes you from beginner to adv
     </div>
 </header>
 
-<script>
-    // Add shadow to header on scroll
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('.header');
-        if (window.scrollY > 0) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-</script>
-
 <!-- Hero Section -->
 <section class="hero">
     <div class="container">
@@ -54,8 +42,8 @@ description: "A comprehensive 12-week course that takes you from beginner to adv
                 <span class="hero-subtitle">From Zero to Deployment</span>
             </h1>
             <p class="hero-description">
-                A comprehensive 4-month course that takes you from beginner to advanced ML engineer. 
-                Learn the fundamentals of ML, from regression and classification to deployment and deep learning.
+                A practical 4-month course where you'll learn to build and deploy machine learning systems. 
+                We focus on the engineering side from training models to getting them to work in production.
             </p>
             <div class="hero-buttons">
                 <a href="#pricing" class="btn btn-primary">Enroll Now</a>
@@ -107,7 +95,7 @@ description: "A comprehensive 12-week course that takes you from beginner to adv
 
 
 
-<!-- What You'll Learn Section -->
+<!-- What This Course Is About Section -->
 <section id="description" class="section section-gray">
     <div class="container">
         <h2 class="section-title">What You'll Learn</h2>
@@ -373,11 +361,11 @@ description: "A comprehensive 12-week course that takes you from beginner to adv
                     </svg>
                 </div>
                 <h3>Programming Experience</h3>
-                <p>At least 1 year of programming experience in any language</p>
+                <p>Some programming experience (1+ years, preferably Python)</p>
                 <ul class="prerequisite-details">
-                    <li>Basic understanding of functions and classes</li>
+                    <li>Basic Python knowledge: variables, libraries, and Jupyter notebooks</li>
                     <li>Experience with data structures</li>
-                    <li>Familiarity with version control (Git)</li>
+                    <li>Familiarity with version control (Git) is helpful but not required</li>
                 </ul>
             </div>
 
@@ -387,12 +375,12 @@ description: "A comprehensive 12-week course that takes you from beginner to adv
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
                     </svg>
             </div>
-                <h3>Command Line Basics</h3>
-                <p>Comfort with basic terminal operations</p>
+                <h3>Technical Setup</h3>
+                <p>Basic command line comfort and high school math</p>
                 <ul class="prerequisite-details">
                     <li>Navigation and file operations</li>
                     <li>Running scripts and commands</li>
-                    <li>Package installation</li>
+                    <li>High school level mathematics</li>
                 </ul>
         </div>
 
@@ -554,6 +542,18 @@ description: "A comprehensive 12-week course that takes you from beginner to adv
                 </ul>
             </div>
 
+            <!-- Module 10 -->
+            <div class="module">
+                <span class="module-tag">Module 10</span>
+                <h3>KServe (Optional)</h3>
+                <ul>
+                    <li>Advanced model serving with KServe</li>
+                    <li>Production ML systems</li>
+                    <li>Scalable model deployment</li>
+                    <li>Model versioning and management</li>
+                </ul>
+            </div>
+
             <!-- Capstone Project -->
             <div class="module project">
                 <span class="module-tag">Capstone Project</span>
@@ -706,84 +706,141 @@ description: "A comprehensive 12-week course that takes you from beginner to adv
 <!-- Portfolio Projects Section -->
 <section id = "portfolio" class="section section-gray">
     <div class="container">
-        <h2 class="section-title">Build Your ML Portfolio</h2>
-        <p class="section-subtitle">Create real-world projects that showcase your skills to potential employers</p>
+        <h2 class="section-title">Course Projects</h2>
+        <p class="section-subtitle">Build real-world projects that demonstrate your ML engineering skills</p>
+
+        <div class="projects-overview">
+            <p class="projects-intro">
+                Personal projects are crucial for job interviews and demonstrating practical ML experience. 
+                You'll complete <strong>2 out of 3 projects</strong> during the course to earn your certificate.
+            </p>
+        </div>
 
         <div class="projects-grid">
-            <div class="project-card main">
+            <!-- Midterm Project -->
+            <div class="project-card">
                 <div class="project-content">
-                    <h3>Course Projects</h3>
+                    <h3>
+                        <a href="https://github.com/DataTalksClub/machine-learning-zoomcamp/tree/master#midterm-project" 
+                           target="_blank">Midterm Project</a>
+                    </h3>
+                    <p class="project-timing"><strong>Timeline:</strong> After Module 4 (Evaluation Metrics)</p>
                     <p class="project-description">
-                        As a machine learning engineer, personal projects are crucial for job interviews and demonstrating practical experience. 
-                        You'll complete two major projects during the course:
+                        Apply your knowledge from modules 1-4 to create a complete machine learning solution.
                     </p>
-                    <ul class="project-list">
-                        <li>
-                            <strong>
-                                <a href="https://github.com/DataTalksClub/machine-learning-zoomcamp/tree/master#midterm-project" 
-                                   target="_blank">Midterm Project</a>:
-                            </strong> 
-                            Choose your own problem, find a dataset, and develop a complete ML solution
-                        </li>
-                        <li>
-                            <strong>Capstone Projects:</strong> Build and deploy a production-ready ML model as a web service
-                            <ul>
-                                <li>
-                                    <a href="https://github.com/DataTalksClub/machine-learning-zoomcamp/tree/master#capstone-project-1" 
-                                       target="_blank">Capstone Project 1</a>
-                                </li>
-                                <li>
-                                    <a href="https://github.com/DataTalksClub/machine-learning-zoomcamp/tree/master#capstone-project-2-optional" 
-                                       target="_blank">Capstone Project 2</a> (optional)
-                                </li>
-                                <li>Option for local or cloud deployment</li>
-                                <li>Bonus points for cloud deployment</li>
-                                <li>Full CI/CD pipeline implementation</li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <div class="project-requirements">
+                        <h4>Requirements:</h4>
+                        <ul class="project-list">
+                            <li>Choose a problem that interests you</li>
+                            <li>Find a suitable dataset</li>
+                            <li>Perform exploratory data analysis</li>
+                            <li>Train and evaluate multiple models</li>
+                            <li>Select the best model based on evaluation metrics</li>
+                            <li>Document your approach and findings</li>
+                        </ul>
+                    </div>
+                    <div class="project-skills">
+                        <h4>Skills Demonstrated:</h4>
+                        <ul class="skills-list">
+                            <li>Data preprocessing and feature engineering</li>
+                            <li>Model selection and hyperparameter tuning</li>
+                            <li>Evaluation metrics and model interpretation</li>
+                            <li>Technical documentation and presentation</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="project-card featured">
-                <div class="featured-badge">Featured Student Project</div>
-                <img src="https://raw.githubusercontent.com/DataTalksClub/datatalksclub.github.io/master/images/posts/2023-08-17-machine-learning-zoomcamp/image9.png" 
-                     alt="Screenshot of Pastor Soto's project" 
-                     class="featured-project-image">
+            <!-- Capstone Project 1 -->
+            <div class="project-card">
                 <div class="project-content">
-                    <h4>Top Project Spotlight</h4>
-                    <p>Pastor Soto's project ranked #1 in the 2022 cohort leaderboard, demonstrating excellence in both implementation and deployment.</p>
+                    <h3>
+                        <a href="https://github.com/DataTalksClub/machine-learning-zoomcamp/tree/master#capstone-project-1" 
+                           target="_blank">Capstone Project 1</a>
+                    </h3>
+                    <p class="project-timing"><strong>Timeline:</strong> Final project (after all modules)</p>
+                    <p class="project-description">
+                        Build and deploy a production-ready ML model as a web service.
+                    </p>
+                    <div class="project-requirements">
+                        <h4>Requirements:</h4>
+                        <ul class="project-list">
+                            <li>Choose a problem and dataset</li>
+                            <li>Train and evaluate your model</li>
+                            <li>Create a web service (Flask/FastAPI)</li>
+                            <li>Containerize with Docker</li>
+                            <li>Deploy locally or to cloud</li>
+                            <li>Include proper documentation</li>
+                        </ul>
+                    </div>
+                    <div class="project-bonus">
+                        <h4>Bonus Points:</h4>
+                        <ul class="bonus-list">
+                            <li>Cloud deployment (AWS, GCP, Azure)</li>
+                            <li>CI/CD pipeline implementation</li>
+                            <li>Model monitoring and logging</li>
+                            <li>API documentation (Swagger/OpenAPI)</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="project-card bonus">
+            <!-- Capstone Project 2 (Optional) -->
+            <div class="project-card">
                 <div class="project-content">
-                    <h3>Bonus Opportunities</h3>
-                    <ul class="project-list">
-                        <li>
-                            <strong>
-                                <a href="https://github.com/DataTalksClub/machine-learning-zoomcamp/tree/master#article" 
-                                   target="_blank">Optional Research Article</a>:
-                            </strong>
-                            <p>Explore advanced topics beyond the curriculum and write a technical article about your findings.</p>
-                        </li>
-                        <li>
-                            <strong>Public Portfolio:</strong>
-                            <p>All projects are featured in our annual leaderboard and make excellent additions to your GitHub profile.</p>
-                        </li>
-                        <li>
-                            <strong>Community Recognition:</strong>
-                            <p>Top projects are showcased to our community of 10,000+ data practitioners.</p>
-                        </li>
-                    </ul>
-                    <div class="project-cta">
-                        <a href="https://github.com/DataTalksClub/machine-learning-zoomcamp/blob/master/cohorts/2022/leaderboard.md" 
-                           target="_blank" 
-                           class="btn btn-secondary">
-                            View 2022 Project Leaderboard
-                        </a>
+                    <h3>
+                        <a href="https://github.com/DataTalksClub/machine-learning-zoomcamp/tree/master#capstone-project-2-optional" 
+                           target="_blank">Capstone Project 2</a>
+                        <span class="optional-badge">Optional</span>
+                    </h3>
+                    <p class="project-timing"><strong>Timeline:</strong> Alternative to Capstone Project 1</p>
+                    <p class="project-description">
+                        An alternative capstone project with different focus areas or advanced implementations.
+                    </p>
+                    <div class="project-requirements">
+                        <h4>Requirements:</h4>
+                        <ul class="project-list">
+                            <li>Similar scope to Capstone Project 1</li>
+                            <li>Focus on advanced ML techniques</li>
+                            <li>Production deployment required</li>
+                            <li>Comprehensive documentation</li>
+                        </ul>
+                    </div>
+                    <div class="project-note">
+                        <p><strong>Note:</strong> You only need to complete either Capstone Project 1 OR Capstone Project 2, not both.</p>
+                    </div>
                 </div>
-                </div>
+            </div>
+        </div>
+
+        <!-- Certification Requirements -->
+        <div class="certification-requirements">
+            <h3>📜 Certification Requirements</h3>
+            <div class="cert-info">
+                <p>To earn your certificate, you must:</p>
+                <ul class="cert-list">
+                    <li><strong>Join a live cohort</strong> (self-paced learners cannot earn certificates)</li>
+                    <li><strong>Complete 2 out of 3 projects:</strong> Midterm Project + (Capstone Project 1 OR Capstone Project 2)</li>
+                    <li><strong>Review 3 peers' projects</strong> by the deadline</li>
+                    <li><strong>Complete projects individually</strong> (no group work)</li>
+                </ul>
+                <p class="cert-note">
+                    <strong>Good news:</strong> You can join the cohort after it starts and still get certified if you complete the required projects, 
+                    even if you miss some homework deadlines.
+                </p>
+            </div>
+        </div>
+
+        <!-- Project Support -->
+        <div class="project-support">
+            <h3>🛠️ Project Support</h3>
+            <div class="support-info">
+                <ul class="support-list">
+                    <li><strong>Office Hours:</strong> Get help from instructors during regular Q&A sessions</li>
+                    <li><strong>Peer Review:</strong> Learn from reviewing other students' projects</li>
+                    <li><strong>Community:</strong> Ask questions in the #course-ml-zoomcamp Slack channel</li>
+                    <li><strong>Examples:</strong> Access previous cohort projects for inspiration</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -1108,7 +1165,7 @@ description: "A comprehensive 12-week course that takes you from beginner to adv
             <div class="free-banner">
                 <span class="free-badge">100% FREE</span>
                 <h2 class="section-title">Start Learning Today!</h2>
-                <p class="pricing-subtitle">Choose your learning path: self-paced or join our next cohort in September 2025</p>
+                <p class="pricing-subtitle">Choose your learning path: self-paced or join our next cohort starting September 15, 2025</p>
             </div>
             
             <div class="pricing-options">
@@ -1151,12 +1208,17 @@ description: "A comprehensive 12-week course that takes you from beginner to adv
                     <div class="pricing-cta">
                         <a href="https://github.com/DataTalksClub/machine-learning-zoomcamp" class="btn btn-primary btn-large">Access Materials Now</a>
                         <p class="cta-subtitle">Join 10,000+ students learning ML!</p>
+                        <div class="additional-links">
+                            <a href="https://www.youtube.com/playlist?list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR" target="_blank" class="feature-link">📺 YouTube Playlist</a>
+                            <a href="https://datatalks.club/slack.html" target="_blank" class="feature-link">💬 Join Slack Community</a>
+                            <a href="https://docs.google.com/document/d/1LpPanc33QJJ6BSsyxVg-pWNMplal84TdZtq10naIhD8" target="_blank" class="feature-link">❓ FAQ</a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="pricing-card free highlight">
                     <div class="pricing-header">
-                        <h3 class="pricing-title">Live Cohort (Sept 2025)</h3>
+                        <h3 class="pricing-title">Live Cohort (September 15, 2025)</h3>
                         <div class="price">
                             <span class="original-price">$0</span>
                             <span class="free-text">Everything + Certificate</span>
@@ -1197,8 +1259,9 @@ description: "A comprehensive 12-week course that takes you from beginner to adv
                     </ul>
                     
                     <div class="pricing-cta">
-                        <a href="#" class="btn btn-primary btn-large">Join Waitlist</a>
-                        <p class="cta-subtitle">Next cohort starts September 2025</p>
+                        <a href="https://airtable.com/appflP5cuR8bD5MIm/shryxwLd0COOEaqXo" class="btn btn-primary btn-large">Register Now</a>
+                        <p class="cta-subtitle">Next cohort starts September 15, 2025</p>
+                        <a href="https://calendar.google.com/calendar/?cid=cGtjZ2tkbGc1OG9yb2lxa2Vwc2g4YXMzMmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ" target="_blank" class="feature-link">📅 Subscribe to calendar updates</a>
                     </div>
                 </div>
             </div>
@@ -1206,6 +1269,13 @@ description: "A comprehensive 12-week course that takes you from beginner to adv
             <div class="why-free">
                 <h3>Why is this course free?</h3>
                 <p>We believe in making quality education accessible to everyone. This course is part of our mission to democratize machine learning education and build a global community of data practitioners. Your success is our success!</p>
+                
+                <div class="github-info">
+                    <p><strong>All course materials are open source and available on GitHub:</strong></p>
+                    <a href="https://github.com/DataTalksClub/machine-learning-zoomcamp" target="_blank" class="btn btn-secondary">
+                        📚 View Full Course on GitHub
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -1221,7 +1291,10 @@ description: "A comprehensive 12-week course that takes you from beginner to adv
                 <h3 class="faq-question">How is the course structured?</h3>
                 <div class="faq-answer">
                     <p>The course runs for 4 months and includes pre-recorded videos, live office hours, hands-on projects, and a vibrant community. You'll need around 10 hours per week for coursework and projects.</p>
-            </div>
+                    <p><strong>Duration:</strong> 4 months</p>
+                    <p><strong>Time commitment:</strong> ~10 hours per week</p>
+                    <p><strong>Format:</strong> Pre-recorded videos with live office hours</p>
+                </div>
             </div>
 
             <div class="faq-item">
@@ -1230,7 +1303,7 @@ description: "A comprehensive 12-week course that takes you from beginner to adv
                     <p>You have two options:</p>
                     <ul>
                         <li><strong>Self-paced learning:</strong> Start immediately! All course materials are pre-recorded and freely available on GitHub. You can learn at your own pace.</li>
-                        <li><strong>Live cohort:</strong> Join our next cohort starting September 2025 to learn with peers, participate in live sessions, and earn a certificate.</li>
+                        <li><strong>Live cohort:</strong> Join our next cohort starting September 15, 2025 to learn with peers, participate in live sessions, and earn a certificate.</li>
                     </ul>
             </div>
             </div>
@@ -1256,16 +1329,16 @@ description: "A comprehensive 12-week course that takes you from beginner to adv
                 <div class="faq-answer">
                     <p>To earn a certificate, you'll need to:</p>
                     <ol>
-                        <li>Join a live cohort</li>
-                        <li>Complete 2 out of 3 projects:
+                        <li><strong>Join a live cohort</strong> (self-paced learners cannot earn certificates)</li>
+                        <li><strong>Complete 2 out of 3 projects:</strong>
                             <ul>
-                                <li>Midterm project</li>
-                                <li>Capstone project (includes deploying a model as a web service)</li>
+                                <li>Midterm Project: Choose a problem that interests you, find a suitable dataset, and develop your model</li>
+                                <li>Capstone Project: Complete either Capstone Project 1 or Capstone Project 2 (includes deploying a model as a web service)</li>
                             </ul>
                         </li>
-                        <li>Review 3 peers' projects by the deadline</li>
+                        <li><strong>Review 3 peers' projects</strong> by the deadline</li>
                     </ol>
-                    <p><strong>Important:</strong> Projects must be completed individually, and you must be part of a cohort to be eligible for certification.</p>
+                    <p><strong>Important:</strong> Projects must be completed individually, and you can join after the course has started if you miss some homework deadlines.</p>
             </div>
             </div>
 
@@ -1306,6 +1379,12 @@ description: "A comprehensive 12-week course that takes you from beginner to adv
                 <h3 class="faq-question">How can I engage with the community?</h3>
                 <div class="faq-answer">
                     <p>Join our active Slack community, participate in office hours, and share your learning journey on social media with #mlzoomcamp. You can earn extra points for sharing your learning experience publicly.</p>
+                    <ul>
+                        <li><strong>Slack:</strong> <a href="https://datatalks.club/slack.html" target="_blank">#course-ml-zoomcamp channel</a></li>
+                        <li><strong>FAQ:</strong> <a href="https://docs.google.com/document/d/1LpPanc33QJJ6BSsyxVg-pWNMplal84TdZtq10naIhD8" target="_blank">Common questions and answers</a></li>
+                        <li><strong>YouTube:</strong> <a href="https://www.youtube.com/playlist?list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR" target="_blank">Course playlist</a></li>
+                        <li><strong>GitHub:</strong> <a href="https://github.com/DataTalksClub/machine-learning-zoomcamp" target="_blank">Course materials</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -1349,131 +1428,6 @@ description: "A comprehensive 12-week course that takes you from beginner to adv
         </div>
     </div>
 </section>
-
-<style>
-    /* Sponsors section styles */
-    .sponsors-pyramid {
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-        margin: 3rem auto;
-        max-width: 1200px;
-    }
-
-    .sponsor-tier {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-    }
-
-    .top-tier {
-        max-width: 800px;
-        margin: 0 auto;
-        width: 100%;
-    }
-
-    .top-tier .sponsor-card {
-        width: 100%;
-    }
-
-    .top-tier .sponsor-logo {
-        width: 100%;
-        height: auto;
-        max-height: 160px;
-        object-fit: contain;
-    }
-
-    .sponsor-card {
-        background: white;
-        border-radius: 12px;
-        padding: 2rem;
-        text-align: center;
-        transition: transform 0.2s ease;
-    }
-
-    .sponsor-card:hover {
-        transform: translateY(-4px);
-    }
-
-    .sponsor-placeholder {
-        text-align: center;
-        padding: 2rem;
-        background: white;
-        border-radius: 12px;
-        border: 2px dashed #e5e7eb;
-        transition: all 0.3s ease;
-        width: 250px;
-    }
-
-    .sponsor-placeholder:hover {
-        border-color: #4338ca;
-    }
-
-    .sponsor-image {
-        width: 120px;
-        height: 120px;
-        margin: 0 auto 1rem;
-        background: #f3f4f6;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .sponsor-placeholder p {
-        color: #6b7280;
-        font-size: 0.875rem;
-        margin: 0;
-    }
-
-    .sponsor-cta {
-        text-align: center;
-        margin: 4rem auto 2rem;
-        max-width: 600px;
-        padding: 2rem;
-        background: #f8fafc;
-        border-radius: 12px;
-    }
-
-    .sponsor-cta p {
-        color: #1f2937;
-        font-size: 1.125rem;
-        margin: 0 0 1rem 0;
-    }
-
-    .cta-link {
-        color: #4338ca;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.2s ease;
-    }
-
-    .cta-link:hover {
-        color: #3730a3;
-        text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-        .sponsors-pyramid {
-            gap: 2rem;
-            margin: 2rem 1rem;
-        }
-
-        .sponsor-tier {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .top-tier {
-            padding: 0 1rem;
-        }
-
-        .sponsor-placeholder {
-            width: 100%;
-            max-width: 250px;
-        }
-    }
-</style>
 
 <!-- DataTalks.Club Section -->
 <section class="section">
@@ -1529,28 +1483,3 @@ description: "A comprehensive 12-week course that takes you from beginner to adv
         </div>
     </div>
 </footer>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const faqItems = document.querySelectorAll('.faq-item');
-        
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-            
-            question.addEventListener('click', () => {
-                const isActive = item.classList.contains('active');
-                
-                // Close all other items
-                faqItems.forEach(otherItem => {
-                    otherItem.classList.remove('active');
-                });
-                
-                // Toggle current item
-                if (!isActive) {
-                    item.classList.add('active');
-                }
-            });
-        });
-    });
-</script>
-

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Machine Learning Zoomcamp - DataMaster Course</title>
-    <meta name="description" content="A comprehensive 12-week course that takes you from beginner to advanced data scientist. Learn Python, machine learning, and real-world projects.">
+    <title>Machine Learning Zoomcamp - DataTalks.Club Free Courses</title>
+    <meta name="description" content="A free 4-month course on ML engineering. Learn machine learning from regression and classification to deployment and deep learning.">
     
     <!-- Performance optimizations -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,11 +15,12 @@
     <link rel="dns-prefetch" href="https://pythoninvest.com">
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/courses/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet" />
     
     <!-- Meta tags for better performance -->
-    <meta name="theme-color" content="#4338CA">
+    <meta name="theme-color" content="#2c573e">
     <meta name="color-scheme" content="light">
 </head>
 <body>
@@ -29,56 +30,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Machine Learning Zoomcamp</title>
-    <meta name="description" content="A comprehensive 12-week course that takes you from beginner to advanced data scientist. Learn Python, machine learning, and real-world projects.">
+    <meta name="description" content="A free 4-month course on ML engineering. Learn machine learning from regression and classification to deployment and deep learning.">
     <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500,600,700&family=Raleway:300,400,500,600,700&display=swap" rel="stylesheet" />
     <style>
-        /* Global color variables */
-        :root {
-            --primary-color: #2563eb;
-            --primary-light: rgba(37, 99, 235, 0.1);
-            --primary-dark: #1d4ed8;
-            --text-dark: #1f2937;
-            --text-medium: #4b5563;
-            --text-light: #6b7280;
-            --bg-light: #f3f4f6;
-            --white: #ffffff;
-            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* CSS Reset and Base Styles */
+        * {
+            box-sizing: border-box;
         }
 
-        /* Top Banner */
+        body, html {
+            height: 100%;
+            font-family: "Alegreya Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            background-color: #ffffff;
+            color: #1f2937;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Improved Color Palette */
+        :root {
+            --primary-color: #3b82f6;
+            --primary-dark: #2563eb;
+            --primary-light: #dbeafe;
+            --secondary-color: #64748b;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --text-muted: #9ca3af;
+            --border-color: #e5e7eb;
+            --border-light: #f3f4f6;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --background-gray: #f9fafb;
+            --background-light: #ffffff;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Top Banner - Enhanced */
         .top-banner {
-            background: linear-gradient(90deg, var(--primary-light), var(--primary-color));
+            background: linear-gradient(135deg, var(--primary-light) 0%, #f0f9ff 100%);
             padding: 1rem 0;
             position: relative;
             z-index: 100;
+            border-bottom: 1px solid var(--border-color);
         }
 
         .top-banner .register-cta-container {
-            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
         }
 
         .top-banner p {
-            color: var(--primary-dark);
+            color: var(--text-primary);
             font-weight: 500;
-            margin: 0 0 0.5rem 0;
+            margin: 0;
+            font-size: 0.95rem;
         }
 
         .top-banner .register-cta {
-            background: var(--white);
-            color: var(--primary-color);
-            margin: 0;
+            background: var(--primary-color);
+            color: white;
             padding: 0.75rem 1.5rem;
-            font-size: 0.95rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: none;
+            transition: all 0.2s ease;
+            box-shadow: var(--shadow-sm);
+            white-space: nowrap;
         }
 
         .top-banner .register-cta:hover {
             background: var(--primary-dark);
-            color: var(--white);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .top-banner .register-cta:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
         }
 
         @media (max-width: 768px) {
-            .top-banner {
+            .top-banner .register-cta-container {
+                flex-direction: column;
+                gap: 0.75rem;
                 text-align: center;
             }
             
@@ -87,648 +138,795 @@
             }
         }
 
-        /* Section IDs */
-        #videos {
-            scroll-margin-top: 80px;
+        /* Header - Enhanced */
+        .header {
+            background: var(--background-light);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95);
         }
 
-        #community {
-            scroll-margin-top: 80px;
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
         }
 
-        #faq {
-            scroll-margin-top: 80px;
+        .logo {
+            font-family: "Raleway", sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.2s ease;
         }
 
-        /* Interactive elements */
-        .nav-link:hover,
-        .btn:hover,
-        .tech-card:hover,
-        .learning-card:hover {
+        .logo:hover {
+            color: var(--primary-color);
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-link:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+            border-radius: 0.25rem;
+        }
+
+        .nav-link-highlight {
+            background: var(--primary-color);
+            color: white !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link-highlight:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+            
+            .header-content {
+                justify-content: center;
+            }
+        }
+
+        /* Section Styles - Enhanced */
+        .section {
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        .section-gray {
+            background: var(--background-gray);
+            position: relative;
+        }
+
+        .section-gray::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--border-color);
+        }
+
+        .section-title {
+            font-family: "Raleway", sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Hero Section - Enhanced */
+        .hero {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(59, 130, 246, 0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            z-index: 0;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--success-color);
+            color: white;
+            border-radius: 2rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-title {
+            font-family: "Raleway", sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .hero-subtitle {
+            font-family: "Raleway", sans-serif;
+            color: var(--primary-color);
+            display: block;
+            font-size: 2.25rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            line-height: 1.7;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .stat-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Tech badges - Enhanced */
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            padding: 0.5rem;
+            background: white;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        .tech-badge img {
+            display: block;
+            height: 32px;
+            width: auto;
+            border-radius: 0.25rem;
+            transition: transform 0.2s ease;
+        }
+
+        .tech-badge:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow-md);
         }
 
-        /* Consistent spacing */
-        .section {
-            padding: 4rem 0;
+        .tech-badge:hover img {
+            transform: scale(1.05);
         }
 
-        .section-gray {
-            background: var(--bg-light);
+        .tech-badge:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
         }
 
-        /* Use color variables */
+        /* Buttons - Enhanced */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.875rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            line-height: 1.5;
+            min-width: 140px;
+        }
+
+        .btn:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
         .btn-primary {
             background: var(--primary-color);
-            color: var(--white);
+            color: white;
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-sm);
         }
 
         .btn-primary:hover {
             background: var(--primary-dark);
+            border-color: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
         }
 
-        .tech-category {
-            background: var(--primary-light);
-            color: var(--primary-color);
-        }
-
-        /* Add section-specific CTA containers */
-        .section-cta {
-            margin-top: 3rem;
-            text-align: center;
-        }
-
-        /* Community section styles */
-        .community-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-top: 3rem;
-            align-items: start;
-        }
-
-        .community-content {
-            padding-right: 2rem;
-        }
-
-        .community-text h3 {
-            font-size: 1.75rem;
-            color: #1f2937;
-            margin-bottom: 1.5rem;
-            line-height: 1.3;
-        }
-
-        .community-benefits {
-            list-style: none;
-            padding: 0;
-            margin: 2rem 0;
-        }
-
-        .community-benefits li {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-            padding: 1.25rem;
+        .btn-secondary {
             background: white;
-            border-radius: 12px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            color: var(--text-primary);
+            border-color: var(--border-color);
+            box-shadow: var(--shadow-sm);
         }
 
-        .community-benefits li:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .btn-secondary:hover {
+            background: var(--background-gray);
+            border-color: var(--text-secondary);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
         }
 
-        .benefit-icon {
-            width: 32px;
-            height: 32px;
-            margin-right: 1rem;
-            padding: 6px;
-            background: rgba(37, 99, 235, 0.1);
-            border-radius: 8px;
-            color: #2563eb;
-            flex-shrink: 0;
+        .btn-large {
+            padding: 1rem 2.5rem;
+            font-size: 1.125rem;
         }
 
-        .community-benefits span {
-            font-size: 1.1rem;
-            color: #374151;
-            line-height: 1.5;
-        }
-
-        .community-showcase {
-            display: flex;
-            flex-direction: column;
+        /* Grid layouts - Enhanced */
+        .grid {
+            display: grid;
             gap: 2rem;
+            margin: 3rem 0;
         }
 
-        .slack-preview {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         }
 
-        .slack-image {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .slack-caption {
-            padding: 1rem;
-            text-align: center;
-            color: #6b7280;
-            font-size: 0.95rem;
-            border-top: 1px solid #f3f4f6;
-        }
-
-        .community-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            padding: 1.5rem;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-
-        .stat {
-            text-align: center;
-            padding: 1rem;
-            background: rgba(37, 99, 235, 0.05);
-            border-radius: 8px;
-        }
-
-        .stat-number {
-            display: block;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #2563eb;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            display: block;
-            color: #4b5563;
-            font-size: 0.95rem;
-        }
-
-        .community-highlight {
-            margin-top: 2rem;
-            padding: 1.5rem;
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
-            border-radius: 12px;
-            border: 1px solid rgba(37, 99, 235, 0.2);
-        }
-
-        .highlight-text {
-            color: #2563eb;
-            font-weight: 500;
-            margin: 0;
-            text-align: center;
-            font-size: 1.1rem;
-            line-height: 1.5;
-        }
-
-        @media (max-width: 768px) {
-            .community-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .community-content {
-                padding-right: 0;
-            }
-
-            .community-stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        /* Homework and Support section styles */
-        .support-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .support-card {
-            background: #fff;
-            border-radius: 8px;
-            padding: 2rem;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .support-image {
-            width: 100%;
-            border-radius: 4px;
-            margin: 1rem 0;
-        }
-
-        .image-caption {
-            text-align: center;
-            color: #666;
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-        }
-
-        .homework-features, .support-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .feature-highlight {
-            color: #2563eb;
-            font-weight: 600;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .support-feature {
-            margin-bottom: 1.5rem;
-        }
-
-        .support-feature h4 {
-            color: #1f2937;
-            margin-bottom: 0.5rem;
-        }
-
-        .feature-link {
-            display: inline-block;
-            color: #2563eb;
-            text-decoration: none;
-            margin-top: 0.5rem;
-            font-weight: 500;
-        }
-
-        .feature-link:hover {
-            text-decoration: underline;
-        }
-
-        /* Prerequisites section styles */
-        .prerequisites-grid {
-            display: grid;
+        .grid-3 {
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
         }
 
-        .prerequisite-card {
-            background: #fff;
-            border-radius: 8px;
+        /* Cards - Enhanced */
+        .card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
             padding: 2rem;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .prerequisite-card.highlight {
-            border: 2px solid #2563eb;
-        }
-
-        .prerequisite-icon {
-            width: 48px;
-            height: 48px;
-            margin-bottom: 1rem;
-            color: #2563eb;
-        }
-
-        .prerequisite-card h3 {
-            color: #1f2937;
-            margin-bottom: 0.5rem;
-            font-size: 1.25rem;
-        }
-
-        .prerequisite-card p {
-            color: #4b5563;
-            margin-bottom: 1rem;
-        }
-
-        .prerequisite-details {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            flex-grow: 1;
-        }
-
-        .prerequisite-details li {
-            color: #6b7280;
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .prerequisite-details li::before {
-            content: "•";
-            color: #2563eb;
-            position: absolute;
-            left: 0.5rem;
-        }
-
-        /* Learning section styles */
-        .learning-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .learning-card {
-            background: #fff;
-            border-radius: 8px;
-            padding: 2rem;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .learning-icon {
-            width: 40px;
-            height: 40px;
-            margin-bottom: 1rem;
-            color: #2563eb;
-        }
-
-        .learning-card h3 {
-            color: #1f2937;
-            margin-bottom: 1rem;
-            font-size: 1.25rem;
-        }
-
-        .learning-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .learning-list li {
-            color: #4b5563;
-            margin-bottom: 0.75rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .learning-list li::before {
-            content: "✓";
-            color: #2563eb;
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-
-        /* DataTalks.Club section styles */
-        .dtc-grid {
-            display: grid;
-            gap: 3rem;
-            margin-top: 2rem;
-        }
-
-        .dtc-mission {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .mission-content h3 {
-            font-size: 1.75rem;
-            color: #1f2937;
-            margin-bottom: 1rem;
-        }
-
-        .mission-content p {
-            font-size: 1.1rem;
-            color: #4b5563;
-            margin-bottom: 2rem;
-        }
-
-        .quick-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .quick-link {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.25rem;
-            background: white;
-            border-radius: 8px;
-            color: #2563eb;
-            text-decoration: none;
-            font-weight: 500;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             transition: all 0.2s ease;
-        }
-
-        .quick-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .quick-link-icon {
-            width: 20px;
-            height: 20px;
-        }
-
-        .dtc-features {
-            margin-top: 3rem;
-        }
-
-        .feature-columns {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 0 auto;
-            max-width: 1000px;
-        }
-
-        .feature-column h4 {
-            font-size: 1.25rem;
-            color: #1f2937;
-            margin-bottom: 1rem;
-        }
-
-        .feature-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .feature-list li {
-            margin-bottom: 0.75rem;
-            padding-left: 1.5rem;
+            box-shadow: var(--shadow-sm);
             position: relative;
-            color: #4b5563;
-        }
-
-        .feature-list li::before {
-            content: "•";
-            color: #2563eb;
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-
-        .dtc-highlights {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .highlight-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .highlight-icon {
-            width: 40px;
-            height: 40px;
-            margin: 0 auto 1rem;
-            color: #2563eb;
-        }
-
-        .highlight-card h4 {
-            font-size: 1.1rem;
-            color: #1f2937;
-            margin-bottom: 0.5rem;
-        }
-
-        .highlight-card p {
-            color: #6b7280;
-            margin: 0;
-        }
-
-        .dtc-links {
-            margin-top: 3rem;
-            text-align: center;
-        }
-
-        .dtc-links h4 {
-            font-size: 1.25rem;
-            color: #1f2937;
-            margin-bottom: 1rem;
-        }
-
-        .resource-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-        }
-
-        .resource-link {
-            color: #2563eb;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            background: rgba(37, 99, 235, 0.1);
-            transition: all 0.2s ease;
-        }
-
-        .resource-link:hover {
-            background: rgba(37, 99, 235, 0.2);
-        }
-
-        @media (max-width: 768px) {
-            .quick-links {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .quick-link {
-                justify-content: center;
-            }
-
-            .feature-columns {
-                grid-template-columns: 1fr;
-            }
-
-            .dtc-highlights {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Footer styles */
-        .footer {
-            background: #1f2937;
-            color: white;
-            padding: 4rem 0;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            text-align: center;
-        }
-
-        .footer-logo {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-tagline {
-            color: #9ca3af;
-            margin-bottom: 2rem;
-        }
-
-        .footer-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .footer-link {
-            color: #e5e7eb;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            transition: all 0.2s ease;
-            font-size: 0.95rem;
-        }
-
-        .footer-link:hover {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-            .footer {
-                padding: 3rem 0;
-            }
-
-            .footer-links {
-                flex-direction: column;
-                align-items: center;
-                gap: 0.75rem;
-            }
-
-            .footer-link {
-                width: 100%;
-                text-align: center;
-                padding: 0.75rem;
-            }
-        }
-
-        /* Video section styles */
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .video-card {
-            background: white;
-            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+            transform: scaleX(0);
             transition: transform 0.2s ease;
         }
 
-        .video-card:hover {
-            transform: translateY(-4px);
+        .card:hover::before {
+            transform: scaleX(1);
         }
 
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .card-title {
+            font-family: "Raleway", sans-serif;
+            font-size: 1.375rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .card-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Lists - Enhanced */
+        .feature-list, .learning-list, .prerequisite-details, .project-list, .benefits-list, .pricing-features, .experience-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .feature-list li, .learning-list li, .prerequisite-details li, .project-list li, .benefits-list li, .pricing-features li, .experience-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+        }
+
+        .feature-list li::before, .learning-list li::before, .prerequisite-details li::before, .project-list li::before, .benefits-list li::before, .pricing-features li::before, .experience-list li::before {
+            content: "✓";
+            color: var(--success-color);
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 0.1rem;
+            flex-shrink: 0;
+        }
+
+        /* Typography - Enhanced */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Raleway", sans-serif;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+        }
+
+        h4 {
+            font-size: 1.375rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        /* Links - Enhanced */
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        a:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+            border-radius: 0.25rem;
+        }
+
+        /* Section CTA - Enhanced */
+        .section-cta {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .register-cta-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .register-cta-container p {
+            margin: 0;
+            color: var(--text-primary);
+            font-size: 1.125rem;
+            font-weight: 500;
+        }
+
+        /* Complex grid components */
+        .tech-grid, .learning-grid, .prerequisites-grid, .syllabus-grid, .features-grid, .support-grid, .projects-grid, .testimonials-grid, .video-grid, .community-grid, .pricing-options, .faq-list, .sponsors-pyramid, .dtc-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        /* Complex card components */
+        .tech-card, .learning-card, .prerequisite-card, .module, .feature-box, .support-card, .project-card, .testimonial-card, .video-card, .community-content, .pricing-card, .faq-item, .sponsor-card, .highlight-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            transition: all 0.2s ease;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-card::before, .learning-card::before, .prerequisite-card::before, .module::before, .feature-box::before, .support-card::before, .project-card::before, .testimonial-card::before, .video-card::before, .pricing-card::before, .sponsor-card::before, .highlight-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+            transform: scaleX(0);
+            transition: transform 0.2s ease;
+        }
+
+        .tech-card:hover::before, .learning-card:hover::before, .prerequisite-card:hover::before, .module:hover::before, .feature-box:hover::before, .support-card:hover::before, .project-card:hover::before, .testimonial-card:hover::before, .video-card:hover::before, .pricing-card:hover::before, .sponsor-card:hover::before, .highlight-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .tech-card:hover, .learning-card:hover, .prerequisite-card:hover, .module:hover, .feature-box:hover, .support-card:hover, .project-card:hover, .testimonial-card:hover, .video-card:hover, .pricing-card:hover, .sponsor-card:hover, .highlight-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        /* Tech icons and images */
+        .tech-icon {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 1.5rem;
+            border-radius: 0.5rem;
+            transition: transform 0.2s ease;
+        }
+
+        .tech-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .instructor-avatar {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            border: 3px solid var(--border-color);
+            transition: border-color 0.2s ease;
+        }
+
+        .instructor-avatar:hover {
+            border-color: var(--primary-color);
+        }
+
+        .featured-project-image, .quote-image, .leaderboard-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .sponsor-logo {
+            max-width: 200px;
+            height: auto;
+            max-height: 80px;
+            object-fit: contain;
+        }
+
+        /* Hide complex elements */
+        .learning-icon, .prerequisite-icon, .feature-icon, .benefit-icon, .slack-image {
+            display: none;
+        }
+
+        /* Support images */
+        .support-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Project cards - Enhanced Layout */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .project-card {
+            position: relative;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            transition: all 0.2s ease;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            height: fit-content;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+            transform: scaleX(0);
+            transition: transform 0.2s ease;
+        }
+
+        .project-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .project-card.main {
+            grid-column: 1 / -1;
+        }
+
+        .project-card.featured {
+            position: relative;
+        }
+
+        .project-card.bonus {
+            /* Ensure bonus card has consistent styling */
+        }
+
+        .project-content h3, .project-content h4 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-size: 1.375rem;
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .project-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .project-list li::before {
+            content: "→";
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 0.1rem;
+            flex-shrink: 0;
+        }
+
+        .project-list ul {
+            margin-top: 0.5rem;
+            padding-left: 1rem;
+        }
+
+        .project-list ul li::before {
+            content: "•";
+            color: var(--secondary-color);
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: -0.5rem;
+            right: -0.5rem;
+            background: var(--warning-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            box-shadow: var(--shadow-md);
+            z-index: 2;
+        }
+
+        .featured-project-image {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .project-cta {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        /* Responsive adjustments for projects */
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin: 2rem 0;
+            }
+
+            .project-card {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Image captions */
+        .image-caption, .slack-caption, .leaderboard-caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 0.75rem;
+            font-style: italic;
+        }
+
+        /* Badges */
+        .tech-category, .module-tag, .feature-number, .free-badge, .featured-badge, .instructor-badge {
+            display: inline-block;
+            padding: 0.375rem 0.875rem;
+            background: var(--primary-light);
+            color: var(--primary-color);
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border: 1px solid var(--primary-color);
+        }
+
+        /* Instructor section */
+        .instructor-card {
+            display: block;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .instructor-name {
+            font-family: "Raleway", sans-serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .instructor-role {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            font-size: 1.125rem;
+        }
+
+        .instructor-bio {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        /* Hide complex elements */
+        .instructor-achievements, .instructor-badges, .instructor-links, .testimonial-source, .learning-public-content, .why-free, .instructor-experience {
+            display: none;
+        }
+
+        /* Video wrappers */
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            width: 100%;
             height: 0;
+            padding-bottom: 56.25%;
+            margin-bottom: 1.5rem;
+            border-radius: 0.75rem;
             overflow: hidden;
-            border-radius: 8px;
+            box-shadow: var(--shadow-md);
         }
 
         .video-wrapper iframe {
@@ -737,76 +935,244 @@
             left: 0;
             width: 100%;
             height: 100%;
-            border: 0;
+            border: none;
         }
 
-        .video-error {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        /* Community showcase */
+        .community-showcase {
+            display: block;
+        }
+
+        .slack-preview {
+            margin-bottom: 2rem;
+        }
+
+        .slack-image {
+            display: block !important;
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .community-stats {
             display: flex;
-            align-items: center;
-            justify-content: center;
+            justify-content: space-around;
+            gap: 1rem;
+            margin-top: 2rem;
         }
 
-        .error-icon {
-            width: 48px;
-            height: 48px;
-            color: #9ca3af;
+        .community-stats .stat {
+            text-align: center;
+            flex: 1;
         }
 
-        .video-info {
-            padding: 1.5rem;
-        }
-
-        .video-info h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #1f2937;
+        .stat-number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
             margin-bottom: 0.5rem;
         }
 
-        .video-info p {
-            color: #6b7280;
-            font-size: 1rem;
-            line-height: 1.5;
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
         }
 
-        @media (max-width: 768px) {
-            .video-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .video-card {
-                max-width: 600px;
-                margin: 0 auto;
-            }
+        /* Leaderboard showcase */
+        .leaderboard-showcase {
+            display: block;
         }
 
-        /* FAQ styles */
-        .faq-item {
-            border-bottom: 1px solid #e5e7eb;
-            margin-bottom: 1rem;
+        .quote-card, .leaderboard-card {
+            margin-bottom: 2rem;
         }
 
-        .faq-question {
-            font-size: 1.1rem;
-            color: #1f2937;
-            padding: 1rem;
-            cursor: pointer;
+        .quote-attribution {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* Learning public grid */
+        .learning-public-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .learning-cta {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .cta-text {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+        }
+
+        /* Community grid */
+        .community-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .community-benefits {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .community-benefits li {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .benefit-icon {
+            width: 20px;
+            height: 20px;
+            color: var(--success-color);
+            margin-top: 0.1rem;
+            flex-shrink: 0;
+        }
+
+        .community-highlight {
+            background: var(--primary-light);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            margin-top: 2rem;
+            text-align: center;
+            border: 1px solid var(--primary-color);
+        }
+
+        .highlight-text {
+            font-weight: 600;
+            color: var(--text-primary);
             margin: 0;
         }
 
+        /* Instructor images */
+        .instructor-image {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Pricing */
+        .pricing-content {
+            text-align: center;
+        }
+
+        .free-banner {
+            margin-bottom: 4rem;
+        }
+
+        .pricing-card {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .pricing-title {
+            font-family: "Raleway", sans-serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .price {
+            margin-bottom: 2rem;
+        }
+
+        .original-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .free-text {
+            display: block;
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+
+        .pricing-cta {
+            margin-top: 2rem;
+        }
+
+        .cta-subtitle {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-top: 0.75rem;
+        }
+
+        /* FAQ styling - Enhanced */
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+            transition: all 0.2s ease;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-light);
+        }
+
+        .faq-question {
+            font-family: "Raleway", sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 0;
+            cursor: pointer;
+            padding: 1.5rem 2rem;
+            border-radius: 0.75rem;
+            transition: all 0.2s ease;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+        }
+
+        .faq-question:hover {
+            color: var(--primary-color);
+            background: var(--background-gray);
+        }
+
+        .faq-question:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
         .faq-question::after {
-            content: '+';
+            content: "+";
             font-size: 1.5rem;
-            color: #6b7280;
-            transition: transform 0.3s ease;
+            font-weight: 300;
+            color: var(--primary-color);
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+            margin-left: 1rem;
         }
 
         .faq-item.active .faq-question::after {
@@ -814,270 +1180,128 @@
         }
 
         .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            padding: 0 1rem;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 1000px;
-            padding: 0 1rem 1rem 1rem;
-        }
-
-        .faq-answer ul, 
-        .faq-answer ol {
-            padding-left: 1.5rem;
-            margin: 1rem 0;
-        }
-
-        .faq-answer ul li,
-        .faq-answer ol li {
-            margin-bottom: 0.5rem;
-        }
-
-        .faq-answer ul li:last-child,
-        .faq-answer ol li:last-child {
-            margin-bottom: 0;
-        }
-
-        .faq-answer ul ul,
-        .faq-answer ol ul,
-        .faq-answer ul ol,
-        .faq-answer ol ol {
-            margin: 0.5rem 0;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            padding: 0 2rem 1.5rem 2rem;
+            border-top: 1px solid var(--border-light);
+            margin-top: 0;
         }
 
         .faq-answer p {
-            margin: 1rem 0;
-        }
-
-        .faq-answer p:first-child {
-            margin-top: 0;
+            margin-bottom: 1rem;
         }
 
         .faq-answer p:last-child {
             margin-bottom: 0;
         }
 
-        /* Syllabus styles */
-        .syllabus-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem auto;
-            max-width: 1200px;
-        }
-
-        .module {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            position: relative;
-            transition: transform 0.2s ease;
-            border: 1px solid #e5e7eb;
-        }
-
-        .module:hover {
-            transform: translateY(-4px);
-        }
-
-        .module-tag {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: #f3f4f6;
-            border-radius: 20px;
-            color: #4b5563;
-            font-size: 0.875rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-
-        .module h3 {
-            color: #111827;
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin: 0 0 1.5rem 0;
-            line-height: 1.4;
-        }
-
-        .module ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .module li {
-            color: #4b5563;
+        .faq-answer ul, .faq-answer ol {
+            margin: 1rem 0;
             padding-left: 1.5rem;
-            position: relative;
-            margin-bottom: 0.75rem;
-            line-height: 1.5;
         }
 
-        .module li:last-child {
-            margin-bottom: 0;
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
         }
 
-        .module li::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0.6rem;
-            width: 6px;
-            height: 6px;
-            background: #4b5563;
-            border-radius: 50%;
+        /* FAQ active state */
+        .faq-item.active .faq-answer {
+            display: block;
         }
 
-        /* Project modules */
-        .module.project {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
+        .faq-item .faq-answer {
+            display: none;
         }
 
-        .module.project .module-tag {
-            background: #e0e7ff;
-            color: #4338ca;
-        }
-
-        .module.project h3 {
-            color: #1e40af;
-        }
-
-        .module.project p {
-            color: #475569;
-            margin: 0 0 1.5rem 0;
-            line-height: 1.6;
-        }
-
-        .module.project li::before {
-            background: #4338ca;
-        }
-
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .syllabus-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-                margin: 2rem 1rem;
+            body {
+                font-size: 15px;
+            }
+            
+            .hero-title, h1 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
             }
 
-            .module {
+            .hero-subtitle, h2 {
+                font-size: 1.75rem;
+                margin-bottom: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+
+            .section-subtitle {
+                margin-bottom: 2rem;
+                font-size: 1.125rem;
+            }
+
+            .card, .tech-card, .learning-card, .prerequisite-card, .module, .feature-box, .support-card, .project-card, .testimonial-card, .video-card, .pricing-card, .faq-item, .sponsor-card, .highlight-card {
                 padding: 1.5rem;
             }
 
-            .module h3 {
-                font-size: 1.125rem;
-                margin-bottom: 1.25rem;
+            .grid, .tech-grid, .learning-grid, .prerequisites-grid, .syllabus-grid, .features-grid, .support-grid, .projects-grid, .testimonials-grid, .video-grid, .community-grid, .pricing-options, .faq-list, .sponsors-pyramid, .dtc-highlights {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin: 2rem 0;
+            }
+
+            .learning-public-grid, .community-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .tech-badges {
+                gap: 0.75rem;
+            }
+
+            .section-cta {
+                margin-top: 2rem;
+            }
+
+            .community-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
             }
         }
 
-        /* Project modules special styling */
-        .project-module {
-            background: #F8FAFC;
-            border: 1px solid rgba(65, 105, 225, 0.2);
-        }
-
-        .project-module .module-number {
-            background: #2563EB;
-        }
-
-        .project-module h3 {
-            color: #1E40AF;
-        }
-
-        .project-module p {
-            color: #475569;
-            margin: 0 0 1.25rem 0;
-            line-height: 1.6;
-        }
-
-        .project-requirements li::before {
-            background-color: #2563EB;
-        }
-
-        @media (max-width: 768px) {
-            .syllabus-timeline::before {
-                left: 29px;
-            }
-
-            .module {
-                padding-left: 60px;
-                margin-left: 1rem;
-                margin-right: 1rem;
-            }
-
-            .module-number {
-                left: -32px;
-                width: 36px;
-                height: 36px;
-                font-size: 0.9rem;
-                top: 1.25rem;
-            }
-
-            .module-content {
-                padding: 1.25rem;
-            }
-
-            .module-content h3 {
-                font-size: 1.1rem;
-                margin-bottom: 1rem;
+        @media (min-width: 768px) {
+            .hero-title, h1 {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
             }
         }
 
-        .project-module {
-            margin: 3rem 0;
+        /* Header scroll effect */
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
         }
 
-        .project-module .module-number {
-            background: var(--primary-dark);
-        }
-
-        .project-content {
-            background: var(--primary-light);
-            border: 1px solid var(--primary-color);
-        }
-
-        .project-content p {
-            color: var(--text-dark);
-            margin: 0 0 1rem 0;
-        }
-
-        .project-requirements {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .project-requirements li {
-            color: var(--text-medium);
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .project-requirements li::before {
-            content: "✓";
-            color: var(--primary-color);
-            position: absolute;
-            left: 0;
-        }
-
-        @media (max-width: 768px) {
-            .syllabus-timeline::before {
-                left: 24px;
-            }
-
-            .module {
-                padding-left: 60px;
-            }
-
-            .module-number {
-                left: 6px;
-            }
-        }
-
-        /* Sponsors section styles */
+        /* Sponsors section */
         .sponsors-pyramid {
             display: flex;
             flex-direction: column;
@@ -1111,43 +1335,48 @@
 
         .sponsor-card {
             background: white;
-            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
             padding: 2rem;
             text-align: center;
-            transition: transform 0.2s ease;
+            transition: all 0.2s ease;
+            box-shadow: var(--shadow-sm);
         }
 
         .sponsor-card:hover {
-            transform: translateY(-4px);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
         }
 
         .sponsor-placeholder {
             text-align: center;
             padding: 2rem;
             background: white;
-            border-radius: 12px;
-            border: 2px dashed #e5e7eb;
+            border-radius: 0.75rem;
+            border: 2px dashed var(--border-color);
             transition: all 0.3s ease;
             width: 250px;
         }
 
         .sponsor-placeholder:hover {
-            border-color: #4338ca;
+            border-color: var(--primary-color);
+            background: var(--primary-light);
         }
 
         .sponsor-image {
             width: 120px;
             height: 120px;
             margin: 0 auto 1rem;
-            background: #f3f4f6;
-            border-radius: 8px;
+            background: var(--background-gray);
+            border-radius: 0.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
+            border: 1px solid var(--border-color);
         }
 
         .sponsor-placeholder p {
-            color: #6b7280;
+            color: var(--text-secondary);
             font-size: 0.875rem;
             margin: 0;
         }
@@ -1157,25 +1386,26 @@
             margin: 4rem auto 2rem;
             max-width: 600px;
             padding: 2rem;
-            background: #f8fafc;
-            border-radius: 12px;
+            background: var(--background-gray);
+            border-radius: 0.75rem;
+            border: 1px solid var(--border-color);
         }
 
         .sponsor-cta p {
-            color: #1f2937;
+            color: var(--text-primary);
             font-size: 1.125rem;
             margin: 0 0 1rem 0;
         }
 
         .cta-link {
-            color: #4338ca;
+            color: var(--primary-color);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             transition: color 0.2s ease;
         }
 
         .cta-link:hover {
-            color: #3730a3;
+            color: var(--primary-dark);
             text-decoration: underline;
         }
 
@@ -1200,221 +1430,140 @@
             }
         }
 
-        /* Registration CTA Button */
-        .register-cta {
-            display: inline-block;
-            background: var(--primary-color);
-            color: var(--white);
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
+        /* Footer */
+        .footer {
+            background: var(--text-primary);
+            color: #ffffff;
+            padding: 4rem 0;
             text-align: center;
-            margin: 1.5rem 0;
-            border: none;
-            cursor: pointer;
         }
 
-        .register-cta:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .register-cta-light {
-            background: var(--white);
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
-        }
-
-        .register-cta-light:hover {
-            background: var(--primary-light);
-        }
-
-        .register-cta-container {
-            text-align: center;
-            margin: 2rem 0;
-        }
-
-        .register-cta-container p {
-            color: var(--text-medium);
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        /* Header Styles */
-        .header {
-            background: var(--white);
-            border-bottom: 1px solid var(--bg-light);
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            padding: 1rem 0;
-            transition: box-shadow 0.3s ease;
-        }
-
-        .header.scrolled {
-            box-shadow: var(--shadow-sm);
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.25rem;
+        .footer-logo {
+            font-family: "Raleway", sans-serif;
+            font-size: 1.75rem;
             font-weight: 700;
-            color: var(--text-dark);
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .logo:hover {
-            color: var(--primary-color);
-        }
-
-        .nav {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-link {
-            color: var(--text-medium);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.2s ease;
-            padding: 0.5rem 0;
-            position: relative;
-        }
-
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: var(--primary-color);
-            transform: scaleX(0);
-            transform-origin: bottom right;
-            transition: transform 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: var(--primary-color);
-        }
-
-        .nav-link:hover:after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-        }
-
-        .nav-link-highlight {
-            color: var(--primary-color);
-            border: 1px solid var(--primary-color);
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            transition: all 0.2s ease;
-        }
-
-        .nav-link-highlight:hover {
-            background: var(--primary-color);
-            color: var(--white);
-        }
-
-        .nav-link-highlight:after {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
-
-            .nav {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1rem;
-            }
-        }
-
-        /* Existing styles ... */
-
-        /* Community Section Styles */
-        .community-section {
-            padding: 5rem 0;
-            background: var(--bg-light);
-        }
-
-        .community-benefits {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .benefit-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 1rem;
-            box-shadow: var(--shadow-sm);
-            transition: all 0.2s ease;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .benefit-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .benefit-card h3 {
-            color: var(--text-dark);
-            font-size: 1.25rem;
-            font-weight: 600;
             margin-bottom: 1rem;
         }
 
-        .benefit-card p {
-            color: var(--text-medium);
-            line-height: 1.6;
-        }
-
-        .cta-container {
-            text-align: center;
-            margin-top: 3rem;
-        }
-
-        .cta-container .btn-primary {
-            padding: 1rem 2rem;
+        .footer-tagline {
+            margin-bottom: 2rem;
+            opacity: 0.9;
             font-size: 1.125rem;
         }
 
-        @media (max-width: 768px) {
-            .community-section {
-                padding: 4rem 0;
-            }
+        .register-cta-light {
+            background: #ffffff;
+            color: var(--text-primary);
+            border: 1px solid rgba(255,255,255,.2);
+        }
 
-            .community-benefits {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
+        .register-cta-light:hover {
+            background: var(--background-gray);
+            color: var(--text-primary);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
 
-            .benefit-card {
-                padding: 1.5rem;
+
+
+        /* Form elements */
+        input, textarea, select {
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 0.875rem;
+            font-family: "Alegreya Sans", sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.2s ease;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+            border-color: var(--primary-color);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
+
+        .hero-content > * {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .hero-content > *:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .hero-content > *:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .hero-content > *:nth-child(4) {
+            animation-delay: 0.3s;
+        }
     </style>
+    
+    <script>
+        // Add shadow to header on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 0) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // FAQ functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+         
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+                    
+                    // Toggle current item
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </head>
 
     <div class="top-banner">
@@ -1429,7 +1578,7 @@
 <header class="header">
     <div class="container">
         <div class="header-content">
-            <a href="https://datatalks.club/courses/ml-zoomcamp/" class="logo">Machine Learning Zoomcamp</a>
+            <a href="/courses/ml-zoomcamp/" class="logo">Machine Learning Zoomcamp</a>
             <nav class="nav">
                 <a href="https://datatalks.club/courses/" class="nav-link">All Courses</a>
                 <a href="#description" class="nav-link">Topics</a>
@@ -1443,18 +1592,6 @@
     </div>
 </header>
 
-<script>
-    // Add shadow to header on scroll
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('.header');
-        if (window.scrollY > 0) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-</script>
-
 <!-- Hero Section -->
 <section class="hero">
     <div class="container">
@@ -1465,8 +1602,8 @@
                 <span class="hero-subtitle">From Zero to Deployment</span>
             </h1>
             <p class="hero-description">
-                A comprehensive 4-month course that takes you from beginner to advanced ML engineer. 
-                Learn the fundamentals of ML, from regression and classification to deployment and deep learning.
+                A practical 4-month course where you'll learn to build and deploy machine learning systems. 
+                We focus on the engineering side from training models to getting them to work in production.
             </p>
             <div class="hero-buttons">
                 <a href="#pricing" class="btn btn-primary">Enroll Now</a>
@@ -1518,7 +1655,7 @@
 
 
 
-<!-- What You'll Learn Section -->
+<!-- What This Course Is About Section -->
 <section id="description" class="section section-gray">
     <div class="container">
         <h2 class="section-title">What You'll Learn</h2>
@@ -1784,11 +1921,11 @@
                     </svg>
                 </div>
                 <h3>Programming Experience</h3>
-                <p>At least 1 year of programming experience in any language</p>
+                <p>Some programming experience (1+ years, preferably Python)</p>
                 <ul class="prerequisite-details">
-                    <li>Basic understanding of functions and classes</li>
+                    <li>Basic Python knowledge: variables, libraries, and Jupyter notebooks</li>
                     <li>Experience with data structures</li>
-                    <li>Familiarity with version control (Git)</li>
+                    <li>Familiarity with version control (Git) is helpful but not required</li>
                 </ul>
             </div>
 
@@ -1798,12 +1935,12 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
                     </svg>
             </div>
-                <h3>Command Line Basics</h3>
-                <p>Comfort with basic terminal operations</p>
+                <h3>Technical Setup</h3>
+                <p>Basic command line comfort and high school math</p>
                 <ul class="prerequisite-details">
                     <li>Navigation and file operations</li>
                     <li>Running scripts and commands</li>
-                    <li>Package installation</li>
+                    <li>High school level mathematics</li>
                 </ul>
         </div>
 
@@ -1965,6 +2102,18 @@
                 </ul>
             </div>
 
+            <!-- Module 10 -->
+            <div class="module">
+                <span class="module-tag">Module 10</span>
+                <h3>KServe (Optional)</h3>
+                <ul>
+                    <li>Advanced model serving with KServe</li>
+                    <li>Production ML systems</li>
+                    <li>Scalable model deployment</li>
+                    <li>Model versioning and management</li>
+                </ul>
+            </div>
+
             <!-- Capstone Project -->
             <div class="module project">
                 <span class="module-tag">Capstone Project</span>
@@ -2117,84 +2266,141 @@
 <!-- Portfolio Projects Section -->
 <section id = "portfolio" class="section section-gray">
     <div class="container">
-        <h2 class="section-title">Build Your ML Portfolio</h2>
-        <p class="section-subtitle">Create real-world projects that showcase your skills to potential employers</p>
+        <h2 class="section-title">Course Projects</h2>
+        <p class="section-subtitle">Build real-world projects that demonstrate your ML engineering skills</p>
+
+        <div class="projects-overview">
+            <p class="projects-intro">
+                Personal projects are crucial for job interviews and demonstrating practical ML experience. 
+                You'll complete <strong>2 out of 3 projects</strong> during the course to earn your certificate.
+            </p>
+        </div>
 
         <div class="projects-grid">
-            <div class="project-card main">
+            <!-- Midterm Project -->
+            <div class="project-card">
                 <div class="project-content">
-                    <h3>Course Projects</h3>
+                    <h3>
+                        <a href="https://github.com/DataTalksClub/machine-learning-zoomcamp/tree/master#midterm-project" 
+                           target="_blank">Midterm Project</a>
+                    </h3>
+                    <p class="project-timing"><strong>Timeline:</strong> After Module 4 (Evaluation Metrics)</p>
                     <p class="project-description">
-                        As a machine learning engineer, personal projects are crucial for job interviews and demonstrating practical experience. 
-                        You'll complete two major projects during the course:
+                        Apply your knowledge from modules 1-4 to create a complete machine learning solution.
                     </p>
-                    <ul class="project-list">
-                        <li>
-                            <strong>
-                                <a href="https://github.com/DataTalksClub/machine-learning-zoomcamp/tree/master#midterm-project" 
-                                   target="_blank">Midterm Project</a>:
-                            </strong> 
-                            Choose your own problem, find a dataset, and develop a complete ML solution
-                        </li>
-                        <li>
-                            <strong>Capstone Projects:</strong> Build and deploy a production-ready ML model as a web service
-                            <ul>
-                                <li>
-                                    <a href="https://github.com/DataTalksClub/machine-learning-zoomcamp/tree/master#capstone-project-1" 
-                                       target="_blank">Capstone Project 1</a>
-                                </li>
-                                <li>
-                                    <a href="https://github.com/DataTalksClub/machine-learning-zoomcamp/tree/master#capstone-project-2-optional" 
-                                       target="_blank">Capstone Project 2</a> (optional)
-                                </li>
-                                <li>Option for local or cloud deployment</li>
-                                <li>Bonus points for cloud deployment</li>
-                                <li>Full CI/CD pipeline implementation</li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <div class="project-requirements">
+                        <h4>Requirements:</h4>
+                        <ul class="project-list">
+                            <li>Choose a problem that interests you</li>
+                            <li>Find a suitable dataset</li>
+                            <li>Perform exploratory data analysis</li>
+                            <li>Train and evaluate multiple models</li>
+                            <li>Select the best model based on evaluation metrics</li>
+                            <li>Document your approach and findings</li>
+                        </ul>
+                    </div>
+                    <div class="project-skills">
+                        <h4>Skills Demonstrated:</h4>
+                        <ul class="skills-list">
+                            <li>Data preprocessing and feature engineering</li>
+                            <li>Model selection and hyperparameter tuning</li>
+                            <li>Evaluation metrics and model interpretation</li>
+                            <li>Technical documentation and presentation</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="project-card featured">
-                <div class="featured-badge">Featured Student Project</div>
-                <img src="https://raw.githubusercontent.com/DataTalksClub/datatalksclub.github.io/master/images/posts/2023-08-17-machine-learning-zoomcamp/image9.png" 
-                     alt="Screenshot of Pastor Soto's project" 
-                     class="featured-project-image">
+            <!-- Capstone Project 1 -->
+            <div class="project-card">
                 <div class="project-content">
-                    <h4>Top Project Spotlight</h4>
-                    <p>Pastor Soto's project ranked #1 in the 2022 cohort leaderboard, demonstrating excellence in both implementation and deployment.</p>
+                    <h3>
+                        <a href="https://github.com/DataTalksClub/machine-learning-zoomcamp/tree/master#capstone-project-1" 
+                           target="_blank">Capstone Project 1</a>
+                    </h3>
+                    <p class="project-timing"><strong>Timeline:</strong> Final project (after all modules)</p>
+                    <p class="project-description">
+                        Build and deploy a production-ready ML model as a web service.
+                    </p>
+                    <div class="project-requirements">
+                        <h4>Requirements:</h4>
+                        <ul class="project-list">
+                            <li>Choose a problem and dataset</li>
+                            <li>Train and evaluate your model</li>
+                            <li>Create a web service (Flask/FastAPI)</li>
+                            <li>Containerize with Docker</li>
+                            <li>Deploy locally or to cloud</li>
+                            <li>Include proper documentation</li>
+                        </ul>
+                    </div>
+                    <div class="project-bonus">
+                        <h4>Bonus Points:</h4>
+                        <ul class="bonus-list">
+                            <li>Cloud deployment (AWS, GCP, Azure)</li>
+                            <li>CI/CD pipeline implementation</li>
+                            <li>Model monitoring and logging</li>
+                            <li>API documentation (Swagger/OpenAPI)</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="project-card bonus">
+            <!-- Capstone Project 2 (Optional) -->
+            <div class="project-card">
                 <div class="project-content">
-                    <h3>Bonus Opportunities</h3>
-                    <ul class="project-list">
-                        <li>
-                            <strong>
-                                <a href="https://github.com/DataTalksClub/machine-learning-zoomcamp/tree/master#article" 
-                                   target="_blank">Optional Research Article</a>:
-                            </strong>
-                            <p>Explore advanced topics beyond the curriculum and write a technical article about your findings.</p>
-                        </li>
-                        <li>
-                            <strong>Public Portfolio:</strong>
-                            <p>All projects are featured in our annual leaderboard and make excellent additions to your GitHub profile.</p>
-                        </li>
-                        <li>
-                            <strong>Community Recognition:</strong>
-                            <p>Top projects are showcased to our community of 10,000+ data practitioners.</p>
-                        </li>
-                    </ul>
-                    <div class="project-cta">
-                        <a href="https://github.com/DataTalksClub/machine-learning-zoomcamp/blob/master/cohorts/2022/leaderboard.md" 
-                           target="_blank" 
-                           class="btn btn-secondary">
-                            View 2022 Project Leaderboard
-                        </a>
+                    <h3>
+                        <a href="https://github.com/DataTalksClub/machine-learning-zoomcamp/tree/master#capstone-project-2-optional" 
+                           target="_blank">Capstone Project 2</a>
+                        <span class="optional-badge">Optional</span>
+                    </h3>
+                    <p class="project-timing"><strong>Timeline:</strong> Alternative to Capstone Project 1</p>
+                    <p class="project-description">
+                        An alternative capstone project with different focus areas or advanced implementations.
+                    </p>
+                    <div class="project-requirements">
+                        <h4>Requirements:</h4>
+                        <ul class="project-list">
+                            <li>Similar scope to Capstone Project 1</li>
+                            <li>Focus on advanced ML techniques</li>
+                            <li>Production deployment required</li>
+                            <li>Comprehensive documentation</li>
+                        </ul>
+                    </div>
+                    <div class="project-note">
+                        <p><strong>Note:</strong> You only need to complete either Capstone Project 1 OR Capstone Project 2, not both.</p>
+                    </div>
                 </div>
-                </div>
+            </div>
+        </div>
+
+        <!-- Certification Requirements -->
+        <div class="certification-requirements">
+            <h3>📜 Certification Requirements</h3>
+            <div class="cert-info">
+                <p>To earn your certificate, you must:</p>
+                <ul class="cert-list">
+                    <li><strong>Join a live cohort</strong> (self-paced learners cannot earn certificates)</li>
+                    <li><strong>Complete 2 out of 3 projects:</strong> Midterm Project + (Capstone Project 1 OR Capstone Project 2)</li>
+                    <li><strong>Review 3 peers' projects</strong> by the deadline</li>
+                    <li><strong>Complete projects individually</strong> (no group work)</li>
+                </ul>
+                <p class="cert-note">
+                    <strong>Good news:</strong> You can join the cohort after it starts and still get certified if you complete the required projects, 
+                    even if you miss some homework deadlines.
+                </p>
+            </div>
+        </div>
+
+        <!-- Project Support -->
+        <div class="project-support">
+            <h3>🛠️ Project Support</h3>
+            <div class="support-info">
+                <ul class="support-list">
+                    <li><strong>Office Hours:</strong> Get help from instructors during regular Q&A sessions</li>
+                    <li><strong>Peer Review:</strong> Learn from reviewing other students' projects</li>
+                    <li><strong>Community:</strong> Ask questions in the #course-ml-zoomcamp Slack channel</li>
+                    <li><strong>Examples:</strong> Access previous cohort projects for inspiration</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -2519,7 +2725,7 @@
             <div class="free-banner">
                 <span class="free-badge">100% FREE</span>
                 <h2 class="section-title">Start Learning Today!</h2>
-                <p class="pricing-subtitle">Choose your learning path: self-paced or join our next cohort in September 2025</p>
+                <p class="pricing-subtitle">Choose your learning path: self-paced or join our next cohort starting September 15, 2025</p>
             </div>
             
             <div class="pricing-options">
@@ -2562,12 +2768,17 @@
                     <div class="pricing-cta">
                         <a href="https://github.com/DataTalksClub/machine-learning-zoomcamp" class="btn btn-primary btn-large">Access Materials Now</a>
                         <p class="cta-subtitle">Join 10,000+ students learning ML!</p>
+                        <div class="additional-links">
+                            <a href="https://www.youtube.com/playlist?list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR" target="_blank" class="feature-link">📺 YouTube Playlist</a>
+                            <a href="https://datatalks.club/slack.html" target="_blank" class="feature-link">💬 Join Slack Community</a>
+                            <a href="https://docs.google.com/document/d/1LpPanc33QJJ6BSsyxVg-pWNMplal84TdZtq10naIhD8" target="_blank" class="feature-link">❓ FAQ</a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="pricing-card free highlight">
                     <div class="pricing-header">
-                        <h3 class="pricing-title">Live Cohort (Sept 2025)</h3>
+                        <h3 class="pricing-title">Live Cohort (September 15, 2025)</h3>
                         <div class="price">
                             <span class="original-price">$0</span>
                             <span class="free-text">Everything + Certificate</span>
@@ -2608,8 +2819,9 @@
                     </ul>
                     
                     <div class="pricing-cta">
-                        <a href="#" class="btn btn-primary btn-large">Join Waitlist</a>
-                        <p class="cta-subtitle">Next cohort starts September 2025</p>
+                        <a href="https://airtable.com/appflP5cuR8bD5MIm/shryxwLd0COOEaqXo" class="btn btn-primary btn-large">Register Now</a>
+                        <p class="cta-subtitle">Next cohort starts September 15, 2025</p>
+                        <a href="https://calendar.google.com/calendar/?cid=cGtjZ2tkbGc1OG9yb2lxa2Vwc2g4YXMzMmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ" target="_blank" class="feature-link">📅 Subscribe to calendar updates</a>
                     </div>
                 </div>
             </div>
@@ -2617,6 +2829,13 @@
             <div class="why-free">
                 <h3>Why is this course free?</h3>
                 <p>We believe in making quality education accessible to everyone. This course is part of our mission to democratize machine learning education and build a global community of data practitioners. Your success is our success!</p>
+                
+                <div class="github-info">
+                    <p><strong>All course materials are open source and available on GitHub:</strong></p>
+                    <a href="https://github.com/DataTalksClub/machine-learning-zoomcamp" target="_blank" class="btn btn-secondary">
+                        📚 View Full Course on GitHub
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -2632,7 +2851,10 @@
                 <h3 class="faq-question">How is the course structured?</h3>
                 <div class="faq-answer">
                     <p>The course runs for 4 months and includes pre-recorded videos, live office hours, hands-on projects, and a vibrant community. You'll need around 10 hours per week for coursework and projects.</p>
-            </div>
+                    <p><strong>Duration:</strong> 4 months</p>
+                    <p><strong>Time commitment:</strong> ~10 hours per week</p>
+                    <p><strong>Format:</strong> Pre-recorded videos with live office hours</p>
+                </div>
             </div>
 
             <div class="faq-item">
@@ -2641,7 +2863,7 @@
                     <p>You have two options:</p>
                     <ul>
                         <li><strong>Self-paced learning:</strong> Start immediately! All course materials are pre-recorded and freely available on GitHub. You can learn at your own pace.</li>
-                        <li><strong>Live cohort:</strong> Join our next cohort starting September 2025 to learn with peers, participate in live sessions, and earn a certificate.</li>
+                        <li><strong>Live cohort:</strong> Join our next cohort starting September 15, 2025 to learn with peers, participate in live sessions, and earn a certificate.</li>
                     </ul>
             </div>
             </div>
@@ -2667,16 +2889,16 @@
                 <div class="faq-answer">
                     <p>To earn a certificate, you'll need to:</p>
                     <ol>
-                        <li>Join a live cohort</li>
-                        <li>Complete 2 out of 3 projects:
+                        <li><strong>Join a live cohort</strong> (self-paced learners cannot earn certificates)</li>
+                        <li><strong>Complete 2 out of 3 projects:</strong>
                             <ul>
-                                <li>Midterm project</li>
-                                <li>Capstone project (includes deploying a model as a web service)</li>
+                                <li>Midterm Project: Choose a problem that interests you, find a suitable dataset, and develop your model</li>
+                                <li>Capstone Project: Complete either Capstone Project 1 or Capstone Project 2 (includes deploying a model as a web service)</li>
                             </ul>
                         </li>
-                        <li>Review 3 peers' projects by the deadline</li>
+                        <li><strong>Review 3 peers' projects</strong> by the deadline</li>
                     </ol>
-                    <p><strong>Important:</strong> Projects must be completed individually, and you must be part of a cohort to be eligible for certification.</p>
+                    <p><strong>Important:</strong> Projects must be completed individually, and you can join after the course has started if you miss some homework deadlines.</p>
             </div>
             </div>
 
@@ -2717,6 +2939,12 @@
                 <h3 class="faq-question">How can I engage with the community?</h3>
                 <div class="faq-answer">
                     <p>Join our active Slack community, participate in office hours, and share your learning journey on social media with #mlzoomcamp. You can earn extra points for sharing your learning experience publicly.</p>
+                    <ul>
+                        <li><strong>Slack:</strong> <a href="https://datatalks.club/slack.html" target="_blank">#course-ml-zoomcamp channel</a></li>
+                        <li><strong>FAQ:</strong> <a href="https://docs.google.com/document/d/1LpPanc33QJJ6BSsyxVg-pWNMplal84TdZtq10naIhD8" target="_blank">Common questions and answers</a></li>
+                        <li><strong>YouTube:</strong> <a href="https://www.youtube.com/playlist?list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR" target="_blank">Course playlist</a></li>
+                        <li><strong>GitHub:</strong> <a href="https://github.com/DataTalksClub/machine-learning-zoomcamp" target="_blank">Course materials</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -2760,131 +2988,6 @@
         </div>
     </div>
 </section>
-
-<style>
-    /* Sponsors section styles */
-    .sponsors-pyramid {
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-        margin: 3rem auto;
-        max-width: 1200px;
-    }
-
-    .sponsor-tier {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-    }
-
-    .top-tier {
-        max-width: 800px;
-        margin: 0 auto;
-        width: 100%;
-    }
-
-    .top-tier .sponsor-card {
-        width: 100%;
-    }
-
-    .top-tier .sponsor-logo {
-        width: 100%;
-        height: auto;
-        max-height: 160px;
-        object-fit: contain;
-    }
-
-    .sponsor-card {
-        background: white;
-        border-radius: 12px;
-        padding: 2rem;
-        text-align: center;
-        transition: transform 0.2s ease;
-    }
-
-    .sponsor-card:hover {
-        transform: translateY(-4px);
-    }
-
-    .sponsor-placeholder {
-        text-align: center;
-        padding: 2rem;
-        background: white;
-        border-radius: 12px;
-        border: 2px dashed #e5e7eb;
-        transition: all 0.3s ease;
-        width: 250px;
-    }
-
-    .sponsor-placeholder:hover {
-        border-color: #4338ca;
-    }
-
-    .sponsor-image {
-        width: 120px;
-        height: 120px;
-        margin: 0 auto 1rem;
-        background: #f3f4f6;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .sponsor-placeholder p {
-        color: #6b7280;
-        font-size: 0.875rem;
-        margin: 0;
-    }
-
-    .sponsor-cta {
-        text-align: center;
-        margin: 4rem auto 2rem;
-        max-width: 600px;
-        padding: 2rem;
-        background: #f8fafc;
-        border-radius: 12px;
-    }
-
-    .sponsor-cta p {
-        color: #1f2937;
-        font-size: 1.125rem;
-        margin: 0 0 1rem 0;
-    }
-
-    .cta-link {
-        color: #4338ca;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.2s ease;
-    }
-
-    .cta-link:hover {
-        color: #3730a3;
-        text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-        .sponsors-pyramid {
-            gap: 2rem;
-            margin: 2rem 1rem;
-        }
-
-        .sponsor-tier {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .top-tier {
-            padding: 0 1rem;
-        }
-
-        .sponsor-placeholder {
-            width: 100%;
-            max-width: 250px;
-        }
-    }
-</style>
 
 <!-- DataTalks.Club Section -->
 <section class="section">
@@ -2941,31 +3044,6 @@
     </div>
 </footer>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const faqItems = document.querySelectorAll('.faq-item');
-        
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-            
-            question.addEventListener('click', () => {
-                const isActive = item.classList.contains('active');
-                
-                // Close all other items
-                faqItems.forEach(otherItem => {
-                    otherItem.classList.remove('active');
-                });
-                
-                // Toggle current item
-                if (!isActive) {
-                    item.classList.add('active');
-                }
-            });
-        });
-    });
-</script>
-
-
-    <script src="/assets/js/main.js" defer></script>
+    <script src="/courses/assets/js/main.js" defer></script>
 </body>
 </html>

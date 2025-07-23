@@ -6,27 +6,19 @@
     <title>{{ page.title }}</title>
     <meta name="description" content="{{ page.description }}">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet" />
     <style>
-        /* Global color variables */
-        :root {
-            --primary-color: #2563eb;
-            --primary-light: rgba(37, 99, 235, 0.1);
-            --primary-dark: #1d4ed8;
-            --text-dark: #1f2937;
-            --text-medium: #4b5563;
-            --text-light: #6b7280;
-            --bg-light: #f3f4f6;
-            --white: #ffffff;
-            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Top Banner */
-        .top-banner {
-            background: linear-gradient(90deg, var(--primary-light), var(--primary-color));
-            padding: 1rem 0;
-            position: relative;
-            z-index: 100;
+        /* Global styles with minimalistic approach */
+        body, html {
+            height: 100%;
+            font-family: "Alegreya Sans", sans-serif;
+            font-weight: 400;
+            font-size: 1.1rem;
+            background-color: #ffffff;
+            color: #2c573e;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
@@ -35,10 +27,10 @@
             padding: 0 1rem;
         }
 
-        /* Header */
+        /* Header - minimal and clean */
         .header {
-            background: var(--white);
-            border-bottom: 1px solid var(--bg-light);
+            background: #ffffff;
+            border-bottom: 1px solid rgba(0,0,0,.1);
             position: sticky;
             top: 0;
             z-index: 50;
@@ -52,9 +44,10 @@
         }
 
         .logo {
+            font-family: "Raleway", sans-serif;
             font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-dark);
+            font-weight: 500;
+            color: #2c573e;
         }
 
         .nav {
@@ -63,20 +56,20 @@
         }
 
         .nav-link {
-            color: var(--text-medium);
+            color: #2c573e;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 400;
             transition: color 0.2s;
         }
 
         .nav-link:hover {
-            color: var(--primary-color);
+            color: #1a3327;
         }
 
-        /* Hero Section */
+        /* Hero Section - simplified */
         .hero {
             padding: 4rem 0;
-            background: var(--white);
+            background: #ffffff;
         }
 
         .hero-content {
@@ -88,31 +81,38 @@
         .badge {
             display: inline-block;
             padding: 0.5rem 1rem;
-            background: var(--primary-light);
-            color: var(--primary-color);
-            border-radius: 2rem;
+            background: rgba(214, 219, 251, 0.5);
+            color: #2c573e;
+            border-radius: 0.5rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            border: 0.5px solid rgba(0,0,0,.1);
+        }
+
+        .hero-title {
+            font-family: "Raleway", sans-serif;
+            font-size: 3rem;
+            font-weight: 500;
+            color: #2c573e;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .hero-subtitle {
+            font-family: "Raleway", sans-serif;
+            color: #2c573e;
+            display: block;
+            font-size: 2rem;
             font-weight: 500;
             margin-bottom: 1.5rem;
         }
 
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: var(--text-dark);
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-subtitle {
-            color: var(--primary-color);
-            display: block;
-            font-size: 2.5rem;
-        }
-
         .hero-description {
-            font-size: 1.25rem;
-            color: var(--text-medium);
+            font-size: 1.1rem;
+            color: #2c573e;
             margin-bottom: 2rem;
+            line-height: 1.6;
         }
 
         .hero-buttons {
@@ -126,19 +126,28 @@
             display: inline-block;
             padding: 0.75rem 1.5rem;
             border-radius: 0.5rem;
-            font-weight: 500;
+            font-weight: 400;
             text-decoration: none;
             transition: all 0.2s;
+            border: 1px solid rgba(0,0,0,.1);
         }
 
         .btn-primary {
-            background: var(--primary-color);
-            color: var(--white);
+            background: rgba(214, 219, 251, 0.5);
+            color: #2c573e;
+        }
+
+        .btn-primary:hover {
+            background: rgba(214, 219, 251, 0.8);
         }
 
         .btn-secondary {
-            background: var(--bg-light);
-            color: var(--text-dark);
+            background: #ffffff;
+            color: #2c573e;
+        }
+
+        .btn-secondary:hover {
+            background: #f8f9fa;
         }
 
         .hero-stats {
@@ -152,29 +161,31 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            color: #2c573e;
         }
 
         .stat-icon {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
         }
 
-        /* Course Grid */
+        /* Course Grid - simplified */
         .courses-section {
             padding: 4rem 0;
-            background: var(--bg-light);
+            background: #ffffff;
         }
 
         .section-title {
+            font-family: "Raleway", sans-serif;
             font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-dark);
+            font-weight: 500;
+            color: #2c573e;
             text-align: center;
             margin-bottom: 1rem;
         }
 
         .section-subtitle {
-            font-size: 1.25rem;
-            color: var(--text-medium);
+            font-size: 1.1rem;
+            color: #2c573e;
             text-align: center;
             margin-bottom: 3rem;
         }
@@ -187,16 +198,16 @@
         }
 
         .course-card {
-            background: var(--white);
-            border-radius: 1rem;
+            background: #ffffff;
+            border-radius: 0.5rem;
             overflow: hidden;
-            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0,0,0,.1);
             transition: all 0.2s;
         }
 
         .course-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .course-content {
@@ -206,24 +217,27 @@
         .course-badge {
             display: inline-block;
             padding: 0.25rem 0.75rem;
-            background: var(--primary-light);
-            color: var(--primary-color);
-            border-radius: 1rem;
+            background: rgba(214, 219, 251, 0.5);
+            color: #2c573e;
+            border-radius: 0.5rem;
             font-size: 0.875rem;
-            font-weight: 500;
+            font-weight: 400;
             margin-bottom: 1rem;
+            border: 0.5px solid rgba(0,0,0,.1);
         }
 
         .course-title {
+            font-family: "Raleway", sans-serif;
             font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-dark);
+            font-weight: 500;
+            color: #2c573e;
             margin-bottom: 1rem;
         }
 
         .course-description {
-            color: var(--text-medium);
+            color: #2c573e;
             margin-bottom: 1.5rem;
+            line-height: 1.6;
         }
 
         .course-features {
@@ -236,29 +250,66 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            color: var(--text-medium);
+            color: #2c573e;
             margin-bottom: 0.5rem;
         }
 
         .course-features li::before {
             content: "✓";
-            color: var(--primary-color);
+            color: #2c573e;
         }
 
         /* Community Section */
         .community-section {
             padding: 4rem 0;
-            background: var(--white);
+            background: #ffffff;
+        }
+
+        /* Links */
+        .course-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .course-card-link:hover .course-card {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-card-link:hover .course-title {
+            color: #1a3327;
+        }
+
+        .live-indicator {
+            color: #dc3545;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+
+        .duration {
+            margin-left: 0.5rem;
+            color: #6c757d;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            body {
+                font-size: 90%;
+            }
+            
             .hero-title {
-                font-size: 2.5rem;
+                font-size: 2.3rem;
             }
 
             .hero-subtitle {
-                font-size: 1.75rem;
+                font-size: 1.7rem;
             }
 
             .hero-stats {
@@ -269,42 +320,17 @@
             .nav {
                 display: none;
             }
-        }
 
-        .course-card-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-
-        .course-card-link:hover .course-card {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .course-card-link:hover .course-title {
-            color: var(--primary-color);
-        }
-
-        .live-indicator {
-            color: #ef4444;
-            font-weight: 600;
-            animation: pulse 2s infinite;
-        }
-
-        .duration {
-            margin-left: 0.5rem;
-        }
-
-        @keyframes pulse {
-            0% {
-                opacity: 1;
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
             }
-            50% {
-                opacity: 0.6;
-            }
-            100% {
-                opacity: 1;
+        }
+
+        @media (min-width: 768px) {
+            .hero-title {
+                margin-top: 3rem;
+                margin-bottom: 3rem;
             }
         }
     </style>

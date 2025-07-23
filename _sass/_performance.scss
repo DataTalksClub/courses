@@ -24,7 +24,7 @@ body {
 @media (prefers-reduced-motion: no-preference) {
     // Only apply animations if user hasn't requested reduced motion
     .course-card,
-    .enroll-button {
+    .btn {
         // Ensure animations run on compositor
         will-change: transform;
     }
@@ -54,7 +54,7 @@ img {
 
 // Optimize focus states for better accessibility and performance
 :focus-visible {
-    outline: 2px solid #4338CA;
+    outline: 2px solid #2c573e;
     outline-offset: 2px;
 }
 
@@ -119,5 +119,12 @@ body {
     // Hide non-essential elements
     .course-actions {
         display: none !important;
+    }
+    
+    // Ensure minimalistic design elements are print-friendly
+    .course-card,
+    .card {
+        border: 1px solid #000 !important;
+        background: #fff !important;
     }
 } 
