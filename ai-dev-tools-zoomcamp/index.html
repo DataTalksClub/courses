@@ -17,6 +17,11 @@ description: "A free course that helps you use AI tools to write better code, fa
     <div class="container">
         <div class="header-content">
             <a href="/courses/ai-dev-tools-zoomcamp/" class="logo">AI Dev Tools Zoomcamp</a>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav class="nav">
                 <a href="/courses/" class="nav-link">All Courses</a>
                 <a href="#description" class="nav-link">Topics</a>
@@ -39,6 +44,30 @@ description: "A free course that helps you use AI tools to write better code, fa
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
+        }
+    });
+
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('.nav');
+        
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                nav.classList.toggle('active');
+                document.body.classList.toggle('menu-open');
+            });
+
+            // Close menu when clicking on a link
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    nav.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                });
+            });
         }
     });
 </script>
@@ -74,31 +103,33 @@ description: "A free course that helps you use AI tools to write better code, fa
                     <span>AI-powered coding</span>
                 </div>
             </div>
-            <div class="tech-badges">
-                <a href="https://github.com/features/copilot" target="_blank" class="tech-badge">
-                    <img src="https://img.shields.io/badge/GitHub_Copilot-000000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Copilot">
-                </a>
-                <a href="https://cursor.sh" target="_blank" class="tech-badge">
-                    <img src="https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Cursor">
-                </a>
-                <a href="https://claude.ai" target="_blank" class="tech-badge">
-                    <img src="https://img.shields.io/badge/Claude-FF6B35?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude">
-                </a>
-                <a href="https://chatgpt.com" target="_blank" class="tech-badge">
-                    <img src="https://img.shields.io/badge/ChatGPT-00A67E?style=for-the-badge&logo=openai&logoColor=white" alt="ChatGPT">
-                </a>
-                <a href="https://bolt.new" target="_blank" class="tech-badge">
-                    <img src="https://img.shields.io/badge/Bolt-4285F4?style=for-the-badge&logo=lightning&logoColor=white" alt="Bolt">
-                </a>
-                <a href="https://www.docker.com" target="_blank" class="tech-badge">
-                    <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
-                </a>
-                <a href="https://n8n.io" target="_blank" class="tech-badge">
-                    <img src="https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white" alt="n8n">
-                </a>
-                <a href="https://reactjs.org" target="_blank" class="tech-badge">
-                    <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
-                </a>
+            <div class="tech-badges-container">
+                <div class="tech-badges">
+                    <a href="https://github.com/features/copilot" target="_blank" class="tech-badge">
+                        <img src="https://img.shields.io/badge/GitHub_Copilot-000000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Copilot">
+                    </a>
+                    <a href="https://cursor.sh" target="_blank" class="tech-badge">
+                        <img src="https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Cursor">
+                    </a>
+                    <a href="https://claude.ai" target="_blank" class="tech-badge">
+                        <img src="https://img.shields.io/badge/Claude-FF6B35?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude">
+                    </a>
+                    <a href="https://chatgpt.com" target="_blank" class="tech-badge">
+                        <img src="https://img.shields.io/badge/ChatGPT-00A67E?style=for-the-badge&logo=openai&logoColor=white" alt="ChatGPT">
+                    </a>
+                    <a href="https://bolt.new" target="_blank" class="tech-badge">
+                        <img src="https://img.shields.io/badge/Bolt-4285F4?style=for-the-badge&logo=lightning&logoColor=white" alt="Bolt">
+                    </a>
+                    <a href="https://www.docker.com" target="_blank" class="tech-badge">
+                        <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
+                    </a>
+                    <a href="https://n8n.io" target="_blank" class="tech-badge">
+                        <img src="https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white" alt="n8n">
+                    </a>
+                    <a href="https://reactjs.org" target="_blank" class="tech-badge">
+                        <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -206,154 +237,6 @@ description: "A free course that helps you use AI tools to write better code, fa
                     <li>Technical documentation</li>
                     <li>Collaboration skills</li>
                 </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Technologies Section -->
-<section id = "technologies" class="technologies">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Technologies You'll Master</h2>
-            <p class="section-subtitle">AI-powered development tools and modern frameworks for efficient coding workflows</p>
-        </div>
-        
-        <!-- Part 1: AI Development Tools -->
-        <div class="tech-part">
-            <div class="tech-part-header">
-                <div class="tech-part-number">01</div>
-                <div>
-                    <h3 class="tech-part-title">AI Development Tools</h3>
-                    <p class="tech-part-description">Master AI-powered coding assistants and development environments</p>
-                </div>
-            </div>
-
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Copilot" class="tech-icon">
-                    <h3 class="tech-name">GitHub Copilot</h3>
-                    <p class="tech-description">AI-powered code completion and generation directly in your IDE</p>
-                    <span class="tech-category">AI Assistant</span>
-            </div>
-
-                <div class="tech-card">
-                    <img src="https://www.cursor.com/assets/images/logo.svg" alt="Cursor" class="tech-icon" onerror="this.src='https://via.placeholder.com/64x64/000000/ffffff?text=C'">
-                    <h3 class="tech-name">Cursor</h3>
-                    <p class="tech-description">AI-first code editor built for pair programming with AI</p>
-                    <span class="tech-category">AI IDE</span>
-            </div>
-
-                <div class="tech-card">
-                    <img src="https://claude.ai/images/claude_app_icon.png" alt="Claude" class="tech-icon">
-                    <h3 class="tech-name">Claude</h3>
-                    <p class="tech-description">Advanced AI assistant for coding, debugging, and technical discussions</p>
-                    <span class="tech-category">AI Assistant</span>
-            </div>
-
-                <div class="tech-card">
-                    <img src="/images/logos/openapifavicon.png" alt="ChatGPT" class="tech-icon">
-                    <h3 class="tech-name">ChatGPT</h3>
-                    <p class="tech-description">Versatile AI for code generation, explanation, and problem-solving</p>
-                    <span class="tech-category">AI Assistant</span>
-            </div>
-
-                <div class="tech-card">
-                    <img src="/images/logos/boltnew.jpg" alt="Bolt" class="tech-icon">
-                    <h3 class="tech-name">Bolt</h3>
-                    <p class="tech-description">AI-powered full-stack web development in the browser</p>
-                    <span class="tech-category">Project Bootstrapper</span>
-                </div>
-
-                <div class="tech-card">
-                    <img src="https://lovable.dev/favicon.ico" alt="Lovable" class="tech-icon">
-                    <h3 class="tech-name">Lovable</h3>
-                    <p class="tech-description">AI-powered app development platform for rapid prototyping</p>
-                    <span class="tech-category">Project Bootstrapper</span>
-                </div>
-
-                <div class="tech-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="tech-icon">
-                    <h3 class="tech-name">React</h3>
-                    <p class="tech-description">Modern frontend framework for building interactive user interfaces</p>
-                    <span class="tech-category">Frontend</span>
-                </div>
-
-                <div class="tech-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="tech-icon">
-                    <h3 class="tech-name">TypeScript</h3>
-                    <p class="tech-description">Typed JavaScript for better code quality and developer experience</p>
-                    <span class="tech-category">Language</span>
-                </div>
-
-                <div class="tech-card">
-                    <img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" alt="FastAPI" class="tech-icon">
-                    <h3 class="tech-name">FastAPI</h3>
-                    <p class="tech-description">Modern, fast web framework for building APIs with Python</p>
-                    <span class="tech-category">Backend</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Part 2: Automation & DevOps -->
-        <div class="tech-part">
-            <div class="tech-part-header">
-                <div class="tech-part-number">02</div>
-                <div>
-                    <h3 class="tech-part-title">Automation & DevOps</h3>
-                    <p class="tech-part-description">Modern deployment and automation tools enhanced with AI</p>
-                </div>
-            </div>
-            
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <img src="https://n8n.io/favicon.ico" alt="n8n" class="tech-icon">
-                    <h3 class="tech-name">n8n</h3>
-                    <p class="tech-description">Low-code automation platform with AI workflow capabilities</p>
-                    <span class="tech-category">Automation</span>
-                </div>
-
-                <div class="tech-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="tech-icon">
-                    <h3 class="tech-name">Docker</h3>
-                    <p class="tech-description">Containerization for consistent development and deployment</p>
-                    <span class="tech-category">DevOps</span>
-                </div>
-
-                <div class="tech-card">
-                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Actions" class="tech-icon">
-                    <h3 class="tech-name">GitHub Actions</h3>
-                    <p class="tech-description">CI/CD automation with AI-assisted testing and deployment</p>
-                    <span class="tech-category">CI/CD</span>
-                </div>
-
-                <div class="tech-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" class="tech-icon">
-                    <h3 class="tech-name">Django</h3>
-                    <p class="tech-description">Python web framework for rapid application development</p>
-                    <span class="tech-category">Backend Framework</span>
-                </div>
-
-                <div class="tech-card">
-                    <img src="https://anthropic.com/favicon.ico" alt="Anthropic MCP" class="tech-icon">
-                    <h3 class="tech-name">Model-Context Protocol</h3>
-                    <p class="tech-description">Connect AI assistants to external tools and data sources</p>
-                    <span class="tech-category">AI Integration</span>
-                </div>
-
-                <div class="tech-card">
-                    <img src="https://openapi-generator.tech/img/logos/openapi.png" alt="OpenAPI" class="tech-icon">
-                    <h3 class="tech-name">OpenAPI</h3>
-                    <p class="tech-description">API specification standard for generating server and client code</p>
-                    <span class="tech-category">API Design</span>
-                </div>
-
-                <div class="tech-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="tech-icon">
-                    <h3 class="tech-name">Git & GitHub</h3>
-                    <p class="tech-description">Version control with AI-enhanced code reviews and collaboration</p>
-                    <span class="tech-category">Version Control</span>
-                </div>
             </div>
         </div>
     </div>
@@ -950,6 +833,71 @@ description: "A free course that helps you use AI tools to write better code, fa
 </section>
 
 <style>
+    /* Mobile Menu Styles */
+    .mobile-menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        z-index: 1001;
+    }
+
+    .mobile-menu-toggle span {
+        width: 25px;
+        height: 3px;
+        background: #1f2937;
+        transition: all 0.3s ease;
+        border-radius: 2px;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    /* Tech Badges Container for better mobile wrapping */
+    .tech-badges-container {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .tech-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5rem;
+        min-width: min-content;
+    }
+
+    .tech-badge {
+        display: inline-block;
+        transition: transform 0.2s ease;
+        flex-shrink: 0;
+    }
+
+    .tech-badge img {
+        height: 28px;
+        width: auto;
+        display: block;
+    }
+
     /* Course cover styles */
     .course-cover {
         padding: 2rem 0;
@@ -987,6 +935,199 @@ description: "A free course that helps you use AI tools to write better code, fa
     }
     
     @media (max-width: 768px) {
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: flex;
+        }
+
+        .header .nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 300px;
+            height: 100vh;
+            background: white;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 80px 2rem 2rem;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+            transition: right 0.3s ease;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .header .nav.active {
+            right: 0;
+        }
+
+        .header .nav-link {
+            padding: 1rem 0;
+            width: 100%;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .header-content {
+            justify-content: space-between;
+        }
+
+        /* Top Banner */
+        .top-banner {
+            padding: 0.75rem 0;
+            font-size: 0.875rem;
+        }
+
+        .top-banner .register-cta {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.4rem 0.8rem;
+            font-size: 0.875rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 2rem 0;
+        }
+
+        .hero-title {
+            font-size: 2rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+        }
+
+        .hero-description {
+            font-size: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .hero-buttons {
+            flex-direction: column;
+            gap: 1rem;
+            width: 100%;
+        }
+
+        .hero-buttons .btn {
+            width: 100%;
+            text-align: center;
+            padding: 0.875rem 1.5rem;
+        }
+
+        .hero-stats {
+            flex-direction: column;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .hero-stats .stat {
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Tech Badges */
+        .tech-badges-container {
+            margin: 1.5rem -1rem 0;
+            padding: 0 1rem;
+        }
+
+        .tech-badges {
+            gap: 0.5rem;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding-bottom: 0.5rem;
+        }
+
+        .tech-badge img {
+            height: 24px;
+        }
+
+        /* Learning Grid */
+        .learning-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .learning-card {
+            padding: 1.5rem;
+        }
+
+        /* Prerequisites Grid */
+        .prerequisites-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        /* Syllabus Grid */
+        .syllabus-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        /* Support Grid */
+        .support-grid {
+            grid-template-columns: 1fr;
+        }
+
+        /* Instructor Card */
+        .instructor-card {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .instructor-image {
+            margin-bottom: 1.5rem;
+        }
+
+        .instructor-links {
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .instructor-link {
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* Learning Public Grid */
+        .learning-public-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        /* Section Padding */
+        .section {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+        }
+
+        /* Container Padding */
+        .container {
+            padding: 0 1.25rem;
+        }
+
+        /* Buttons */
+        .btn {
+            font-size: 0.9375rem;
+            padding: 0.75rem 1.25rem;
+        }
+
+        /* Course Cover */
         .course-cover {
             padding: 1rem 0;
         }
@@ -1001,6 +1142,48 @@ description: "A free course that helps you use AI tools to write better code, fa
         
         .audience-note {
             font-size: 1rem;
+        }
+
+        /* Tables and overflow content */
+        .support-image,
+        .quote-image,
+        .leaderboard-image,
+        .slack-preview-image {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    /* Small mobile devices */
+    @media (max-width: 480px) {
+        .hero-title {
+            font-size: 1.75rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            padding: 0.4rem 0.8rem;
+        }
+
+        .module-tag {
+            font-size: 0.75rem;
+        }
+
+        .instructor-badges {
+            gap: 0.5rem;
+        }
+
+        .instructor-badge {
+            font-size: 0.75rem;
+            padding: 0.4rem 0.8rem;
         }
     }
 
