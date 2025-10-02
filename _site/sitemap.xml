@@ -10,6 +10,9 @@
 <loc>http://localhost:4000/courses/ml-zoomcamp/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/courses/ai-dev-tools-zoomcamp/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/courses/</loc>
 </url>
 </urlset>

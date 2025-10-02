@@ -1,0 +1,1740 @@
+---
+layout: default
+title: "AI Dev Tools Zoomcamp"
+description: "A free course that helps you use AI tools to write better code, faster. Learn to leverage AI assistants, coding tools, and automation for development."
+---
+
+{% include ml-zoomcamp-styles.html %}
+
+    <div class="top-banner">
+        <div class="container">
+            <p>🚀 First cohort starting November 18, 2025! <a href="#register" class="register-cta">Register</a></p>
+        </div>
+    </div>
+
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <a href="/courses/ai-dev-tools-zoomcamp/" class="logo">AI Dev Tools Zoomcamp</a>
+            <nav class="nav">
+                <a href="/courses/" class="nav-link">All Courses</a>
+                <a href="#description" class="nav-link">Topics</a>
+                <a href="#technologies" class="nav-link">Technologies</a>
+                <a href="#syllabus" class="nav-link">Syllabus</a>
+                <a href="#portfolio" class="nav-link">Projects</a>
+                <a href="#register" class="nav-link">Register</a>
+                <a href="https://datatalks.club/slack.html" class="nav-link" target="_blank">Slack</a>
+                <a href="#register" class="nav-link nav-link-highlight">Register</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<script>
+    // Add shadow to header on scroll
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 0) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+</script>
+
+<!-- Course Cover Image -->
+<section class="course-cover">
+    <div class="container">
+        <img src="images/course-cover.png" alt="AI Dev Tools Zoomcamp Cover Image" class="cover-image">
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="badge">Free Course</div>
+            <h1 class="hero-title">
+                AI Dev Tools Zoomcamp<br>
+                <span class="hero-subtitle">Write Better Code Faster</span>
+            </h1>
+            <p class="hero-description">
+                A free course that helps you use AI tools to write better code, faster. 
+                Learn to leverage AI assistants, coding tools, and automation for development.
+            </p>
+            <div class="hero-buttons">
+                <a href="#register" class="btn btn-primary">Register</a>
+                <a href="#description" class="btn btn-secondary">Learn More</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-icon">🚀</span>
+                    <span>Coming 2025</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">⏰</span>
+                    <span>6 weeks of content</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🤖</span>
+                    <span>AI-powered coding</span>
+                </div>
+            </div>
+            <div class="tech-badges">
+                <a href="https://github.com/features/copilot" target="_blank" class="tech-badge">
+                    <img src="https://img.shields.io/badge/GitHub_Copilot-000000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Copilot">
+                </a>
+                <a href="https://cursor.sh" target="_blank" class="tech-badge">
+                    <img src="https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white" alt="Cursor">
+                </a>
+                <a href="https://claude.ai" target="_blank" class="tech-badge">
+                    <img src="https://img.shields.io/badge/Claude-FF6B35?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude">
+                </a>
+                <a href="https://chatgpt.com" target="_blank" class="tech-badge">
+                    <img src="https://img.shields.io/badge/ChatGPT-00A67E?style=for-the-badge&logo=openai&logoColor=white" alt="ChatGPT">
+                </a>
+                <a href="https://bolt.new" target="_blank" class="tech-badge">
+                    <img src="https://img.shields.io/badge/Bolt-4285F4?style=for-the-badge&logo=bolt&logoColor=white" alt="Bolt">
+                </a>
+                <a href="https://www.docker.com" target="_blank" class="tech-badge">
+                    <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
+                </a>
+                <a href="https://n8n.io" target="_blank" class="tech-badge">
+                    <img src="https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white" alt="n8n">
+                </a>
+                <a href="https://reactjs.org" target="_blank" class="tech-badge">
+                    <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- What You'll Learn Section -->
+<section id="description" class="section section-gray">
+    <div class="container">
+        <h2 class="section-title">What You'll Learn</h2>
+        <p class="section-subtitle">Master AI-powered development tools and workflows to code faster and smarter</p>
+        
+        <div class="learning-grid">
+            <div class="learning-card">
+                <div class="learning-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <h3>AI Coding Assistants</h3>
+                <ul class="learning-list">
+                    <li>GitHub Copilot integration</li>
+                    <li>Cursor AI-powered IDE</li>
+                    <li>Claude Code for development</li>
+                    <li>Pear AI collaborative coding</li>
+                    <li>Best practices for AI assistance</li>
+                </ul>
+            </div>
+
+            <div class="learning-card">
+                <div class="learning-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                    </svg>
+                </div>
+                <h3>Project Bootstrappers</h3>
+                <ul class="learning-list">
+                    <li>Bolt.new for rapid prototyping</li>
+                    <li>Lovable for app development</li>
+                    <li>AI-powered scaffolding tools</li>
+                    <li>Template generation workflows</li>
+                    <li>Quick deployment strategies</li>
+                </ul>
+            </div>
+
+            <div class="learning-card">
+                <div class="learning-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.871 4A17.926 17.926 0 003 12c0 2.874.673 5.59 1.871 8m14.13 0a17.926 17.926 0 001.87-8c0-2.874-.673-5.59-1.87-8M9 9h1.246a1 1 0 01.961.725l1.586 5.55a1 1 0 00.961.725H15m1-7h-.08a2 2 0 00-1.519.698L9.6 15.302A2 2 0 018.08 16H8" />
+                    </svg>
+                </div>
+                <h3>AI Agents & Automation</h3>
+                <ul class="learning-list">
+                    <li>Model-Context Protocol (MCP)</li>
+                    <li>Anthropic Computer Use</li>
+                    <li>PR Agent for code reviews</li>
+                    <li>Automated testing with AI</li>
+                    <li>CI/CD with AI assistance</li>
+                </ul>
+            </div>
+
+            <div class="learning-card">
+                <div class="learning-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                </div>
+                <h3>End-to-End Projects</h3>
+                <ul class="learning-list">
+                    <li>Snake game in React/TypeScript</li>
+                    <li>FastAPI backend generation</li>
+                    <li>OpenAPI specification design</li>
+                    <li>Django app with AI agents</li>
+                    <li>Deployment automation</li>
+                </ul>
+            </div>
+
+            <div class="learning-card">
+                <div class="learning-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                </div>
+                <h3>Low-Code Automation</h3>
+                <ul class="learning-list">
+                    <li>n8n workflow automation</li>
+                    <li>LLM nodes and webhooks</li>
+                    <li>Email, Slack, GitHub connectors</li>
+                    <li>Database integrations</li>
+                    <li>Lightweight AI assistants</li>
+                </ul>
+            </div>
+
+            <div class="learning-card">
+                <div class="learning-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <h3>Career Development</h3>
+                <ul class="learning-list">
+                    <li>Portfolio building</li>
+                    <li>Real-world projects</li>
+                    <li>Industry best practices</li>
+                    <li>Technical documentation</li>
+                    <li>Collaboration skills</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technologies Section -->
+<section id = "technologies" class="technologies">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Technologies You'll Master</h2>
+            <p class="section-subtitle">AI-powered development tools and modern frameworks for efficient coding workflows</p>
+        </div>
+        
+        <!-- Part 1: AI Development Tools -->
+        <div class="tech-part">
+            <div class="tech-part-header">
+                <div class="tech-part-number">01</div>
+                <div>
+                    <h3 class="tech-part-title">AI Development Tools</h3>
+                    <p class="tech-part-description">Master AI-powered coding assistants and development environments</p>
+                </div>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Copilot" class="tech-icon">
+                    <h3 class="tech-name">GitHub Copilot</h3>
+                    <p class="tech-description">AI-powered code completion and generation directly in your IDE</p>
+                    <span class="tech-category">AI Assistant</span>
+            </div>
+
+                <div class="tech-card">
+                    <img src="https://cursor.sh/brand/icon.png" alt="Cursor" class="tech-icon">
+                    <h3 class="tech-name">Cursor</h3>
+                    <p class="tech-description">AI-first code editor built for pair programming with AI</p>
+                    <span class="tech-category">AI IDE</span>
+            </div>
+
+                <div class="tech-card">
+                    <img src="https://claude.ai/images/claude_app_icon.png" alt="Claude" class="tech-icon">
+                    <h3 class="tech-name">Claude</h3>
+                    <p class="tech-description">Advanced AI assistant for coding, debugging, and technical discussions</p>
+                    <span class="tech-category">AI Assistant</span>
+            </div>
+
+                <div class="tech-card">
+                    <img src="https://openai.com/favicon.ico" alt="ChatGPT" class="tech-icon">
+                    <h3 class="tech-name">ChatGPT</h3>
+                    <p class="tech-description">Versatile AI for code generation, explanation, and problem-solving</p>
+                    <span class="tech-category">AI Assistant</span>
+            </div>
+
+                <div class="tech-card">
+                    <img src="https://bolt.new/favicon.ico" alt="Bolt" class="tech-icon">
+                    <h3 class="tech-name">Bolt</h3>
+                    <p class="tech-description">AI-powered full-stack web development in the browser</p>
+                    <span class="tech-category">Project Bootstrapper</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://lovable.dev/favicon.ico" alt="Lovable" class="tech-icon">
+                    <h3 class="tech-name">Lovable</h3>
+                    <p class="tech-description">AI-powered app development platform for rapid prototyping</p>
+                    <span class="tech-category">Project Bootstrapper</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="tech-icon">
+                    <h3 class="tech-name">React</h3>
+                    <p class="tech-description">Modern frontend framework for building interactive user interfaces</p>
+                    <span class="tech-category">Frontend</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="tech-icon">
+                    <h3 class="tech-name">TypeScript</h3>
+                    <p class="tech-description">Typed JavaScript for better code quality and developer experience</p>
+                    <span class="tech-category">Language</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" alt="FastAPI" class="tech-icon">
+                    <h3 class="tech-name">FastAPI</h3>
+                    <p class="tech-description">Modern, fast web framework for building APIs with Python</p>
+                    <span class="tech-category">Backend</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Part 2: Automation & DevOps -->
+        <div class="tech-part">
+            <div class="tech-part-header">
+                <div class="tech-part-number">02</div>
+                <div>
+                    <h3 class="tech-part-title">Automation & DevOps</h3>
+                    <p class="tech-part-description">Modern deployment and automation tools enhanced with AI</p>
+                </div>
+            </div>
+            
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <img src="https://n8n.io/favicon.ico" alt="n8n" class="tech-icon">
+                    <h3 class="tech-name">n8n</h3>
+                    <p class="tech-description">Low-code automation platform with AI workflow capabilities</p>
+                    <span class="tech-category">Automation</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="tech-icon">
+                    <h3 class="tech-name">Docker</h3>
+                    <p class="tech-description">Containerization for consistent development and deployment</p>
+                    <span class="tech-category">DevOps</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Actions" class="tech-icon">
+                    <h3 class="tech-name">GitHub Actions</h3>
+                    <p class="tech-description">CI/CD automation with AI-assisted testing and deployment</p>
+                    <span class="tech-category">CI/CD</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" class="tech-icon">
+                    <h3 class="tech-name">Django</h3>
+                    <p class="tech-description">Python web framework for rapid application development</p>
+                    <span class="tech-category">Backend Framework</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://anthropic.com/favicon.ico" alt="Anthropic MCP" class="tech-icon">
+                    <h3 class="tech-name">Model-Context Protocol</h3>
+                    <p class="tech-description">Connect AI assistants to external tools and data sources</p>
+                    <span class="tech-category">AI Integration</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://openapi-generator.tech/img/logos/openapi.png" alt="OpenAPI" class="tech-icon">
+                    <h3 class="tech-name">OpenAPI</h3>
+                    <p class="tech-description">API specification standard for generating server and client code</p>
+                    <span class="tech-category">API Design</span>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="tech-icon">
+                    <h3 class="tech-name">Git & GitHub</h3>
+                    <p class="tech-description">Version control with AI-enhanced code reviews and collaboration</p>
+                    <span class="tech-category">Version Control</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Who Is This For Section -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Who Is This For?</h2>
+        <div class="target-audience">
+            <p class="audience-description">
+                This course is for anyone who wants to use AI tools to help with coding.
+            </p>
+            <p class="audience-note">
+                You don't need any AI experience to start - just curiosity about using AI tools to help with your coding!
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Prerequisites Section -->
+<section class="section section-gray">
+    <div class="container">
+        <h2 class="section-title">Prerequisites</h2>
+        <div class="prerequisites-grid">
+            <div class="prerequisite-card">
+                <div class="prerequisite-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                </div>
+                <h3>Programming Experience</h3>
+                <p>Basic programming experience in any language</p>
+                <ul class="prerequisite-details">
+                    <li>Understanding of basic programming concepts</li>
+                    <li>Familiarity with functions and variables</li>
+                    <li>Experience with any IDE or code editor</li>
+                </ul>
+            </div>
+
+            <div class="prerequisite-card">
+                <div class="prerequisite-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
+                    </svg>
+            </div>
+                <h3>Command Line Basics</h3>
+                <p>Comfort with basic terminal operations</p>
+                <ul class="prerequisite-details">
+                    <li>Navigation and file operations</li>
+                    <li>Running scripts and commands</li>
+                    <li>Package installation</li>
+                </ul>
+        </div>
+
+            <div class="prerequisite-card highlight">
+                <div class="prerequisite-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <h3>AI Tools Knowledge</h3>
+                <p>No prior AI tools experience required!</p>
+                <ul class="prerequisite-details">
+                    <li>We'll introduce you to AI coding assistants</li>
+                    <li>Hands-on approach to learning</li>
+                    <li>Focus on practical development workflows</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section-cta">
+            <div class="register-cta-container">
+                <p>Meet the requirements? Take the next step in your ML career!</p>
+                <a href="#register" class="register-cta">Begin Your Journey</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Syllabus Section -->
+<section id="syllabus" class="section">
+    <div class="container">
+        <h2 class="section-title">Course Syllabus</h2>
+        <p class="section-subtitle">Master AI development tools through hands-on projects and real-world applications</p>
+
+        <div class="syllabus-grid">
+            <!-- Module 1 -->
+            <div class="module">
+                <span class="module-tag">Module 1</span>
+                <h3>Introduction to Vibe Coding / AI Tools Overview</h3>
+                <ul>
+                    <li>AI-assisted development with Snake game example (React + JS)</li>
+                    <li>Chat applications: ChatGPT, Claude, DeepSeek, Microsoft Copilot</li>
+                    <li>Coding assistants / IDEs: Claude Code, GitHub Copilot, Cursor, Pear</li>
+                    <li>Project bootstrappers: Bolt, Lovable</li>
+                    <li>Agents: Anthropic Computer Use, PR Agent, others</li>
+                </ul>
+            </div>
+
+            <!-- Module 2 -->
+            <div class="module">
+                <span class="module-tag">Module 2</span>
+                <h3>End-to-End Project (Snake)</h3>
+                <ul>
+                    <li>Use a coding assistant for an end-to-end project</li>
+                    <li>Build Snake in React/TS</li>
+                    <li>Define API with OpenAPI</li>
+                    <li>Generate FastAPI server from OpenAPI specs</li>
+                    <li>Add CI/CD</li>
+                    <li>Deploy the application</li>
+                </ul>
+            </div>
+
+            <!-- Module 3 -->
+            <div class="module">
+                <span class="module-tag">Module 3</span>
+                <h3>Model-Context Protocol</h3>
+                <ul>
+                    <li>Enhancing AI assistants with tools</li>
+                    <li>Core servers: GitHub, Filesystem, DB/SQL, HTTP/API, CI</li>
+                    <li>Practical workflows: repo triage, PR summarization, scripted edits, data queries</li>
+                    <li>Local vs. remote servers</li>
+                    <li>Security/permissions</li>
+                </ul>
+            </div>
+
+            <!-- Module 4 -->
+            <div class="module">
+                <span class="module-tag">Module 4</span>
+                <h3>Build an AI Coding Agent (for Django)</h3>
+                <ul>
+                    <li>Build your own coding agent that can scaffold and extend projects</li>
+                    <li>Use a Django template as the base project</li>
+                    <li>Learn how agents act as project bootstrappers</li>
+                    <li>Explore multiple agent orchestration frameworks</li>
+                    <li>Outcome: a Django app created and modified by your AI agent</li>
+                </ul>
+            </div>
+
+            <!-- Module 5 -->
+            <div class="module">
+                <span class="module-tag">Module 5</span>
+                <h3>AI for Testing, CI/CD & DevOps</h3>
+                <ul>
+                    <li>AI-assisted PR reviews/summaries and change-risk hints</li>
+                    <li>Automated test generation, coverage gates, and LLM evals in CI</li>
+                    <li>Release notes, changelog drafting, and deployment runbooks</li>
+                    <li>Incident postmortems and on-call copilots</li>
+                </ul>
+            </div>
+
+            <!-- Module 6 -->
+            <div class="module">
+                <span class="module-tag">Module 6</span>
+                <h3>Automation with Low-Code and No-Code AI (n8n)</h3>
+                <ul>
+                    <li>When to automate vs. code; composable AI tasks</li>
+                    <li>Build an n8n workflow using LLM nodes and webhooks</li>
+                    <li>Connectors: email, Slack, GitHub/Jira/Notion, databases</li>
+                    <li>Ship lightweight assistants without maintaining servers</li>
+                </ul>
+            </div>
+
+            <!-- Course Project -->
+            <div class="module project">
+                <span class="module-tag">Course Project</span>
+                <h3>End-to-End AI-Enhanced Development</h3>
+                <p>Build a complete application using AI tools throughout the entire development lifecycle.</p>
+                <ul>
+                    <li>Start with AI-assisted project planning and architecture</li>
+                    <li>Use coding assistants for implementation (React/TypeScript frontend, FastAPI backend)</li>
+                    <li>Implement AI agents for code reviews and testing</li>
+                    <li>Set up automated CI/CD pipeline with AI-enhanced workflows</li>
+                    <li>Deploy and monitor using modern DevOps practices</li>
+                    <li>Document your AI-powered development journey</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section-cta">
+            <div class="register-cta-container">
+                <p>Ready to supercharge your development with AI tools?</p>
+                <a href="#register" class="register-cta">Start Learning Today</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Course Features Section -->
+<section class="section section-features">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">How You'll Learn</h2>
+            <p class="section-subtitle">Our comprehensive approach combines theory, practice, and community support</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-box">
+                <span class="feature-number">01</span>
+                <h3 class="feature-title">Theory Meets Practice</h3>
+                <p class="feature-description">
+                    Each concept is followed by hands-on practice. You'll learn by doing, not just watching.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <span class="feature-number">02</span>
+                <h3 class="feature-title">Interactive Learning</h3>
+                <p class="feature-description">
+                    Video lectures are paired with code demos, bringing complex concepts to life through practical examples.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <span class="feature-number">03</span>
+                <h3 class="feature-title">Weekly Assignments</h3>
+                <p class="feature-description">
+                    Reinforce your learning with practical homework assignments that challenge and inspire.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <span class="feature-number">04</span>
+                <h3 class="feature-title">Portfolio Project</h3>
+                <p class="feature-description">
+                    Cap off your learning with an end-to-end project that showcases your new skills to potential employers.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <span class="feature-number">05</span>
+                <h3 class="feature-title">Vibrant Community</h3>
+                <p class="feature-description">
+                    Join DataTalks.Club on Slack to connect with peers, share insights, and get support when you need it.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Homework and Support Section -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Homework & Support System</h2>
+        <p class="section-subtitle">Get regular feedback and help when you need it</p>
+
+        <div class="support-grid">
+            <!-- Homework and Leaderboard -->
+            <div class="support-card">
+                <h3>Weekly Homework & Leaderboard</h3>
+                <p>To reinforce your learning, we offer regular homework assignments, reviewed and scored by industry professionals. Your scores are added to an anonymous leaderboard, creating friendly competition among course members and motivating you to do your best.</p>
+                
+                <div class="leaderboard-preview">
+                    <img src="https://raw.githubusercontent.com/DataTalksClub/datatalksclub.github.io/master/images/posts/2023-08-17-machine-learning-zoomcamp/image6.png" 
+                         alt="Anonymous leaderboard with scored homework"
+                         class="support-image">
+                    <div class="image-caption">
+                        <p>Anonymous leaderboard tracking homework scores</p>
+            </div>
+        </div>
+
+                <div class="homework-features">
+                    <div class="feature">
+                        <span class="feature-highlight">Weekly Cadence</span>
+                        <p>Regular assignments to keep you on track</p>
+                </div>
+                    <div class="feature">
+                        <span class="feature-highlight">Friendly Competition</span>
+                        <p>Anonymous leaderboard to track progress</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+                </div>
+                </div>
+</section>
+
+<!-- Instructor Section -->
+<section id="instructor" class="section section-gray">
+    <div class="container">
+        <h2 class="section-title">Meet Your Instructor</h2>
+        <div class="instructor-card">
+            <div class="instructor-image">
+                <img src="https://avatars.githubusercontent.com/u/875246" alt="Alexey Grigorev" class="instructor-avatar">
+            </div>
+            <div class="instructor-info">
+                <div class="instructor-header">
+                    <h3 class="instructor-name">Alexey Grigorev</h3>
+                    <p class="instructor-role">Founder of DataTalks.Club</p>
+                </div>
+                <p class="instructor-bio">
+                    A seasoned software engineer and data scientist with over 10 years of engineering and 6 years of ML experience, 
+                    Alexey specializes in bringing data science projects from early prototypes to production. His expertise spans 
+                    problem identification, data collection, model creation, deployment, and maintenance.
+                </p>
+                <div class="instructor-experience">
+                    <h4>Professional Background</h4>
+                    <ul class="experience-list">
+                        <li>Lead Data Scientist at OLX Group (Berlin) - Built large-scale ML systems processing 250+ images/second</li>
+                        <li>Data Scientist at Simplaex - Developed ML infrastructure processing 3+ billion events daily</li>
+                        <li>Data Scientist at Searchmetrics (Berlin)</li>
+                        <li>Research positions at TU Berlin, Boston University Cognitive Neuroscience Lab</li>
+                    </ul>
+                </div>
+                <div class="instructor-achievements">
+                    <h4>Publications & Achievements</h4>
+                    <ul class="experience-list">
+                        <li>Author of "Mastering Java for Data Science" (2017) and "TensorFlow Deep Learning Projects" (2018)</li>
+                        <li>Kaggle Competition Master with multiple top-10 finishes, including 1st place in NIPS'17 Criteo Challenge</li>
+                        <li>Published researcher with papers in SIGIR and WSDM</li>
+                        <li>IT4BI Master's graduate (ULB, UFRT, TU Berlin)</li>
+                    </ul>
+                </div>
+                <div class="instructor-badges">
+                    <span class="instructor-badge">Python & Java Expert</span>
+                    <span class="instructor-badge">ML Systems Design</span>
+                    <span class="instructor-badge">Kaggle Master</span>
+                    <span class="instructor-badge">Published Author</span>
+                    <span class="instructor-badge">Community Builder</span>
+                </div>
+                <div class="instructor-links">
+                    <a href="https://datatalks.club" target="_blank" rel="noopener noreferrer" class="instructor-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="link-icon">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                        </svg>
+                        DataTalks.Club
+                    </a>
+                    <a href="https://www.linkedin.com/in/agrigorev/" target="_blank" rel="noopener noreferrer" class="instructor-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="link-icon">
+                            <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/alexeygrigorev" target="_blank" rel="noopener noreferrer" class="instructor-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="link-icon">
+                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=xT1V5UwAAAAJ" target="_blank" rel="noopener noreferrer" class="instructor-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="link-icon">
+                            <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
+                        </svg>
+                        Google Scholar
+                    </a>
+                    <a href="https://www.kaggle.com/agrigorev" target="_blank" rel="noopener noreferrer" class="instructor-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="link-icon">
+                            <path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.358"/>
+                        </svg>
+                        Kaggle
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Learning in Public Section -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Learn in Public</h2>
+        <p class="section-subtitle">Share your journey, build your presence, earn recognition</p>
+
+        <div class="learning-public-grid">
+            <div class="learning-public-content">
+
+                <div class="learning-benefits">
+                    <h3>Why Learn in Public?</h3>
+                    <ul class="benefits-list">
+                        <li>
+                            <strong>Earn Extra Points</strong>
+                            <p>Get bonus points for sharing your progress, insights, and projects online</p>
+                        </li>
+                        <li>
+                            <strong>Build Your Portfolio</strong>
+                            <p>Create valuable content that showcases your skills and knowledge</p>
+                        </li>
+                        <li>
+                            <strong>Increase Visibility</strong>
+                            <p>Get noticed by social media algorithms and reach a broader audience</p>
+                        </li>
+                        <li>
+                            <strong>Network Growth</strong>
+                            <p>Connect with individuals and organizations in the data science community</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="leaderboard-showcase">
+                <div class="quote-card">
+                    <img src="https://raw.githubusercontent.com/DataTalksClub/datatalksclub.github.io/master/images/posts/2023-08-17-machine-learning-zoomcamp/image8.png" 
+                         alt="Extract from Shawn Wang's article about learning in public"
+                         class="quote-image">
+                    <div class="quote-attribution">
+                        <p>Inspired by <a href="https://www.youtube.com/watch?v=tkBCPqWKCL8&list=PL7NIGf5_PlM-Dk3lgPsZFT94Ng7PpRQEh&index=5&t=195s" 
+                                        target="_blank">Shawn @swyx Wang</a>'s approach to 
+                           <a href="https://www.swyx.io/learn-in-public" target="_blank">learning in public</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="leaderboard-card">
+                    <img src="https://raw.githubusercontent.com/DataTalksClub/datatalksclub.github.io/master/images/posts/2023-08-17-machine-learning-zoomcamp/image2.png" 
+                         alt="Leaderboard showing bonus points for learning in public"
+                         class="leaderboard-image">
+                    <div class="leaderboard-caption">
+                        <p>Previous cohort leaderboard showing bonus points earned through public learning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="learning-cta">
+            <p class="cta-text">Everyone has something valuable to contribute, regardless of their expertise level</p>
+            <a href="#" class="btn btn-primary">Start Your Learning Journey</a>
+        </div>
+    </div>
+</section>
+
+<!-- Community Section -->
+<section class="section section-gray">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Learn with Our Community</h2>
+            <p class="section-subtitle">Join DataTalks.Club - a thriving community of 79,000+ data practitioners worldwide</p>
+        </div>
+
+        <!-- Community Platforms -->
+        <div class="community-platforms">
+            <h3>How to Connect</h3>
+            <div class="platforms-grid">
+                <div class="platform-card primary">
+                    <div class="platform-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.5 14.5A2.5 2.5 0 0011 12H13a2.5 2.5 0 002.5 2.5v0a2.5 2.5 0 002.5-2.5V9a2.5 2.5 0 00-2.5-2.5H13A2.5 2.5 0 0010.5 9v.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h4>Slack Community</h4>
+                    <p>Join our main hub for discussions, Q&A, and real-time support</p>
+                    <a href="https://datatalks.club/slack.html" class="platform-link" target="_blank">Join Slack →</a>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h4>Telegram Updates</h4>
+                    <p>Get course announcements and important updates</p>
+                    <a href="https://t.me/aidevtoolszoomcamp" class="platform-link" target="_blank">Subscribe →</a>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23 7l-7 5 7 5V7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h4>Course Playlist</h4>
+                    <p>Access all recorded sessions and supplementary content</p>
+                    <span class="coming-soon-badge">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Community Preview -->
+        <div class="community-preview">
+            <div class="preview-content">
+                <h3>See Our Community in Action</h3>
+                <p>Get a glimpse of the active discussions and collaborative learning happening in our Slack community</p>
+            </div>
+            <div class="preview-image">
+                <img src="https://raw.githubusercontent.com/DataTalksClub/datatalksclub.github.io/master/images/posts/2023-08-17-machine-learning-zoomcamp/image5.png" 
+                     alt="Active discussions in our Slack community"
+                     class="slack-preview-image">
+                <div class="image-caption">
+                    <p>Real conversations from our active learning community</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Registration Section -->
+<section id="register" class="section section-highlight">
+    <div class="container">
+        <div class="registration-content">
+            <div class="registration-header">
+                <h2 class="section-title">Register for AI Dev Tools Zoomcamp</h2>
+                <p class="section-subtitle">Join our first cohort starting November 18, 2025</p>
+            </div>
+            
+            <div class="registration-form">
+                <iframe class="airtable-embed" src="https://airtable.com/embed/appJRFiWKHBgmEt70/pag7ykopwCxXrDfOa/form" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Learning Options Section -->
+<section id="learning-options" class="section section-highlight">
+    <div class="container">
+        <div class="options-content">
+            <div class="free-banner">
+                <span class="free-badge">100% FREE</span>
+                <h2 class="section-title">Start Learning Today!</h2>
+                <p class="options-subtitle">Join our first cohort starting November 18, 2025</p>
+            </div>
+            
+            <div class="learning-options">
+                <div class="option-card highlight">
+                    <div class="option-header">
+                        <h3 class="option-title">Live Cohort (Nov 2025)</h3>
+                        <div class="option-label">
+                            <span class="availability-text">Certificate Opportunity</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="option-features">
+                        <li>
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Complete course materials
+                        </li>
+                        <li>
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Regular live office hours
+                        </li>
+                        <li>
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Structured timeline with deadlines
+                        </li>
+                        <li>
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Certificate upon completion
+                        </li>
+                        <li>
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Peer learning & project reviews
+                        </li>
+                    </ul>
+                    
+                    <div class="option-cta">
+                        <a href="#register" class="btn btn-primary btn-large">Register</a>
+                        <p class="cta-subtitle">Next cohort starts November 18, 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="free-learning">
+                <h3>Why is this course free?</h3>
+                <p>We believe in making quality education accessible to everyone. This course is part of our mission to democratize machine learning education and build a global community of data practitioners. Your success is our success!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sponsors Section -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Sponsors & Supporters</h2>
+        <p class="section-subtitle">A special thanks to our course sponsors for making this initiative possible!</p>
+
+        <div class="sponsors-pyramid">
+            <!-- Bottom Tier - Future Sponsors -->
+            <div class="sponsor-tier">
+                <div class="sponsor-placeholder">
+                    <div class="sponsor-image"></div>
+                    <p>Your Logo Here</p>
+                </div>
+                <div class="sponsor-placeholder">
+                    <div class="sponsor-image"></div>
+                    <p>Your Logo Here</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sponsor-cta">
+            <p>Interested in supporting our community?</p>
+            <a href="mailto:alexey@datatalks.club" class="cta-link">Reach out to alexey@datatalks.club</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Course cover styles */
+    .course-cover {
+        padding: 2rem 0;
+        background: #f8fafc;
+    }
+    
+    .cover-image {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Target audience styles */
+    .target-audience {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .audience-description {
+        font-size: 1.25rem;
+        color: #1f2937;
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+    }
+    
+    .audience-note {
+        font-size: 1.1rem;
+        color: #4b5563;
+        font-style: italic;
+    }
+    
+    @media (max-width: 768px) {
+        .course-cover {
+            padding: 1rem 0;
+        }
+        
+        .cover-image {
+            margin: 0 1rem;
+        }
+        
+        .audience-description {
+            font-size: 1.1rem;
+        }
+        
+        .audience-note {
+            font-size: 1rem;
+        }
+    }
+
+    /* Course badges styles */
+    .course-badges {
+        text-align: center;
+        padding: 2rem 0;
+    }
+    
+    .badge-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .course-badge {
+        display: inline-block;
+        transition: transform 0.2s ease;
+    }
+    
+    .course-badge:hover {
+        transform: translateY(-2px);
+    }
+    
+    .course-badge img {
+        height: 32px;
+        width: auto;
+    }
+    
+    @media (max-width: 768px) {
+        .badge-row {
+            gap: 0.5rem;
+        }
+        
+        .course-badge img {
+            height: 28px;
+        }
+    }
+
+    /* Registration section styles */
+    .registration-content {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    .registration-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .registration-form {
+        background: white;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .airtable-embed {
+        border-radius: 8px;
+    }
+    
+    @media (max-width: 768px) {
+        .registration-form {
+            padding: 1rem;
+        }
+        
+        .registration-header {
+            margin-bottom: 2rem;
+        }
+        
+        .airtable-embed {
+            height: 600px !important;
+        }
+    }
+
+    /* Coming Soon section styles */
+    .coming-soon-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .coming-soon-item {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.2s ease;
+    }
+    
+    .coming-soon-item:hover {
+        transform: translateY(-2px);
+    }
+    
+    .coming-soon-item h3 {
+        color: #1f2937;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+    }
+    
+    .coming-soon-item p {
+        color: #6b7280;
+        margin: 0;
+        font-size: 0.95rem;
+    }
+    
+    @media (max-width: 768px) {
+        .coming-soon-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        .coming-soon-item {
+            padding: 1.5rem;
+        }
+    }
+
+    /* Sponsors section styles */
+    .sponsors-pyramid {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin: 3rem auto;
+        max-width: 1200px;
+    }
+
+    .sponsor-tier {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .top-tier {
+        max-width: 800px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .top-tier .sponsor-card {
+        width: 100%;
+    }
+
+    .top-tier .sponsor-logo {
+        width: 100%;
+        height: auto;
+        max-height: 160px;
+        object-fit: contain;
+    }
+
+    .sponsor-card {
+        background: white;
+        border-radius: 12px;
+        padding: 2rem;
+        text-align: center;
+        transition: transform 0.2s ease;
+    }
+
+    .sponsor-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .sponsor-placeholder {
+        text-align: center;
+        padding: 2rem;
+        background: white;
+        border-radius: 12px;
+        border: 2px dashed #e5e7eb;
+        transition: all 0.3s ease;
+        width: 250px;
+    }
+
+    .sponsor-placeholder:hover {
+        border-color: #4338ca;
+    }
+
+    .sponsor-image {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 1rem;
+        background: #f3f4f6;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sponsor-placeholder p {
+        color: #6b7280;
+        font-size: 0.875rem;
+        margin: 0;
+    }
+
+    .sponsor-cta {
+        text-align: center;
+        margin: 4rem auto 2rem;
+        max-width: 600px;
+        padding: 2rem;
+        background: #f8fafc;
+        border-radius: 12px;
+    }
+
+    .sponsor-cta p {
+        color: #1f2937;
+        font-size: 1.125rem;
+        margin: 0 0 1rem 0;
+    }
+
+    .cta-link {
+        color: #4338ca;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s ease;
+    }
+
+    .cta-link:hover {
+        color: #3730a3;
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        .sponsors-pyramid {
+            gap: 2rem;
+            margin: 2rem 1rem;
+        }
+
+        .sponsor-tier {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .top-tier {
+            padding: 0 1rem;
+        }
+
+        .sponsor-placeholder {
+            width: 100%;
+            max-width: 250px;
+        }
+    }
+
+    /* Community Section Styles */
+    .community-overview {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 3rem;
+        margin-bottom: 4rem;
+        align-items: center;
+    }
+
+    .overview-content h3 {
+        color: #1f2937;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .overview-content p {
+        color: #4b5563;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .community-stats-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .stat-card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+    }
+
+    .stat-card:hover {
+        transform: translateY(-2px);
+    }
+
+    .stat-number {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #4338ca;
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+        color: #6b7280;
+        font-size: 0.875rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    /* Community Benefits Section */
+    .community-benefits-section {
+        margin-bottom: 4rem;
+    }
+
+    .community-benefits-section h3 {
+        color: #1f2937;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .benefit-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .benefit-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .benefit-card .benefit-icon {
+        width: 48px;
+        height: 48px;
+        margin: 0 auto 1rem;
+        color: #4338ca;
+    }
+
+    .benefit-card h4 {
+        color: #1f2937;
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .benefit-card p {
+        color: #6b7280;
+        line-height: 1.5;
+    }
+
+    /* Community Platforms Section */
+    .community-platforms {
+        margin-bottom: 4rem;
+    }
+
+    .community-platforms h3 {
+        color: #1f2937;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .platforms-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+
+    .platform-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border: 2px solid transparent;
+    }
+
+    .platform-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .platform-card.primary {
+        border-color: #4338ca;
+        background: linear-gradient(135deg, #4338ca 0%, #6366f1 100%);
+        color: white;
+    }
+
+    .platform-card.primary h4,
+    .platform-card.primary p {
+        color: white;
+    }
+
+    .platform-card .platform-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 1rem;
+        color: #4338ca;
+    }
+
+    .platform-card.primary .platform-icon {
+        color: white;
+    }
+
+    .platform-card h4 {
+        color: #1f2937;
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .platform-card p {
+        color: #6b7280;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+    }
+
+    .platform-link {
+        display: inline-flex;
+        align-items: center;
+        color: #4338ca;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.2s ease;
+    }
+
+    .platform-card.primary .platform-link {
+        color: white;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        transition: background 0.2s ease;
+    }
+
+    .platform-card.primary .platform-link:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    .platform-link:hover {
+        color: #3730a3;
+    }
+
+    .coming-soon-badge {
+        display: inline-block;
+        background: #f3f4f6;
+        color: #6b7280;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    /* Community Preview Section */
+    .community-preview {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .preview-content h3 {
+        color: #1f2937;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .preview-content p {
+        color: #4b5563;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .preview-image {
+        text-align: center;
+    }
+
+    .slack-preview-image {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1rem;
+    }
+
+    .image-caption p {
+        color: #6b7280;
+        font-size: 0.875rem;
+        font-style: italic;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .community-overview {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .community-stats-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .stat-card {
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+        }
+
+        .benefits-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .platforms-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .community-preview {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .community-benefits-section,
+        .community-platforms {
+            margin-bottom: 3rem;
+        }
+    }
+    
+    /* DataTalks.Club styles */
+    .about-dtc {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .dtc-logo {
+        margin: 0 auto 1.5rem;
+    }
+    
+    .dtc-description {
+        max-width: 800px;
+        margin: 0 auto 1.5rem;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+    
+    .dtc-links {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+    }
+    
+    .dtc-links a {
+        color: #4338ca;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+    
+    .dtc-links a:hover {
+        color: #3730a3;
+        text-decoration: underline;
+    }
+
+    /* Learning options section styles */
+    .options-content {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .options-subtitle {
+        font-size: 1.2rem;
+        color: #4b5563;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .learning-options {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .option-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .option-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .option-card.highlight {
+        border: 2px solid #4338ca;
+        position: relative;
+        z-index: 1;
+    }
+
+    .option-header {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .option-title {
+        font-size: 1.5rem;
+        color: #111827;
+        margin-bottom: 0.5rem;
+    }
+
+    .option-label {
+        margin-top: 0.5rem;
+    }
+
+    .availability-text {
+        color: #4338ca;
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+
+    .option-features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 2rem 0;
+    }
+
+    .option-features li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        color: #4b5563;
+    }
+
+    .option-features svg {
+        width: 20px;
+        height: 20px;
+        color: #4338ca;
+        margin-right: 0.75rem;
+        flex-shrink: 0;
+    }
+
+    .option-cta {
+        text-align: center;
+    }
+
+    .free-learning {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .free-learning h3 {
+        color: #111827;
+        margin-bottom: 1rem;
+    }
+
+    .free-learning p {
+        color: #4b5563;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    /* Existing styles from the original pricing section that we need to keep */
+    .section-highlight {
+        background: linear-gradient(to right, #f9fafb, #f3f4f6);
+        padding: 5rem 0;
+    }
+
+    .free-banner {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .free-badge {
+        display: inline-block;
+        background: #4338ca;
+        color: white;
+        font-weight: 700;
+        padding: 0.5rem 1.5rem;
+        border-radius: 9999px;
+        margin-bottom: 1.5rem;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .btn-large {
+        padding: 0.75rem 2rem;
+        font-size: 1.125rem;
+    }
+
+    @media (max-width: 768px) {
+        .learning-options {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .option-card {
+            max-width: 400px;
+            width: 100%;
+        }
+    }
+</style>
+
+
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">DataTalks.Club</div>
+            <p class="footer-tagline">A global community of data professionals.</p>
+            <div class="register-cta-container">
+                <p>Don't miss out on this opportunity to master AI Development Tools</p>
+                <a href="#register" class="register-cta register-cta-light">Join AI Dev Tools Zoomcamp Today</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
